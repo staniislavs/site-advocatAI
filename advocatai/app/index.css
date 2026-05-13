@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -56,8 +56,8 @@
 }
 
 @theme {
-  --font-serif: "Playfair Display", Georgia, serif;
-  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-serif: "Noto Serif", Georgia, serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
 
   --color-sage: #5E694D;
   --color-sage-bright: #7C8A66;
@@ -81,13 +81,38 @@
     accent-color: #5E694D;
   }
   h1, h2, h3 {
-    @apply tracking-tight;
+    @apply font-serif;
+    font-feature-settings: "liga", "kern";
+    letter-spacing: -0.02em;
+  }
+  h1 {
+    @apply font-serif font-medium;
+    line-height: 1.05;
+  }
+  h2 {
+    @apply font-serif font-medium;
+    line-height: 1.1;
+  }
+  h3 {
+    @apply font-serif font-medium;
+    line-height: 1.15;
   }
   .tracking-extrawide {
     @apply tracking-[0.4em];
   }
   ::selection {
     @apply bg-sage/30 text-[var(--text-primary)];
+  }
+
+  /* Eyebrow labels */
+  .eyebrow {
+    @apply font-sans font-semibold text-[12px] uppercase;
+    letter-spacing: 0.18em;
+  }
+
+  /* Tabular numbers for statistics and prices */
+  .numbers {
+    font-variant-numeric: tabular-nums;
   }
 }
 
@@ -135,7 +160,15 @@ html.lenis {
 }
 
 .markdown-body h1, .markdown-body h2 {
-  @apply font-serif text-[var(--text-primary)] leading-tight tracking-tight mt-12 mb-6;
+  @apply font-serif font-medium text-[var(--text-primary)] mt-12 mb-6;
+  font-feature-settings: "liga", "kern";
+  letter-spacing: -0.02em;
+}
+.markdown-body h1 {
+  line-height: 1.05;
+}
+.markdown-body h2 {
+  line-height: 1.1;
 }
 
 .markdown-body h1 { @apply text-4xl md:text-[36px] lg:text-[42px] border-b border-sage/10 pb-4; }
