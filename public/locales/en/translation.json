@@ -1,0 +1,365 @@
+{
+  "navbar": {
+    "name": "Darya Bogdashkina",
+    "role": "Your Protection - With an Attorney",
+    "links": {
+      "services": "Services",
+      "about": "About",
+      "blog": "Blog",
+      "contacts": "Contacts",
+      "faq": "FAQ"
+    },
+    "consultation": "Consultation"
+  },
+  "hero": {
+    "role": "Attorney · Kyiv · {{years}} years of practice",
+    "title_1": "Protecting your rights —",
+    "title_2_italic": "with experience and care",
+    "description": "Darya Bogdashkina — professional civil law attorney. Solving complex cases involving divorce, alimony and property division since 2014.",
+    "img_alt": "Attorney Darya Bogdashkina - civil law specialist in Kyiv",
+    "cta_free": "Free Consultation",
+    "stats": {
+      "practice": "years of practice",
+      "practice_val": "{{years}}+",
+      "won": "cases won",
+      "won_val": "90%",
+      "response": "response time",
+      "response_val": "24h",
+      "offices": "office in Kyiv",
+      "offices_val": "1"
+    },
+    "badge": {
+      "cert": "ZP 001001",
+      "since": "Attorney since 2014"
+    },
+    "scroll": "Scroll"
+  },
+  "services": {
+    "tag": "Competencies",
+    "title": "What I ",
+    "title_italic": "specialize in",
+    "description": "Deep expertise in civil law, based on {{years}} years of practice and hundreds of successful cases.",
+    "more": "Learn More",
+    "cta_title": "Have questions?",
+    "cta_desc": "Describe your problem, and we will help.",
+    "cta_button": "Consultation",
+    "items": {
+      "divorce": {
+        "name": "Marriage and Divorce",
+        "desc": "Professional support for marriage dissolution. Assistance in court and out-of-court settlements.",
+        "details": [
+          "Consultations on divorce procedures",
+          "Preparation of divorce claims",
+          "Representation in court without client presence",
+          "Marriage annulment",
+          "Establishment of separate residence regime"
+        ]
+      },
+      "alimony": {
+        "name": "Alimony",
+        "desc": "Protection of child rights and ensuring financial well-being. Collection and review of payments.",
+        "details": [
+          "Collection of alimony in fixed amount or share of income",
+          "Collection of additional expenses for the child",
+          "Reduction or increase of alimony amount",
+          "Spousal support collection",
+          "Enforcement of alimony payment responsibility"
+        ]
+      },
+      "property": {
+        "name": "Property Division",
+        "desc": "Fair distribution of jointly acquired marital property, protection of rights to housing and business.",
+        "details": [
+          "Division of real estate (apartments, houses, land plots)",
+          "Division of vehicles and shared business",
+          "Disputes over joint credit obligations and debts",
+          "Recognition of property as personal private property",
+          "Execution of property division agreements"
+        ]
+      },
+      "children": {
+        "name": "Custody and Children",
+        "desc": "Solving complex issues of child upbringing and residence with their best interests in mind.",
+        "details": [
+          "Determination of child's place of residence",
+          "Establishment of communication and upbringing schedule",
+          "Deprivation and restoration of parental rights",
+          "Obtaining permission for child's travel abroad",
+          "Removal of obstacles in communication with the child"
+        ]
+      },
+      "inheritance": {
+        "name": "Inheritance",
+        "desc": "Legal assistance in heritage registration and resolution of inheritance disputes in court.",
+        "details": [
+          "Registration of inheritance by law and by will",
+          "Restoration of terms for inheritance acceptance",
+          "Recognition of ownership through inheritance",
+          "Contesting wills in court",
+          "Determination of additional term for inheritance application"
+        ]
+      },
+      "domestic_violence": {
+        "name": "Domestic Violence",
+        "desc": "Urgent legal protection for victims of domestic violence. Obtaining protection orders.",
+        "details": [
+          "Obtaining a restrictive order against the offender",
+          "Defense in administrative offense cases",
+          "Representation in police and law enforcement",
+          "Legal support for responsibility procedures"
+        ]
+      },
+      "housing": {
+        "name": "Housing Disputes",
+        "desc": "Protection of rights to use housing, resolution of registration and eviction conflicts.",
+        "details": [
+          "Eviction or move-in to housing premises",
+          "Recognition of a person as having lost the right to use housing",
+          "Disputes over the procedure for using housing premises",
+          "Removal of obstacles to the use of property"
+        ]
+      },
+      "adoption": {
+        "name": "Adoption",
+        "desc": "Full support for the adoption process. Help in preparing documents for guardianship authorities.",
+        "details": [
+          "Legal consultations on adoption issues",
+          "Preparation of document package for court submission",
+          "Representation in guardianship and trusteeship authorities",
+          "Child adoption by one spouse (stepparent)"
+        ]
+      },
+      "property_rights": {
+        "name": "Property Rights",
+        "desc": "Protection and registration of ownership rights for real estate and other valuable property.",
+        "details": [
+          "Protection of ownership rights in court",
+          "Recognition of ownership for new buildings and unauthorized construction",
+          "Registration of real estate documents",
+          "Support for real estate transactions"
+        ]
+      }
+    }
+  },
+  "about": {
+    "tag": "About me",
+    "title": "An attorney you can trust",
+    "p1": "I am Darya Oleksandrivna Bogdashkina, an attorney with {{years}} years of experience in civil law. My approach is based not only on dry legislation but also on empathy.",
+    "p2": "I understand that civil disputes are always an emotional trial. Each client receives my personal attention and honest assessment of the situation.",
+    "p3": "I don't strive to take on hundreds of cases at once. My philosophy is a deep immersion into each separate story to find a solution that protects your interests to the maximum.",
+    "highlights": {
+      "licensed": {
+        "title": "Licensed Ukrainian Attorney",
+        "sub": "Certificate ZP 001001 from 28.02.2014"
+      },
+      "offices": {
+        "title": "Office in Kyiv",
+        "sub": "23 Baseina St, Office 25"
+      },
+      "quick": {
+        "title": "I answer personally",
+        "sub": "+38 095 909 89 80 · Quick contact"
+      }
+    },
+    "cta": "Free Consultation"
+  },
+  "process": {
+    "tag": "Process",
+    "title_1": "Four steps from",
+    "title_2": "the first call to ",
+    "title_italic": "the result.",
+    "subtitle": "№ 04 · PROCESS",
+    "items": [
+      {
+        "id": "01",
+        "name": "First Call",
+        "desc": "30 minutes on Zoom or in the office. Free of charge. You explain the situation — I tell you what to do with it."
+      },
+      {
+        "id": "02",
+        "name": "Strategy",
+        "desc": "Written legal position with realistic scenarios, deadlines, and budget. No surprises."
+      },
+      {
+        "id": "03",
+        "name": "Documents",
+        "desc": "I prepare the claim, evidence, motions. You sign. I file and conduct the case further."
+      },
+      {
+        "id": "04",
+        "name": "Court & Execution",
+        "desc": "Representation at all hearings. Control of the decision enforcement until the actual result."
+      }
+    ]
+  },
+  "reviews": {
+    "tag": "Reviews",
+    "title": "What ",
+    "title_italic": "clients say",
+    "stat": "reviews",
+    "items": [
+      {
+        "name": "Olena Savchenko",
+        "date": "March 2024",
+        "text": "Asked for help in an alimony case. The result exceeded expectations — decision in 2 hearings. Extremely grateful for clarity and support."
+      },
+      {
+        "name": "Mykhailo Tkachenko",
+        "date": "December 2023",
+        "text": "Divorce with property division went much smoother than I expected. Darya Oleksandrivna is a true professional who knows how to protect the client's interests."
+      },
+      {
+        "name": "Iryna Kovalenko",
+        "date": "August 2024",
+        "text": "Fought for child custody. Darya Oleksandrivna was available almost 24/7. Her confidence in court gave me strength. Positive result!"
+      }
+    ]
+  },
+  "faq": {
+    "tag": "Frequently Asked Questions",
+    "title": "Need ",
+    "title_italic": "answers?",
+    "items": [
+      {
+        "q": "How much does the first consultation cost?",
+        "a": "The first consultation is free. During it, we get to know each other, I analyze your situation and propose a defense strategy. No obligations after the first conversation."
+      },
+      {
+        "q": "How quickly can an appointment be scheduled?",
+        "a": "An appointment (offline or online) is usually scheduled within 24 hours of contact. In urgent situations — within a few hours."
+      },
+      {
+        "q": "Is my presence mandatory at hearings?",
+        "a": "In most cases (divorce, property division), I can represent your interests entirely independently. Your presence is not mandatory if we issue appropriate representation."
+      },
+      {
+        "q": "How long does a divorce process take?",
+        "a": "Through the registry office — 1 month. Through court — from 2 to 6 months, depending on disputes regarding children or property. I always try to speed up the process as much as possible."
+      }
+    ]
+  },
+  "contacts": {
+    "tag": "Contact",
+    "title": "Tell me about ",
+    "title_italic": "your situation",
+    "description": "The first consultation is free and confidential. Choose a convenient way to contact or fill out the form — I will respond within 24 hours.",
+    "phone": "Phone",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "facebook": "Facebook",
+    "form": {
+      "name": "Your name *",
+      "name_placeholder": "Yaroslav the Wise",
+      "phone": "Phone number *",
+      "phone_placeholder": "+38 0__ ___ __ __",
+      "type": "Type of case",
+      "type_placeholder": "Select category",
+      "description": "Short description",
+      "desc_placeholder": "Describe your problem with basic information...",
+      "submit": "Submit",
+      "agreement": "By clicking the button, you agree to the processing of personal data. Confidentiality guaranteed.",
+      "required_field": "Please fill out this field",
+      "success": "Thank you! Your request has been sent. I will contact you shortly.",
+      "captcha_label": "Verification: {{num1}} + {{num2}} = ?",
+      "captcha_placeholder": "Your answer",
+      "captcha_error": "Incorrect verification answer. Please try again.",
+      "bot_error": "Sorry, you seem like a bot.",
+      "types": {
+        "divorce": "Divorce",
+        "alimony": "Alimony",
+        "property": "Property Division",
+        "children": "Custody",
+        "custody": "Custody",
+        "inheritance": "Inheritance",
+        "other": "Other"
+      },
+      "theme": {
+        "ai": "AI:",
+        "light": "Adapted for daylight",
+        "dark": "Adapted for night mode"
+      }
+    }
+  },
+  "footer": {
+    "desc": "Professional legal protection in civil matters. Working for results since 2014.",
+    "nav_tag": "Navigation",
+    "loc_tag": "Locations",
+    "kyiv": "Kyiv",
+    "kyiv_addr": "23 Baseina St, Office 25",
+    "legal_tag": "Legal Information",
+    "legal_text": "Attorney certificate ZP 001001 from 28.02.2014 issued by the Bar Council of Zaporizhzhia region",
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "blog": {
+    "tag": "Blog",
+    "title": "Latest ",
+    "title_italic": "publications",
+    "read_more": "Read more",
+    "no_posts": "No publications yet.",
+    "back": "Back to list",
+    "admin": {
+      "title": "Blog Management",
+      "login": "Author Login",
+      "logout": "Logout",
+      "new_post": "New Post",
+      "edit": "Edit",
+      "delete": "Delete",
+      "save": "Save",
+      "cancel": "Cancel",
+      "publish": "Publish",
+      "draft": "Draft",
+      "fields": {
+        "title": "Title",
+        "excerpt": "Excerpt",
+        "content": "Content",
+        "contentType": "Content Type",
+        "image": "Image URL",
+        "category": "Category",
+        "slug": "Slug (URL)",
+        "tags": "Tags (comma separated)"
+      }
+    },
+    "hero": {
+      "title": "Legal Blog",
+      "subtitle": "Attorney advice on civil law: divorce, alimony, property division.",
+      "search": "Search blog...",
+      "find": "Find"
+    },
+    "categories": {
+      "tag": "Categories",
+      "all": "All Articles",
+      "posts_count": "{{count}} articles",
+      "items": {
+        "rozluchennya": "Marriage and Divorce",
+        "podil-mayna": "Property Division",
+        "alimony": "Alimony",
+        "opika": "Custody and Children",
+        "spadkuvannya": "Inheritance",
+        "nasylstvo": "Domestic Violence",
+        "zhytlovi-spory": "Housing Disputes",
+        "usynovlennya": "Adoption",
+        "pravo-vlasnosti": "Property Rights",
+        "general": "General Topics"
+      }
+    },
+    "post": {
+      "updated": "Updated",
+      "reading_time": "{{min}} min read",
+      "toc": "Table of Contents",
+      "share": "Share",
+      "next_posts": "Related Articles",
+      "cta_sidebar": {
+        "title": "Free Case Assessment",
+        "subtitle": "Answer in 15 minutes — based on your situation",
+        "button": "Get Consultation"
+      }
+    }
+  },
+  "preloader": {
+    "slogan": "Your Protection with an Attorney",
+    "initials_1": "D",
+    "initials_2": "B"
+  }
+}
