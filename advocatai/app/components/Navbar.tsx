@@ -292,8 +292,8 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
             onClick={(e) => handleLinkClick(e, `/${currentLang}/${LOCALIZED_PATHS[currentLang].contacts}`)}
             className={`px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-wider transition-all border ${
               scrolled
-                ? 'bg-sage text-navy border-sage hover:bg-sage-light hover:border-sage-light'
-                : 'bg-sage/10 text-sage border-sage/30 hover:bg-sage/20 hover:border-sage'
+                ? 'bg-sage text-white border-sage hover:bg-sage/90 hover:border-sage/90'
+                : 'bg-sage text-white border-sage hover:bg-sage/90'
             }`}
           >
             {t('navbar.consultation')}
