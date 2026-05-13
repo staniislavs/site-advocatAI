@@ -1,0 +1,12 @@
+name = "site-advocatai"
+main = "advocatai/worker.ts"
+compatibility_date = "2024-12-19"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./advocatai/dist/client"
+binding = "ASSETS"
+
+[vars]
+ENVIRONMENT = "production"
+NODE_ENV = "production"
