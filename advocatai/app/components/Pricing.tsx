@@ -11,23 +11,18 @@ export default function Pricing() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2
-      }
+      transition: { staggerChildren: 0.15, delayChildren: 0.2 }
     }
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } }
+  };
+
+  const scrollToContacts = () => {
+    const el = document.getElementById('kontakty');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -58,67 +53,81 @@ export default function Pricing() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
+          viewport={{ once: true, margin: '-100px' }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-end"
         >
-          {items.map((item: any) => (
+          {items.map((item: any, idx: number) => (
             <motion.div
               key={item.name}
               variants={itemVariants}
-              whileHover={{ y: -5 }}
-              className={`group rounded-2xl p-6 md:p-8 transition-all duration-500 flex flex-col ${
+              whileHover={{ y: item.featured ? -8 : -4 }}
+              className={`group rounded-2xl p-6 md:p-8 transition-all duration-500 flex flex-col relative ${
                 item.featured
-                  ? 'bg-sage text-white border border-sage shadow-[0_20px_50px_rgba(94,105,77,0.3)]'
-                  : 'bg-[var(--card-bg)] border border-[var(--card-border)] text-[var(--text-primary)] hover:border-sage/30 hover:shadow-[0_20px_50px_rgba(94,105,77,0.1)]'
-              }`}
+                  ? 'bg-sage border border-sage shadow-[0_30px_70px_rgba(94,105,77,0.35)] md:-mt-4 md:pb-10'
+                  : 'bg-[var(--card-bg)] border border-[var(--card-border)] hover:border-sage/30 hover:shadow-[0_20px_50px_rgba(94,105,77,0.08)]'
+              } ${item.featured ? 'order-first md:order-none' : ''}`}
             >
+              {/* Badge for featured */}
+              {item.featured && (
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+                  <span className="bg-white text-sage text-[9px] font-bold uppercase tracking-[0.2em] px-4 py-1.5 rounded-full shadow-sm">
+                    Рекомендовано
+                  </span>
+                </div>
+              )}
+
               {/* Header */}
-              <div className="mb-6">
-                <h3 className={`font-serif text-2xl mb-2 ${item.featured ? 'text-white' : 'text-[var(--text-primary)]'}`}>
+              <div className="mb-5">
+                <h3 className={`font-serif text-2xl mb-1.5 ${item.featured ? 'text-white' : 'text-[var(--text-primary)]'}`}>
                   {item.name}
                 </h3>
-                <p className={`text-sm ${item.featured ? 'text-white/80' : 'text-[var(--text-muted)]'}`}>
+                <p className={`text-sm ${item.featured ? 'text-white/75' : 'text-[var(--text-muted)]'}`}>
                   {item.description}
                 </p>
               </div>
 
               {/* Price */}
-              <div className="mb-6">
-                <p className={`text-4xl md:text-5xl font-serif font-bold mb-1 ${item.featured ? 'text-white' : 'text-sage'}`}>
+              <div className={`mb-6 pb-5 border-b ${item.featured ? 'border-white/20' : 'border-[var(--card-border)]'}`}>
+                <p className={`font-serif font-bold leading-none mb-1 ${
+                  item.featured ? 'text-white text-5xl' : 'text-sage text-4xl md:text-5xl'
+                }`}>
                   {item.price}
                 </p>
-                <p className={`text-sm ${item.featured ? 'text-white/80' : 'text-[var(--text-muted)]'}`}>
+                <p className={`text-xs mt-2 ${item.featured ? 'text-white/70' : 'text-[var(--text-muted)]'}`}>
                   {item.currency}
                 </p>
               </div>
 
               {/* Features */}
               <div className="space-y-3 mb-8 flex-grow">
-                {item.features.map((feature: string, idx: number) => (
-                  <div key={idx} className="flex items-start gap-3">
+                {item.features.map((feature: string, i: number) => (
+                  <div key={i} className="flex items-start gap-3">
                     <CheckCircle2
-                      size={18}
-                      className={`flex-shrink-0 mt-0.5 ${item.featured ? 'text-white' : 'text-sage'}`}
+                      size={16}
+                      className={`flex-shrink-0 mt-0.5 ${item.featured ? 'text-white/80' : 'text-sage'}`}
                     />
-                    <span className={`text-sm leading-relaxed ${item.featured ? 'text-white/90' : 'text-[var(--text-secondary)]'}`}>
+                    <span className={`text-sm leading-relaxed ${
+                      item.featured ? 'text-white/85' : 'text-[var(--text-secondary)]'
+                    }`}>
                       {feature}
                     </span>
                   </div>
                 ))}
               </div>
 
-              {/* CTA Button */}
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className={`w-full px-6 py-3 rounded-lg font-sans text-sm font-medium transition-all ${
+              {/* CTA */}
+              <button
+                onClick={scrollToContacts}
+                className={`w-full px-6 py-3.5 rounded-xl font-medium text-sm transition-all active:scale-[0.98] ${
                   item.featured
-                    ? 'bg-white text-sage hover:bg-white/90'
-                    : 'bg-sage text-white hover:bg-sage/90'
+                    ? 'bg-white text-sage hover:bg-white/92 shadow-sm'
+                    : idx === 0
+                      ? 'border border-sage text-sage hover:bg-sage hover:text-white'
+                      : 'border border-[var(--card-border)] text-[var(--text-secondary)] hover:border-sage hover:text-sage'
                 }`}
               >
-                {t('contacts.form.submit')}
-              </motion.button>
+                {item.featured ? 'Обговорити справу' : idx === 0 ? 'Записатись' : 'Запит ціни'}
+              </button>
             </motion.div>
           ))}
         </motion.div>

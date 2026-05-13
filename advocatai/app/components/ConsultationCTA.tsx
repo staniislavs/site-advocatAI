@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
-import { Phone, Video, Building2, CheckCircle2 } from 'lucide-react';
+import { Phone, Video, Building2, CheckCircle2, ArrowRight } from 'lucide-react';
 
 const iconMap: Record<string, any> = {
   phone: Phone,
@@ -14,107 +14,86 @@ export default function ConsultationCTA() {
   const featuresRaw = t('consultation.features', { returnObjects: true });
   const features = Array.isArray(featuresRaw) ? featuresRaw : [];
 
+  const scrollToContacts = () => {
+    const el = document.getElementById('kontakty');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="bg-[var(--bg-primary)] py-12 md:py-20 overflow-hidden">
       <div className="max-w-5xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-sage rounded-3xl p-8 md:p-12 text-white overflow-hidden relative"
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-sage rounded-3xl overflow-hidden relative"
         >
-          {/* Decorative background */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mt-48" />
-          </div>
+          {/* Decorative circles */}
+          <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/5 pointer-events-none" />
+          <div className="absolute -bottom-12 -left-12 w-48 h-48 rounded-full bg-white/5 pointer-events-none" />
+          <div className="absolute top-1/2 right-16 -translate-y-1/2 w-24 h-24 rounded-full bg-white/5 pointer-events-none hidden lg:block" />
 
-          <div className="relative z-10">
-            {/* Header */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="mb-12"
-            >
-              <p className="text-white/80 text-[10px] uppercase tracking-[0.2em] font-semibold mb-4">
-                {t('consultation.tag')}
-              </p>
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl leading-[1.2] mb-6">
-                {t('consultation.title')}
-                <span className="font-light italic"> {t('consultation.title_italic')}</span>
-              </h2>
-              <p className="text-white/90 text-base md:text-lg leading-relaxed max-w-3xl">
-                {t('consultation.description')}
-              </p>
-            </motion.div>
+          <div className="relative z-10 p-8 md:p-12 lg:p-16">
+            {/* Tag */}
+            <p className="text-white/60 text-[10px] uppercase tracking-[0.25em] font-semibold mb-5">
+              {t('consultation.tag')}
+            </p>
 
-            {/* Features Grid */}
+            {/* Title */}
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white leading-[1.15] mb-5 max-w-2xl">
+              {t('consultation.title')}
+              <span className="italic font-light">{t('consultation.title_italic')}</span>
+            </h2>
+
+            <p className="text-white/75 text-base md:text-lg leading-relaxed mb-10 max-w-xl">
+              {t('consultation.description')}
+            </p>
+
+            {/* Features */}
             <motion.div
               variants={{
                 hidden: { opacity: 0 },
-                visible: {
-                  opacity: 1,
-                  transition: {
-                    staggerChildren: 0.1,
-                    delayChildren: 0.2
-                  }
-                }
+                visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.3 } }
               }}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10"
             >
               {features.map((feature: any, idx: number) => {
-                const IconComponent = iconMap[feature.icon] || Phone;
+                const Icon = iconMap[feature.icon] || Phone;
                 return (
                   <motion.div
                     key={idx}
                     variants={{
-                      hidden: { opacity: 0, x: -20 },
-                      visible: {
-                        opacity: 1,
-                        x: 0,
-                        transition: { duration: 0.6 }
-                      }
+                      hidden: { opacity: 0, x: -16 },
+                      visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
                     }}
-                    className="flex gap-4"
+                    className="flex items-start gap-4"
                   >
-                    <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/20">
-                        <IconComponent size={24} className="text-white" />
-                      </div>
+                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center">
+                      <Icon size={18} className="text-white" />
                     </div>
-                    <div className="flex-grow">
-                      <h3 className="font-serif text-lg mb-1 text-white">
-                        {feature.title}
-                      </h3>
-                      <p className="text-white/80 text-sm leading-relaxed">
-                        {feature.desc}
-                      </p>
+                    <div>
+                      <p className="text-white font-medium text-sm mb-0.5">{feature.title}</p>
+                      <p className="text-white/60 text-xs leading-relaxed">{feature.desc}</p>
                     </div>
                   </motion.div>
                 );
               })}
             </motion.div>
 
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+            {/* CTA */}
+            <motion.button
+              onClick={scrollToContacts}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-sage font-semibold rounded-xl hover:bg-white/93 transition-all shadow-lg hover:shadow-xl text-sm"
             >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-sage font-sans font-semibold rounded-lg hover:bg-white/90 transition-all shadow-lg hover:shadow-xl"
-              >
-                {t('consultation.cta')}
-              </motion.button>
-            </motion.div>
+              {t('consultation.cta')}
+              <ArrowRight size={16} />
+            </motion.button>
           </div>
         </motion.div>
       </div>
