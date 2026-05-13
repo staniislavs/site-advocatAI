@@ -152,7 +152,7 @@ export default function Calculator() {
               </button>
             </div>
 
-            <p className="text-[var(--text-muted)] text-[11px] leading-relaxed mt-4">
+            <p className="text-[var(--text-secondary)] text-[11px] leading-relaxed mt-4">
               {t('calculator.form.info')}
             </p>
           </div>
