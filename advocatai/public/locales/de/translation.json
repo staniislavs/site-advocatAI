@@ -214,6 +214,70 @@
       }
     ]
   },
+  "cases": {
+    "tag": "Anonym verfolgten Fälle",
+    "title": "Ergebnisse, die ",
+    "title_italic": "messbar sind",
+    "description": "Ohne Namen und Fotos — nur Fakten, Zahlen und Fristen...",
+    "items": [
+      {
+        "id": 1,
+        "type": "Unterhalt",
+        "year": "2025",
+        "status": "Gewonnen",
+        "title": "Unterhaltsbetrag verfaßt",
+        "description": "Unterhaltsbetrag in 2 Anhörungen verdreifacht",
+        "duration": "Dauer",
+        "durationValue": "48 Tage",
+        "cost": "Ergebnis",
+        "costValue": "×3"
+      },
+      {
+        "id": 2,
+        "type": "Vermögensteilung",
+        "year": "2024",
+        "status": "Gewonnen",
+        "title": "Immobilie geschützt",
+        "description": "Mandantin behielt die Wohnung und 60% der Gemeinschaftsgüter",
+        "duration": "Dauer",
+        "durationValue": "5 Monate",
+        "cost": "Ergebnis",
+        "costValue": "3.2M gespart"
+      },
+      {
+        "id": 3,
+        "type": "Scheidung",
+        "year": "2024",
+        "status": "Gewonnen",
+        "title": "Internationale Scheidung",
+        "description": "Scheidung mit ausländischem Element in 4 Monaten abgeschlossen",
+        "duration": "Dauer",
+        "durationValue": "117 Tage",
+        "cost": "Verfahren",
+        "costValue": "3 Anhörungen"
+      }
+    ]
+  },
+  "situation": {
+    "tag": "Wir kennen die Situation",
+    "title": "Falls das auf Sie zutrifft —",
+    "title_italic": "sind Sie hier richtig.",
+    "description": "Wir verstehen die Komplexität jeder Situation und wissen, wie wir in den schwierigsten Fällen helfen können.",
+    "items": [
+      {
+        "quote": "Mein Ex hat drei Monate lang keinen Unterhalt gezahlt.",
+        "description": "Wir helfen Ihnen, den Rückstand einzutreiben und die Durchsetzung zu sichern, ohne dass Sie an Gerichtsverfahren teilnehmen müssen."
+      },
+      {
+        "quote": "Ich fürchte, mich in der Scheidung die Wohnung zu verlieren.",
+        "description": "Wir analysieren die Erwerbungsquellen, bereiten Beweise vor und schützen das, das Ihnen rechtlich gehört."
+      },
+      {
+        "quote": "Ich weiß nicht, wo ich anfangen soll — ich bin verloren in der Terminologie.",
+        "description": "Bei der ersten Beratung erklären wir alles in einfacher Sprache und erstellen einen klaren 3-Schritte-Plan nach vorne."
+      }
+    ]
+  },
   "faq": {
     "tag": "Häufig gestellte Fragen",
     "title": "Brauchen Sie ",
