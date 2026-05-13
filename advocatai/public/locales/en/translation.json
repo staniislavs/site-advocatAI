@@ -34,6 +34,26 @@
     },
     "scroll": "Scroll"
   },
+  "situation": {
+    "tag": "We Know Your Situation",
+    "title": "If this sounds like you —",
+    "title_italic": "you've come to the right place.",
+    "description": "We understand the complexity of each situation and know how to help in the most challenging cases.",
+    "items": [
+      {
+        "quote": "My ex hasn't paid alimony in three months.",
+        "description": "We'll help you recover the arrears and establish enforcement without your participation in court proceedings."
+      },
+      {
+        "quote": "I'm afraid I'll lose the apartment in the divorce.",
+        "description": "We'll analyze the sources of acquisition, prepare evidence, and protect what legally belongs to you."
+      },
+      {
+        "quote": "I have no idea where to start — I'm lost in the terminology.",
+        "description": "At the first consultation, we'll explain everything in plain language and create a clear 3-step plan forward."
+      }
+    ]
+  },
   "services": {
     "tag": "Competencies",
     "title": "What I ",

@@ -5,6 +5,7 @@ import { LOCALIZED_PATHS, LanguageCode } from './lib/utils';
 
 // Public UI components
 import Hero from './components/Hero';
+import Situation from './components/Situation';
 import Services from './components/Services';
 import About from './components/About';
 import Process from './components/Process';
@@ -20,6 +21,7 @@ import TermsOfService from './components/TermsOfService';
 export const HomePage = () => (
   <main>
     <Hero />
+    <Situation />
     <Services />
     <About />
     <Process />
