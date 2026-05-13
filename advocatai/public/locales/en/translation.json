@@ -235,6 +235,101 @@
       }
     ]
   },
+  "calculator": {
+    "tag": "What the Court Can Award",
+    "title": "How much can the ",
+    "title_italic": "court award?",
+    "description": "Anonymous case data shows typical court awards for similar cases in Ukrainian courts. These are realistic scenarios based on 10 years of practice.",
+    "form": {
+      "caseType": "Case Type",
+      "children": "Children",
+      "period": "Period (months)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "{{amount}} ₴/mo.",
+      "period_label": "estimated period",
+      "info": "This calculator is for reference only. The actual court award depends on many individual factors.",
+      "types": {
+        "alimony": "Child Alimony",
+        "spousal": "Spousal Support",
+        "property": "Property Claim"
+      }
+    }
+  },
+  "pricing": {
+    "tag": "Pricing",
+    "title": "No \"buts\" ",
+    "title_italic": "in the final invoice.",
+    "description": "Professional support, transparent pricing and fixed cost — no surprises. For complex cases, we offer individual packages.",
+    "items": [
+      {
+        "name": "Consultation",
+        "price": "1 500₴",
+        "currency": "per session",
+        "description": "Professional legal assessment",
+        "features": [
+          "30-minute consultation",
+          "Situational analysis",
+          "Legal position outline",
+          "Next steps clarity"
+        ]
+      },
+      {
+        "name": "Basic Package",
+        "price": "25 000₴",
+        "currency": "complete service",
+        "description": "Full case support",
+        "featured": true,
+        "features": [
+          "Strategy development",
+          "Document preparation",
+          "Court representation",
+          "Case supervision"
+        ]
+      },
+      {
+        "name": "Premium Support",
+        "price": "Individual",
+        "currency": "negotiated",
+        "description": "Full case management",
+        "features": [
+          "Personal attention",
+          "24/7 contact availability",
+          "Appeals support",
+          "Execution support"
+        ]
+      }
+    ]
+  },
+  "consultation": {
+    "tag": "30 Minutes",
+    "title": "30 minutes of conversation ",
+    "title_italic": "— and you'll have a PLAN.",
+    "description": "Personal legal assessment. We analyze your situation, explain everything in plain language, and outline the next steps. No obligations.",
+    "features": [
+      {
+        "icon": "phone",
+        "title": "Phone Consultation",
+        "desc": "Call +38 095 909 89 80 or book online"
+      },
+      {
+        "icon": "video",
+        "title": "Video Meeting",
+        "desc": "Zoom or Teams, choose your time"
+      },
+      {
+        "icon": "office",
+        "title": "Office Visit",
+        "desc": "23 Baseina St, Kyiv, Office 25"
+      },
+      {
+        "icon": "check",
+        "title": "Guaranteed Result",
+        "desc": "Clear plan and next steps defined"
+      }
+    ],
+    "cta": "Book Free Consultation"
+  },
   "faq": {
     "tag": "Frequently Asked Questions",
     "title": "Need ",

@@ -278,6 +278,101 @@
       }
     ]
   },
+  "calculator": {
+    "tag": "Was das Gericht vergibt",
+    "title": "Wie viel kann das ",
+    "title_italic": "Gericht zusprechen?",
+    "description": "Anonyme Falldate zeigen typische Gerichte Sprüche in ähnlichen Fällen bei ukrainischen Gerichten. Dies sind realistische Szenarien auf Basis von 10 Jahren Praxis.",
+    "form": {
+      "caseType": "Fall-Typ",
+      "children": "Kinder",
+      "period": "Zeitraum (Monate)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "{{amount}} ₴/Mo.",
+      "period_label": "geschätzter Zeitraum",
+      "info": "Dieser Rechner dient nur zu Referenzzwecken. Der tatsächliche Gerichtsbeschluss hängt von vielen einzelnen Faktoren ab.",
+      "types": {
+        "alimony": "Kinderunter halt",
+        "spousal": "Ehegattenunterhalt",
+        "property": "Vermögensanspruch"
+      }
+    }
+  },
+  "pricing": {
+    "tag": "Preisgestaltung",
+    "title": "Keine \"aber\" ",
+    "title_italic": "in der Endrechnung.",
+    "description": "Professionelle Unterstützung, transparente Preisgestaltung und feste Kosten — keine Überraschungen. Für komplexe Fälle bieten wir individuelle Pakete an.",
+    "items": [
+      {
+        "name": "Beratung",
+        "price": "1 500₴",
+        "currency": "pro Sitzung",
+        "description": "Professionelle Rechtsberatung",
+        "features": [
+          "30-Minuten-Beratung",
+          "Situationsanalyse",
+          "Rechtliche Grundposition",
+          "Klarheit der nächsten Schritte"
+        ]
+      },
+      {
+        "name": "Basispaket",
+        "price": "25 000₴",
+        "currency": "kompletter Service",
+        "description": "Vollständige Fallunterstützung",
+        "featured": true,
+        "features": [
+          "Strategieentwicklung",
+          "Dokumentvorbereitung",
+          "Gerichtsvertretung",
+          "Fallüberwachung"
+        ]
+      },
+      {
+        "name": "Premium Support",
+        "price": "Individuell",
+        "currency": "verhandelt",
+        "description": "Vollständiges Fallmanagement",
+        "features": [
+          "Persönliche Aufmerksamkeit",
+          "24/7 Kontaktverfügbarkeit",
+          "Berufungsunterstützung",
+          "Vollstreckungsunterstützung"
+        ]
+      }
+    ]
+  },
+  "consultation": {
+    "tag": "30 Minuten",
+    "title": "30 Minuten Gespräch ",
+    "title_italic": "— und Sie haben einen PLAN.",
+    "description": "Persönliche Rechtsberatung. Wir analysieren Ihre Situation, erklären alles in einfacher Sprache und skizzieren die nächsten Schritte. Keine Verpflichtungen.",
+    "features": [
+      {
+        "icon": "phone",
+        "title": "Telefonberatung",
+        "desc": "Rufen Sie +38 095 909 89 80 an oder buchen Sie online"
+      },
+      {
+        "icon": "video",
+        "title": "Videokonferenz",
+        "desc": "Zoom oder Teams, wählen Sie Ihre Zeit"
+      },
+      {
+        "icon": "office",
+        "title": "Büro",
+        "desc": "Baseina Str. 23, Kiew, Büro 25"
+      },
+      {
+        "icon": "check",
+        "title": "Garantiertes Ergebnis",
+        "desc": "Klarer Plan und definierte nächste Schritte"
+      }
+    ],
+    "cta": "Kostenlose Beratung buchen"
+  },
   "faq": {
     "tag": "Häufig gestellte Fragen",
     "title": "Brauchen Sie ",

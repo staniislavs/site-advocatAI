@@ -10,6 +10,9 @@ import Situation from './components/Situation';
 import Services from './components/Services';
 import About from './components/About';
 import Process from './components/Process';
+import Calculator from './components/Calculator';
+import Pricing from './components/Pricing';
+import ConsultationCTA from './components/ConsultationCTA';
 import Blog from './components/Blog';
 import FAQ from './components/FAQ';
 import Contacts from './components/Contacts';
@@ -27,6 +30,9 @@ export const HomePage = () => (
     <Services />
     <About />
     <Process />
+    <Calculator />
+    <Pricing />
+    <ConsultationCTA />
     <Contacts />
     <Reviews />
     <FAQ />
