@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #ffffff; /* Pure white */
+  --bg-secondary: #fdfcfb; /* Extremely subtle paper tint */
+  --text-primary: #141414; /* Deep ink charcoal */
+  --text-secondary: #4a4a4a;
+  --text-muted: #666666;
+  --card-bg: #ffffff;
+  --card-border: rgba(184, 149, 90, 0.08); /* Minimalist gold */
+  --navy-deep: #121212;
+  --navy: #1a1a1a;
+  --cream: #fcfaf7;
+  --cream-dark: #fbf9f4;
+  --slate-100: rgba(0, 0, 0, 0.015);
+  --slate-500: #4a4a4a;
+  --accent-glow: rgba(184, 149, 90, 0.01);
+}
+
+.dark {
+  --bg-primary: #020617; /* Deep Navy Black */
+  --bg-secondary: #0a111f; /* Navy */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: rgba(248, 250, 252, 0.4);
+  --card-bg: rgba(15, 23, 42, 0.7); /* Translucent navy */
+  --card-border: rgba(74, 124, 89, 0.1);
+  --navy-deep: #020617;
+  --navy: #0a111f;
+  --cream: #1e293b;
+  --cream-dark: #0f172a;
+  --slate-100: rgba(255, 255, 255, 0.05);
+  --slate-500: #94a3b8;
+  --accent-glow: rgba(74, 124, 89, 0.05);
+}
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+
+  --color-gold: #b8955a;
+  --color-gold-light: #c9a66b;
+  
+  --color-navy-deep: var(--navy-deep);
+  --color-navy: var(--navy);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-slate-100: var(--slate-100);
+  --color-slate-500: var(--slate-500);
+}
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    @apply font-sans bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased transition-colors duration-500;
+    accent-color: #b8955a;
+  }
+  h1, h2, h3 {
+    @apply tracking-tight;
+  }
+  .tracking-extrawide {
+    @apply tracking-[0.4em];
+  }
+  ::selection {
+    @apply bg-gold/30 text-[var(--text-primary)];
+  }
+
+  /* Icon color override for professional aesthetic */
+  .icon-accent {
+    @apply text-[#E74C3C];
+  }
+}
+
+/* Custom scrollbar for a premium feel */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gold/40 rounded-full hover:bg-gold/60 transition-colors;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gold/20 rounded-full hover:bg-gold/40;
+}
+
+/* Professional Blog Styling */
+.markdown-body {
+  @apply font-sans mx-auto;
+  max-width: 680px;
+}
+
+.markdown-body h1, .markdown-body h2 {
+  @apply font-serif text-[var(--text-primary)] leading-tight tracking-tight mt-12 mb-6;
+}
+
+.markdown-body h1 { @apply text-4xl md:text-[36px] lg:text-[42px] border-b border-gold/10 pb-4; }
+.markdown-body h2 { @apply text-2xl md:text-[26px] lg:text-[28px] mt-[48px]; }
+.markdown-body h3 { @apply font-sans font-bold text-[20px] md:text-[22px] text-[var(--text-primary)] mt-[32px] mb-4; }
+
+.markdown-body p {
+  @apply mb-6 text-[var(--text-secondary)] leading-[1.8] text-[17px] md:text-[18px] font-light;
+}
+
+.markdown-body blockquote {
+  @apply border-l-4 border-gold pl-8 py-2 my-10 italic text-2xl font-serif text-[var(--text-primary)] bg-gold/5 rounded-r-xl;
+}
+
+.markdown-body ul, .markdown-body ol {
+  @apply mb-8 pl-6 space-y-3 text-[var(--text-secondary)] text-[17px];
+}
+
+.markdown-body ul { @apply list-none; }
+.markdown-body ul li { @apply relative pl-6; }
+.markdown-body ul li::before {
+  content: "•";
+  @apply absolute left-0 text-gold font-bold;
+}
+
+.markdown-body ol { @apply list-decimal; }
+
+.markdown-body img {
+  @apply rounded-2xl shadow-2xl my-12 w-full object-cover max-w-[none] lg:-mx-12 lg:w-[calc(100%+6rem)];
+}
+
+.markdown-body a {
+  @apply text-gold font-medium text-[17px] transition-colors hover:underline;
+}
+
+.markdown-body hr {
+  @apply my-16 border-gold/10;
+}
+
+.markdown-body strong {
+  @apply text-gold font-bold;
+}
+
+.markdown-body table {
+  @apply w-full border-collapse my-12 border border-gold/10 rounded-xl overflow-hidden shadow-sm;
+}
+.markdown-body th { @apply bg-[var(--bg-secondary)] text-[var(--text-primary)] p-4 font-serif text-left border-b border-gold/10; }
+.markdown-body td { @apply p-4 border border-gold/10 text-[var(--text-secondary)] bg-[var(--bg-primary)]; }

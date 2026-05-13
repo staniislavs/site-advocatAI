@@ -1,0 +1,322 @@
+{
+  "navbar": {
+    "name": "Darya Bogdashkina",
+    "role": "Ihr Schutz - Mit einer Anwältin",
+    "links": {
+      "services": "Leistungen",
+      "about": "Über mich",
+      "blog": "Blog",
+      "contacts": "Kontakt",
+      "faq": "FAQ"
+    },
+    "consultation": "Beratung"
+  },
+  "hero": {
+    "role": "Anwältin · Kiew · {{years}} Jahre Praxis",
+    "title_1": "Schutz Ihrer Rechte —",
+    "title_2_italic": "mit Erfahrung und Sorgfalt",
+    "description": "Anwältin für Zivilrecht Darya Bogdashkina. Lösung komplexester Zivilsachen professionell und vertraulich.",
+    "cta_free": "Kostenlose Beratung",
+    "stats": {
+      "practice": "Jahre Praxis",
+      "practice_val": "{{years}}+",
+      "won": "gewonnene Fälle",
+      "won_val": "90%",
+      "response": "Reaktionszeit",
+      "response_val": "24h",
+      "offices": "Büro in Kiew",
+      "offices_val": "1"
+    },
+    "badge": {
+      "cert": "ZP 001001",
+      "since": "Anwältin seit 2014"
+    },
+    "scroll": "Scrollen"
+  },
+  "services": {
+    "tag": "Kompetenzen",
+    "title": "Worauf ich mich ",
+    "title_italic": "spezialisiere",
+    "description": "Umfassende Expertise im Zivilrecht, basierend auf {{years}} Jahren Praxis und hunderten erfolgreichen Fällen.",
+    "more": "Mehr erfahren",
+    "cta_title": "Haben Sie Fragen?",
+    "cta_desc": "Beschreiben Sie Ihr Problem, wir helfen Ihnen.",
+    "cta_button": "Beratung",
+    "items": {
+      "divorce": {
+        "name": "Ehe und Scheidung",
+        "desc": "Professionelle Begleitung des Ehescheidungsverfahrens. Unterstützung bei gerichtlichen und außergerichtlichen Beilegungen.",
+        "details": [
+          "Beratung zum Scheidungsverfahren",
+          "Vorbereitung von Scheidungsklagen",
+          "Vertretung vor Gericht ohne Anwesenheit des Mandanten",
+          "Annullierung der Ehe",
+          "Festlegung des getrennten Wohnsitzes"
+        ]
+      },
+      "alimony": {
+        "name": "Unterhalt",
+        "desc": "Schutz der Kinderrechte und Sicherstellung des finanziellen Wohlergehens. Einzug und Überprüfung von Zahlungen.",
+        "details": [
+          "Einzug von Unterhalt in fester Summe oder Einkommensanteil",
+          "Einzug zusätzlicher Kosten für das Kind",
+          "Senkung oder Erhöhung des Unterhaltsbetrags",
+          "Ehegattenunterhalt",
+          "Durchsetzung der Verantwortung bei Nichtzahlung"
+        ]
+      },
+      "property": {
+        "name": "Vermögensteilung",
+        "desc": "Faire Aufteilung des während der Ehe erworbenen Vermögens, Schutz der Rechte an Wohnraum und Unternehmen.",
+        "details": [
+          "Aufteilung von Immobilien (Wohnungen, Häuser, Grundstücke)",
+          "Aufteilung von Fahrzeugen und gemeinsamen Unternehmen",
+          "Streitigkeiten über Kreditverpflichtungen und Schulden",
+          "Anerkennung von Eigentum als persönliches Privateigentum",
+          "Abschluss von Vereinbarungen über die Vermögensteilung"
+        ]
+      },
+      "children": {
+        "name": "Sorgerecht und Kinder",
+        "desc": "Lösung komplexer Fragen der Kindererziehung und des Wohnsitzes unter Berücksichtigung des Kindeswols.",
+        "details": [
+          "Bestimmung des Wohnsitzes des Kindes",
+          "Erstellung eines Umgangs- und Erziehungsplans",
+          "Entzug und Wiederherstellung des elterlichen Sorgerechts",
+          "Einholung der Erlaubnis für Reisen des Kindes ins Ausland",
+          "Beseitigung von Hindernissen im Umgang mit dem Kind"
+        ]
+      },
+      "inheritance": {
+        "name": "Erbrecht",
+        "desc": "Rechtliche Unterstützung bei der Erbschaftsregistrierung und Beilegung von Erbrechtsstreitigkeiten vor Gericht.",
+        "details": [
+          "Erbschaftsabwicklung nach Gesetz und Testament",
+          "Wiederherstellung von Fristen für die Erbschaftsannahme",
+          "Anerkennung von Eigentum durch Erbschaft",
+          "Anfechtung von Testamenten vor Gericht",
+          "Festlegung einer zusätzlichen Frist für den Erbschaftsantrag"
+        ]
+      },
+      "domestic_violence": {
+        "name": "Häusliche Gewalt",
+        "desc": "Dringender Rechtsschutz für Opfer häuslicher Gewalt. Einholung von Schutzanordnungen.",
+        "details": [
+          "Einholung einer Schutzanordnung gegen den Täter",
+          "Verteidigung in Ordnungswidrigkeitsverfahren",
+          "Vertretung bei Polizei und Strafverfolgungsbehörden",
+          "Rechtliche Unterstützung bei Verantwortungsverfahren"
+        ]
+      },
+      "housing": {
+        "name": "Wohnungsstreitigkeiten",
+        "desc": "Schutz der Wohnnutzungsrechte, Beilegung von Registrierungs- und Räumungskonflikten.",
+        "details": [
+          "Räumung oder Einzug in Wohnräume",
+          "Anerkennung des Verlusts des Wohnnutzungsrechts",
+          "Streitigkeiten über das Verfahren zur Nutzung von Wohnräumen",
+          "Beseitigung von Eigentumsnutzungshindernissen"
+        ]
+      },
+      "adoption": {
+        "name": "Adoption",
+        "desc": "Vollständige Unterstützung des Adoptionsprozesses. Hilfe bei der Vorbereitung von Dokumenten für Behörden.",
+        "details": [
+          "Rechtliche Beratung zu Adoptionsfragen",
+          "Vorbereitung des Dokumentenpakets für das Gericht",
+          "Vertretung vor Vormundschaftsbehörden",
+          "Adoption durch einen Ehepartner (Stiefelternteil)"
+        ]
+      },
+      "property_rights": {
+        "name": "Eigentumsrechte",
+        "desc": "Schutz und Registrierung von Eigentumsrechten für Immobilien und andere wertvolle Güter.",
+        "details": [
+          "Schutz von Eigentumsrechten vor Gericht",
+          "Anerkennung von Eigentum bei Neubauten und unbefugtem Bauen",
+          "Registrierung von Immobiliendokumenten",
+          "Unterstützung bei Immobilientransaktionen"
+        ]
+      }
+    }
+  },
+  "about": {
+    "tag": "Über mich",
+    "title": "Eine Anwältin, der Sie vertrauen können",
+    "p1": "Ich bin Darya Oleksandrivna Bogdashkina, eine Anwältin mit {{years}} Jahren Erfahrung im Zivilrecht. Mein Ansatz basiert nicht nur auf trockenen Gesetzen, sondern auch auf Empathie.",
+    "p2": "Ich verstehe, dass Zivilstreitigkeiten immer eine emotionale Belastung sind. Jeder Mandant erhält meine persönliche Aufmerksamkeit und eine ehrliche Einschätzung der Situation.",
+    "p3": "Ich strebe nicht danach, hunderte Fälle gleichzeitig zu übernehmen. Meine Philosophie ist ein tiefes Eintauchen in jede einzelne Geschichte, um eine Lösung zu finden, die Ihre Interessen optimal schützt.",
+    "highlights": {
+      "licensed": {
+        "title": "Zugelassene ukrainische Anwältin",
+        "sub": "Zertifikat ZP 001001 vom 28.02.2014"
+      },
+      "offices": {
+        "title": "Büro in Kiew",
+        "sub": "Baseina Str. 23, Büro 25"
+      },
+      "quick": {
+        "title": "Ich antworte persönlich",
+        "sub": "+38 095 909 89 80 · Schneller Kontakt"
+      }
+    },
+    "cta": "Kostenlose Beratung"
+  },
+  "process": {
+    "tag": "Prozess",
+    "title_1": "Vier Schritte vom",
+    "title_2": "ersten Anruf bis zum ",
+    "title_italic": "Ergebnis.",
+    "subtitle": "№ 04 · PROZESS",
+    "items": [
+      {
+        "id": "01",
+        "name": "Erstes Gespräch",
+        "desc": "30 Minuten Zoom oder im Büro. Kostenlos. Sie schildern — ich sage, was zu tun ist."
+      },
+      {
+        "id": "02",
+        "name": "Strategie",
+        "desc": "Schriftliche Position mit Szenarien, Terminen und Budget. Ohne Überraschungen."
+      },
+      {
+        "id": "03",
+        "name": "Dokumente",
+        "desc": "Ich erstelle Klagen, Beweise, Anträge. Sie unterschreiben. Ich reiche ein."
+      },
+      {
+        "id": "04",
+        "name": "Gericht & Vollstreckung",
+        "desc": "Vertretung bei allen Terminen. Kontrolle der Vollstreckung der Entscheidung bis zum Ergebnis."
+      }
+    ]
+  },
+  "reviews": {
+    "tag": "Bewertungen",
+    "title": "Was ",
+    "title_italic": "Kunden sagen",
+    "stat": "Bewertungen",
+    "items": [
+      {
+        "name": "Olena Sawtschenko",
+        "date": "März 2024",
+        "text": "Habe Hilfe in einem Unterhaltsfall gesucht. Das Ergebnis übertraf die Erwartungen — Entscheidung in 2 Anhörungen. Sehr dankbar für Klarheit und Unterstützung."
+      },
+      {
+        "name": "Mychailo Tkachenko",
+        "date": "Dezember 2023",
+        "text": "Die Scheidung mit Güterteilung verlief viel ruhiger als erwartet. Darya Oleksandrivna ist ein echter Profi, der weiß, wie man die Interessen der Mandanten schützt."
+      },
+      {
+        "name": "Iryna Kowalenko",
+        "date": "August 2024",
+        "text": "Wir haben um das Sorgerecht für das Kind gekämpft. Darya Oleksandrivna war fast rund um die Uhr erreichbar. Ihre Sicherheit vor Gericht gab mir Kraft. Positives Ergebnis!"
+      }
+    ]
+  },
+  "faq": {
+    "tag": "Häufig gestellte Fragen",
+    "title": "Brauchen Sie ",
+    "title_italic": "Antworten?",
+    "items": [
+      {
+        "q": "Wie viel kostet die Erstberatung?",
+        "a": "Die Erstberatung ist kostenlos. Dabei lernen wir uns kennen, ich analysiere Ihre Situation und schlage eine Verteidigungsstrategie vor. Keine Verpflichtungen nach dem ersten Gespräch."
+      },
+      {
+        "q": "Wie schnell kann ein Termin vereinbart werden?",
+        "a": "Ein Termin (offline oder online) wird in der Regel innerhalb von 24 Stunden nach der Kontaktaufnahme vereinbart. In dringenden Situationen — innerhalb weniger Stunden."
+      },
+      {
+        "q": "Ist meine Anwesenheit bei Anhörungen obligatorisch?",
+        "a": "In den meisten Fällen (Scheidung, Vermögensteilung) kann ich Ihre Interessen völlig unabhängig vertreten. Ihre Anwesenheit ist nicht obligatorisch, wenn wir eine entsprechende Vertretung ausstellen."
+      },
+      {
+        "q": "Wie lange dauert ein Scheidungsprozess?",
+        "a": "Über das Standesamt — 1 Monat. Über das Gericht — 2 bis 6 Monate, abhängig von Streitigkeiten über Kinder oder Eigentum. Ich versuche immer, den Prozess so weit wie möglich zu beschleunigen."
+      }
+    ]
+  },
+  "contacts": {
+    "tag": "Kontakt",
+    "title": "Erzählen Sie mir von ",
+    "title_italic": "Ihrer Situation",
+    "description": "Die Erstberatung ist kostenlos und vertraulich. Wählen Sie einen bequemen Weg zur Kontaktaufnahme oder füllen Sie das Formular aus — ich antworte innerhalb von 24 Stunden.",
+    "phone": "Telefon",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "facebook": "Facebook",
+    "form": {
+      "name": "Ihr Name *",
+      "name_placeholder": "Jaroslaw der Weise",
+      "phone": "Telefonnummer *",
+      "phone_placeholder": "+38 0__ ___ __ __",
+      "type": "Art des Falls",
+      "type_placeholder": "Kategorie wählen",
+      "description": "Kurzbeschreibung",
+      "desc_placeholder": "Beschreiben Sie Ihr Problem mit den wichtigsten Informationen...",
+      "submit": "Anfrage senden",
+      "agreement": "Mit dem Klick auf den Button stimmen Sie der Verarbeitung personenbezogener Daten zu. Vertraulichkeit garantiert.",
+      "required_field": "Bitte füllen Sie dieses Feld aus",
+      "success": "Danke! Ihre Anfrage wurde gesendet. Ich werde mich in Kürze bei Ihnen melden.",
+      "captcha_label": "Verifizierung: {{num1}} + {{num2}} = ?",
+      "captcha_placeholder": "Ihre Antwort",
+      "captcha_error": "Falsche Verifizierungsantwort. Bitte versuchen Sie es erneut.",
+      "bot_error": "Entschuldigung, Sie scheinen ein Bot zu sein.",
+      "types": {
+        "divorce": "Scheidung",
+        "alimony": "Unterhalt",
+        "property": "Vermögensteilung",
+        "children": "Sorgerecht",
+        "custody": "Sorgerecht",
+        "inheritance": "Erbrecht",
+        "other": "Andere"
+      }
+    }
+  },
+  "footer": {
+    "desc": "Professioneller Rechtsschutz in Zivilsachen. Wir arbeiten seit 2014 für Ergebnisse.",
+    "nav_tag": "Navigation",
+    "loc_tag": "Standorte",
+    "kyiv": "Kiew",
+    "kyiv_addr": "Baseina Str. 23, Büro 25",
+    "legal_tag": "Rechtliche Informationen",
+    "legal_text": "Anwaltszertifikat ZP 001001 vom 28.02.2014, ausgestellt durch den Anwaltsrat der Region Saporischschja",
+    "rights": "Alle Rechte vorbehalten",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen"
+  },
+  "blog": {
+    "tag": "Blog",
+    "title": "Aktuelle ",
+    "title_italic": "Veröffentlichungen",
+    "read_more": "Weiterlesen",
+    "no_posts": "Noch keine Veröffentlichungen.",
+    "back": "Zurück zur Liste",
+    "admin": {
+      "title": "Blog-Verwaltung",
+      "login": "Autoren-Login",
+      "logout": "Abmelden",
+      "new_post": "Neuer Beitrag",
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "publish": "Veröffentlichen",
+      "draft": "Entwurf",
+      "fields": {
+        "title": "Titel",
+        "excerpt": "Auszug",
+        "content": "Inhalt",
+        "contentType": "Inhaltstyp",
+        "image": "Bild-URL",
+        "tags": "Tags (kommagetrennt)"
+      }
+    }
+  },
+  "preloader": {
+    "slogan": "Ihr Schutz mit einer Anwältin",
+    "initials_1": "D",
+    "initials_2": "B"
+  }
+}

@@ -1,0 +1,146 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ---------------------------------------------------------
+    // HELPERS
+    // ---------------------------------------------------------
+    
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerified() {
+      return isSignedIn() && (request.auth.token.email_verified == true || request.auth.token.email == 'bogdashkina.lawyer@gmail.com' || request.auth.token.email == 'stanislav.zhabko@gmail.com');
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == 'bogdashkina.lawyer@gmail.com' ||
+        request.auth.token.email == 'stanislav.zhabko@gmail.com' ||
+        (exists(/databases/$(database)/documents/admins/$(request.auth.uid)) && get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role == 'admin')
+      );
+    }
+
+    function isEditor() {
+      return isSignedIn() && (
+        isAdmin() ||
+        (exists(/databases/$(database)/documents/admins/$(request.auth.uid)) && get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role == 'editor')
+      );
+    }
+
+    function isViewer() {
+      return isSignedIn() && (
+        isEditor() ||
+        (exists(/databases/$(database)/documents/admins/$(request.auth.uid)) && get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role == 'viewer')
+      );
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // ---------------------------------------------------------
+    // DEFAULT DENY
+    // ---------------------------------------------------------
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // ---------------------------------------------------------
+    // COLLECTIONS
+    // ---------------------------------------------------------
+
+    // Колекція для заявок з сайту (форми, контакти)
+    match /applications/{applicationId} {
+      function isValidApplication(data) {
+        return data.clientName is string && data.clientName.size() <= 100 &&
+               (data.phone is string || !('phone' in data)) &&
+               (data.email is string || !('email' in data)) &&
+               data.status in ['new', 'in_progress', 'completed', 'rejected', 'archived'];
+      }
+      // Дозволяємо будь-кому створювати заявки
+      allow create: if isValidId(applicationId) && isValidApplication(incoming()) && incoming().status == 'new';
+      // Тільки адмін/редактор може читати, оновлювати або видаляти заявки
+      allow read, update, delete: if isEditor();
+    }
+
+    match /admins/{adminId} {
+      allow read: if isSignedIn() && (request.auth.uid == adminId || isViewer());
+      allow write: if isAdmin();
+    }
+
+    match /leads/{leadId} {
+      function isValidLead(data) {
+        return data.clientName is string && data.clientName.size() <= 100 &&
+               data.phone is string && data.phone.size() <= 20 &&
+               data.status in ['new', 'in_progress', 'completed', 'rejected', 'archived'];
+      }
+      // Дозволяємо створення заявок усім
+      allow create: if isValidId(leadId) && isValidLead(incoming()) && incoming().status == 'new'; 
+      allow read, write: if isViewer();
+    }
+
+    match /articles/{articleId} {
+      function isValidArticle(data) {
+        return data.title is string && data.title.size() <= 200 &&
+               data.slug is string && data.slug.size() <= 200 &&
+               data.status in ['draft', 'review', 'published', 'scheduled', 'archived'];
+      }
+      // Публічне читання статей
+      allow read: if true;
+      // Редагування лише для авторизованих редакторів
+      allow create, update: if isEditor() && isValidArticle(incoming());
+      allow delete: if isAdmin();
+    }
+
+    match /services/{serviceId} {
+      allow read: if true;
+      allow write: if isEditor();
+    }
+
+    match /reviews/{reviewId} {
+      allow read: if (existing().isApproved == true) || isViewer();
+      allow create: if true; // Validation could be added here too
+      allow update, delete: if isEditor();
+    }
+
+    match /faq/{faqId} {
+      allow read: if true;
+      allow write: if isEditor();
+    }
+
+    match /consultations/{consultationId} {
+      allow read, write: if isEditor();
+    }
+
+    match /notification_connections/{connectionId} {
+      function isValidConnection(data) {
+        return data.type in ['email', 'telegram', 'whatsapp'] &&
+               data.value is string && data.value.size() <= 256 &&
+               data.isActive is bool;
+      }
+      allow read: if isEditor();
+      allow create: if isAdmin() && isValidConnection(incoming());
+      allow update: if isAdmin() && isValidConnection(incoming());
+      allow delete: if isAdmin();
+    }
+
+    match /settings/{settingId} {
+      // Allow public read only for specific non-sensitive settings
+      allow read: if (settingId == 'seo' || settingId == 'general') || isEditor();
+      allow write: if isAdmin();
+    }
+
+    match /test/connection {
+      allow read: if true;
+    }
+  }
+}

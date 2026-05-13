@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Light Theme - Lex Tranquilla */
+  --bg-primary: #EFE8D8; /* Основний кремовий фон */
+  --bg-secondary: #E6DECA; /* Recessed секції */
+  --text-primary: #1A1A1A; /* Основний чорно-вугільний текст */
+  --text-secondary: #4A463F; /* Вторинний текст */
+  --text-muted: #7A7368; /* Метадані, eyebrow */
+  --card-bg: #FAF4E5; /* Картки — піднятий папір */
+  --card-border: rgba(26, 26, 26, 0.10); /* Лінії */
+  --navy-deep: #4A5341; /* Темно-sage острови */
+  --navy: #5E6A4F; /* Soft sage */
+  --cream: #D9CDBA; /* Теплий кремовий */
+  --cream-dark: #E6DECA; /* Темніший крем */
+  --slate-100: rgba(26, 26, 26, 0.05);
+  --slate-500: #4A463F;
+  --accent-glow: rgba(94, 105, 77, 0.05);
+
+  /* Sage акценти */
+  --sage-primary: #5E694D;
+  --sage-bright: #7C8A66;
+  --sage-deep: #4A5341;
+
+  /* Charcoal */
+  --charcoal: #2C2C2C;
+  --charcoal-light: #1A1A1A;
+}
+
+.dark {
+  /* Dark Theme - Lex Tranquilla */
+  --bg-primary: #161616; /* Основний фон */
+  --bg-secondary: #1A1A1A; /* Recessed секції */
+  --text-primary: #D9CDBA; /* Основний кремовий текст */
+  --text-secondary: #A8A095; /* Вторинний текст */
+  --text-muted: #6E685E; /* Метадані */
+  --card-bg: #222222; /* Картки */
+  --card-border: rgba(217, 205, 186, 0.08); /* Лінії */
+  --navy-deep: #2A3122; /* Темно-sage острови */
+  --navy: #353D2C; /* Soft sage */
+  --cream: #D9CDBA; /* Теплий кремовий */
+  --cream-dark: #A8A095; /* Темніший крем */
+  --slate-100: rgba(217, 205, 186, 0.05);
+  --slate-500: #A8A095;
+  --accent-glow: rgba(217, 205, 186, 0.05);
+
+  /* Sage акценти */
+  --sage-primary: #5E694D;
+  --sage-bright: #7C8A66;
+  --sage-deep: #4A5341;
+
+  /* Charcoal */
+  --charcoal: #2C2C2C;
+  --charcoal-light: #1A1A1A;
+}
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+
+  --color-sage: #5E694D;
+  --color-sage-bright: #7C8A66;
+  --color-sage-deep: #4A5341;
+  --color-cream: #D9CDBA;
+  --color-charcoal: #2C2C2C;
+
+  --color-navy-deep: var(--navy-deep);
+  --color-navy: var(--navy);
+  --color-cream-dark: var(--cream-dark);
+  --color-slate-100: var(--slate-100);
+  --color-slate-500: var(--slate-500);
+}
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    @apply font-sans bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased transition-colors duration-500;
+    accent-color: #5E694D;
+  }
+  h1, h2, h3 {
+    @apply tracking-tight;
+  }
+  .tracking-extrawide {
+    @apply tracking-[0.4em];
+  }
+  ::selection {
+    @apply bg-sage/30 text-[var(--text-primary)];
+  }
+}
+
+/* Custom scrollbar for a premium feel */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-sage/40 rounded-full hover:bg-sage/60 transition-colors;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-sage/20 rounded-full hover:bg-sage/40;
+}
+
+/* Professional Blog Styling */
+.markdown-body {
+  @apply font-sans mx-auto;
+  max-width: 680px;
+}
+
+.markdown-body h1, .markdown-body h2 {
+  @apply font-serif text-[var(--text-primary)] leading-tight tracking-tight mt-12 mb-6;
+}
+
+.markdown-body h1 { @apply text-4xl md:text-[36px] lg:text-[42px] border-b border-sage/10 pb-4; }
+.markdown-body h2 { @apply text-2xl md:text-[26px] lg:text-[28px] mt-[48px]; }
+.markdown-body h3 { @apply font-sans font-bold text-[20px] md:text-[22px] text-[var(--text-primary)] mt-[32px] mb-4; }
+
+.markdown-body p {
+  @apply mb-6 text-[var(--text-secondary)] leading-[1.8] text-[17px] md:text-[18px] font-light;
+}
+
+.markdown-body blockquote {
+  @apply border-l-4 border-sage pl-8 py-2 my-10 italic text-2xl font-serif text-[var(--text-primary)] bg-sage/5 rounded-r-xl;
+}
+
+.markdown-body ul, .markdown-body ol {
+  @apply mb-8 pl-6 space-y-3 text-[var(--text-secondary)] text-[17px];
+}
+
+.markdown-body ul { @apply list-none; }
+.markdown-body ul li { @apply relative pl-6; }
+.markdown-body ul li::before {
+  content: "•";
+  @apply absolute left-0 text-sage font-bold;
+}
+
+.markdown-body ol { @apply list-decimal; }
+
+.markdown-body img {
+  @apply rounded-2xl shadow-2xl my-12 w-full object-cover max-w-[none] lg:-mx-12 lg:w-[calc(100%+6rem)];
+}
+
+.markdown-body a {
+  @apply text-sage font-medium text-[17px] transition-colors hover:underline;
+}
+
+.markdown-body hr {
+  @apply my-16 border-sage/10;
+}
+
+.markdown-body strong {
+  @apply text-sage font-bold;
+}
+
+.markdown-body table {
+  @apply w-full border-collapse my-12 border border-sage/10 rounded-xl overflow-hidden shadow-sm;
+}
+.markdown-body th { @apply bg-[var(--bg-secondary)] text-[var(--text-primary)] p-4 font-serif text-left border-b border-sage/10; }
+.markdown-body td { @apply p-4 border border-sage/10 text-[var(--text-secondary)] bg-[var(--bg-primary)]; }
