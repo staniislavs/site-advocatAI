@@ -20,7 +20,7 @@ export default function ConsultationCTA() {
   };
 
   return (
-    <section className="bg-[var(--bg-primary)] py-12 md:py-20 overflow-hidden">
+    <section className="bg-[var(--bg-primary)] pt-12 md:pt-20 pb-8 md:pb-12 overflow-hidden">
       <div className="max-w-5xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -102,7 +102,7 @@ export default function Contacts() {
   ];
 
   return (
-    <section id="kontakty" className="py-24 md:py-40 bg-[var(--bg-primary)] relative overflow-hidden transition-all duration-700">
+    <section id="kontakty" className="pt-0 pb-20 md:pb-32 bg-[var(--bg-primary)] relative overflow-hidden transition-all duration-700">
         {/* Decorative elements */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(94,105,77,0.02),transparent)] pointer-events-none" />
 

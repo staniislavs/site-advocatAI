@@ -67,7 +67,7 @@ export default function Hero() {
   const imgY = useTransform(scrollYProgress, [0, 1], [0, -120]);
 
   return (
-    <section id="hero" ref={targetRef} className="relative min-h-[110vh] flex items-center overflow-hidden pt-20">
+    <section id="hero" ref={targetRef} className="relative min-h-[100vh] md:min-h-[82vh] flex items-center overflow-hidden pt-20">
       {/* Video Background Layer */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <motion.div 

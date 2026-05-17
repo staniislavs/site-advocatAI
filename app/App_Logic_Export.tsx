@@ -24,18 +24,29 @@ import TermsOfService from './components/TermsOfService';
 
 export const HomePage = () => (
   <main>
+    {/* 1. AWARENESS */}
     <Hero />
-    <Cases />
+    {/* 2. INTEREST — біль / ідентифікація */}
     <Situation />
+    {/* 3. INTEREST — рішення */}
     <Services />
+    {/* 4. TRUST — докази результатів */}
+    <Cases />
+    {/* 5. TRUST — хто за цими результатами */}
     <About />
+    {/* 6. DESIRE — як це працює */}
     <Process />
+    {/* 7. DESIRE — демонстрація цінності */}
     <Calculator />
+    {/* 8. DESIRE — ціна після демонстрації цінності */}
     <Pricing />
+    {/* 9. TRUST — фінальний соціальний доказ перед CTA */}
+    <Reviews />
+    {/* 10. OBJECTIONS — зняття заперечень перед CTA */}
+    <FAQ />
+    {/* 11. ACTION — об'єднана зона дії */}
     <ConsultationCTA />
     <Contacts />
-    <Reviews />
-    <FAQ />
   </main>
 );
 
