@@ -17,20 +17,44 @@ const SITE_ADDRESS = "м. Київ, вул. Басейна 23, офіс 25";
 export const buildLegalServiceSchema = (siteUrl: string) => ({
   '@context': 'https://schema.org',
   '@type': 'LegalService',
+  '@id': siteUrl,
   name: SITE_NAME,
-  description: 'Професійні послуги адвоката у Києві — сімейне та цивільне право',
+  description: 'Професійні послуги адвоката у Києві — спеціаліст з сімейного та цивільного права',
   url: siteUrl,
   telephone: SITE_PHONE,
   email: SITE_EMAIL,
+  image: `${siteUrl}/og-image.jpg`,
+  logo: { '@type': 'ImageObject', url: `${siteUrl}/logo.png` },
   priceRange: '$$',
-  areaServed: { '@type': 'Country', name: 'Ukraine' },
+  areaServed: [
+    { '@type': 'Country', name: 'Ukraine' },
+    { '@type': 'City', name: 'Київ' },
+  ],
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'вул. Басейна 23, офіс 25',
     addressLocality: 'Київ',
+    postalCode: '02000',
     addressCountry: 'UA',
   },
-  serviceType: ['Розлучення', 'Аліменти', 'Поділ майна', 'Спадкування'],
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '50.4501',
+    longitude: '30.5234',
+  },
+  serviceType: ['Розлучення', 'Аліменти', 'Поділ майна', 'Спадкування', 'Цивільні справи'],
+  sameAs: [
+    'https://t.me/Bohdashkina',
+    'https://wa.me/380959098980',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'Legal Consultation',
+    telephone: SITE_PHONE,
+    email: SITE_EMAIL,
+    areaServed: 'UA',
+    availableLanguage: ['uk', 'en', 'de', 'ru'],
+  },
 });
 
 export const buildArticleSchema = (article: {

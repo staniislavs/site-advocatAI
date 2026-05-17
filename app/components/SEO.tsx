@@ -14,9 +14,9 @@ interface SEOProps {
   article?: boolean;
 }
 
-export const SEO: React.FC<SEOProps> = ({ 
-  title: customTitle, 
-  description: customDescription, 
+export const SEO: React.FC<SEOProps> = ({
+  title: customTitle,
+  description: customDescription,
   keywords: customKeywords,
   image: customImage,
   article = false
@@ -54,15 +54,16 @@ export const SEO: React.FC<SEOProps> = ({
   }, []);
 
   const defaultTitle = seoData?.global?.title || "Адвокат Дар'я Богдашкіна | Сімейне право Київ";
-  const defaultDescription = seoData?.global?.description || "Професійні послуги адвоката. Розлучення, аліменти, поділ майна.";
-  const defaultKeywords = seoData?.global?.keywords || "адвокат, київ, сімейне право, розлучення";
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const defaultDescription = seoData?.global?.description || "Професійні послуги адвоката у Києві. Розлучення, аліменти, поділ майна, спадкування.";
+  const defaultKeywords = seoData?.global?.keywords || "адвокат київ, сімейне право, розлучення, аліменти, поділ майна";
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : (import.meta.env.VITE_SITE_URL || 'https://sadvokatom.com.ua');
+  const currentLang = lang || i18n.language?.split('-')[0] || 'uk';
 
   const title = customTitle || defaultTitle;
   const description = customDescription || defaultDescription;
   const keywords = customKeywords || defaultKeywords;
-  const image = customImage || `${siteUrl}/og-image.jpg`; 
-  const url = `${siteUrl}${pathname}`;
+  const image = customImage || `${siteUrl}/og-image.jpg`;
+  const url = pathname ? `${siteUrl}${pathname}` : siteUrl;
 
   return (
     <>
@@ -72,7 +73,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={url} />
-      <html lang={lang || (i18n.language?.split('-')[0] || 'uk')} />
+      <html lang={currentLang} />
 
       {/* Open Graph */}
       <meta property="og:type" content={article ? 'article' : 'website'} />
@@ -80,18 +81,23 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Адвокат Дар'я Богдашкіна" />
+      <meta property="og:locale" content={`${currentLang}_${currentLang === 'uk' ? 'UA' : currentLang === 'ru' ? 'RU' : 'GB'}`} />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+      <meta name="twitter:site" content="@bohdashkina" />
 
       {/* Alternate languages */}
       <link rel="alternate" href={`${siteUrl}/uk${pathname.replace(/^\/[a-z]{2}/, '')}`} hrefLang="uk" />
       <link rel="alternate" href={`${siteUrl}/en${pathname.replace(/^\/[a-z]{2}/, '')}`} hrefLang="en" />
       <link rel="alternate" href={`${siteUrl}/de${pathname.replace(/^\/[a-z]{2}/, '')}`} hrefLang="de" />
+      <link rel="alternate" href={`${siteUrl}/ru${pathname.replace(/^\/[a-z]{2}/, '')}`} hrefLang="ru" />
       <link rel="alternate" href={`${siteUrl}/uk${pathname.replace(/^\/[a-z]{2}/, '')}`} hrefLang="x-default" />
 
       {/* Analytics IDs from Firestore */}

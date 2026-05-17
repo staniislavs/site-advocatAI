@@ -56,10 +56,14 @@ export function links() {
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="uk">
+    <html lang="uk" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Дар'я Богдашкіна" />
+        <meta name="theme-color" content="#2d3f34" />
+        <link rel="manifest" href="/manifest.json" />
         <Meta />
         <Links />
       </head>

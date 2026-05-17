@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Ukrainian -->
+  <url>
+    <loc>https://sadvokatom.com.ua/uk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sadvokatom.com.ua/en" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://sadvokatom.com.ua/de" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sadvokatom.com.ua/ru" />
+    <lastmod>2026-05-17</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Services -->
+  <url>
+    <loc>https://sadvokatom.com.ua/uk/послуги</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sadvokatom.com.ua/en/services" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://sadvokatom.com.ua/de/services" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sadvokatom.com.ua/ru/услуги" />
+    <lastmod>2026-05-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://sadvokatom.com.ua/uk/блог</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sadvokatom.com.ua/en/blog" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://sadvokatom.com.ua/de/blog" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sadvokatom.com.ua/ru/блог" />
+    <lastmod>2026-05-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://sadvokatom.com.ua/uk/про-мене</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sadvokatom.com.ua/en/about" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://sadvokatom.com.ua/de/about" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sadvokatom.com.ua/ru/про-мене" />
+    <lastmod>2026-05-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contacts -->
+  <url>
+    <loc>https://sadvokatom.com.ua/uk/контакти</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sadvokatom.com.ua/en/contacts" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://sadvokatom.com.ua/de/contacts" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sadvokatom.com.ua/ru/контакты" />
+    <lastmod>2026-05-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://sadvokatom.com.ua/uk/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sadvokatom.com.ua/en/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://sadvokatom.com.ua/de/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sadvokatom.com.ua/ru/faq" />
+    <lastmod>2026-05-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://sadvokatom.com.ua/uk/політика-конфіденційності</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sadvokatom.com.ua/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://sadvokatom.com.ua/de/privacy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sadvokatom.com.ua/ru/политика-конфиденциальности" />
+    <lastmod>2026-05-17</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://sadvokatom.com.ua/uk/умови-використання</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sadvokatom.com.ua/en/terms" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://sadvokatom.com.ua/de/terms" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sadvokatom.com.ua/ru/условия-использования" />
+    <lastmod>2026-05-17</lastmod>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- English -->
+  <url>
+    <loc>https://sadvokatom.com.ua/en</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sadvokatom.com.ua/uk" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://sadvokatom.com.ua/de" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sadvokatom.com.ua/ru" />
+    <lastmod>2026-05-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- German -->
+  <url>
+    <loc>https://sadvokatom.com.ua/de</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sadvokatom.com.ua/uk" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sadvokatom.com.ua/en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sadvokatom.com.ua/ru" />
+    <lastmod>2026-05-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Russian -->
+  <url>
+    <loc>https://sadvokatom.com.ua/ru</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sadvokatom.com.ua/uk" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sadvokatom.com.ua/en" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://sadvokatom.com.ua/de" />
+    <lastmod>2026-05-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+</urlset>

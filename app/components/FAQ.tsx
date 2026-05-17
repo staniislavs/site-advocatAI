@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Plus } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
+import { buildFaqSchema } from './JsonLd';
 
 interface FAQItem {
   q: string;
@@ -14,7 +16,16 @@ export default function FAQ() {
   const localizedFaqsRaw = t('faq.items', { returnObjects: true });
   const localizedFaqs = Array.isArray(localizedFaqsRaw) ? localizedFaqsRaw : [];
 
+  const faqSchema = useMemo(
+    () => buildFaqSchema(localizedFaqs),
+    [localizedFaqs]
+  );
+
   return (
+    <>
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+    </Helmet>
     <section id="faq" className="py-24 md:py-32 bg-[var(--bg-primary)] border-t border-[var(--card-border)]">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-16">
@@ -71,5 +82,6 @@ export default function FAQ() {
         </div>
       </div>
     </section>
+    </>
   );
 }

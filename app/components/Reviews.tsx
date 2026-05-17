@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { collection, query, where, onSnapshot, orderBy, limit, addDoc, serverTimestamp } from 'firebase/firestore';
+import { Helmet } from 'react-helmet-async';
 import { db, handleFirestoreError, OperationType } from '../lib/firebase';
 import { Star, Quote, ChevronLeft, ChevronRight, MessageSquare, X, Loader2, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { cn, getApiUrl } from '../lib/utils';
+import { buildReviewSchema } from './JsonLd';
 
 interface Review {
   id: string;
@@ -40,6 +42,17 @@ export const Reviews: React.FC = () => {
   for (let i = 0; i < reviews.length; i += chunkSize) {
     slides.push(reviews.slice(i, i + chunkSize));
   }
+
+  // Generate review schema for SEO
+  const reviewSchema = useMemo(() => {
+    const mappedReviews = reviews.map(r => ({
+      author: r.name,
+      rating: r.rating || 5,
+      text: r.text,
+      date: r.date || new Date().toISOString()
+    }));
+    return buildReviewSchema(mappedReviews);
+  }, [reviews]);
 
   useEffect(() => {
     if (slides.length === 0) return;
@@ -147,6 +160,10 @@ export const Reviews: React.FC = () => {
   if (reviews.length === 0) return null;
 
   return (
+    <>
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(reviewSchema)}</script>
+    </Helmet>
     <section id="vidhuky" className="py-24 relative overflow-hidden bg-[var(--bg-primary)]">
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
@@ -415,5 +432,6 @@ export const Reviews: React.FC = () => {
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-sage/5 blur-[120px] rounded-full -z-10" />
       <div className="absolute top-0 right-0 w-64 h-64 bg-sage/5 blur-[80px] rounded-full -z-10" />
     </section>
+    </>
   );
 };
