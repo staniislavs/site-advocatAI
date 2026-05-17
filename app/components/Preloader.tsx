@@ -39,7 +39,7 @@ export default function Preloader() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1.2, opacity: 1 }}
               transition={{ duration: 2, ease: "easeOut" }}
-              className="absolute w-80 h-80 bg-gold/5 dark:bg-gold/10 blur-[100px] rounded-full"
+              className="absolute w-80 h-80 bg-sage/5 dark:bg-sage/10 blur-[100px] rounded-full"
             />
 
             <div className="relative overflow-hidden flex items-center justify-center p-12">
@@ -65,7 +65,7 @@ export default function Preloader() {
                     delay: 0.4,
                     ease: [0.16, 1, 0.3, 1] 
                   }}
-                  className="text-gold italic -ml-1 md:-ml-2"
+                  className="text-sage italic -ml-1 md:-ml-2"
                 >
                   {t('preloader.initials_2')}
                 </motion.span>
@@ -76,7 +76,7 @@ export default function Preloader() {
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 1.5, delay: 0.6, ease: "easeInOut" }}
-                className="absolute bottom-6 left-0 h-[1.5px] bg-gold/20 dark:bg-gold/30"
+                className="absolute bottom-6 left-0 h-[1.5px] bg-sage/20 dark:bg-sage/30"
               />
             </div>
 
@@ -84,7 +84,7 @@ export default function Preloader() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 1, ease: "easeOut" }}
-              className="mt-2 text-gold/60 text-[10px] uppercase tracking-[0.5em] font-medium"
+              className="mt-2 text-sage/60 text-[10px] uppercase tracking-[0.5em] font-medium"
             >
               {t('preloader.slogan')}
             </motion.div>

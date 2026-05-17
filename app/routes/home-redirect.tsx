@@ -1,12 +1,16 @@
-import { redirect } from "react-router";
-import type { Route } from "./+types/home-redirect";
+import { useEffect } from "react";
+import { useNavigate } from "react-router";
 
-export function loader({ request }: Route.LoaderArgs) {
-  // Get preferred language from headers or default to uk
-  const acceptLanguage = request.headers.get("accept-language");
-  const preferredLang = acceptLanguage?.includes("en") ? "en" :
-                        acceptLanguage?.includes("de") ? "de" :
-                        acceptLanguage?.includes("ru") ? "ru" : "uk";
+export default function HomeRedirect() {
+  const navigate = useNavigate();
 
-  return redirect(`/${preferredLang}`);
+  useEffect(() => {
+    const browserLang = (navigator.language || "uk").toLowerCase();
+    const preferredLang = browserLang.startsWith("en") ? "en" :
+                          browserLang.startsWith("de") ? "de" :
+                          browserLang.startsWith("ru") ? "ru" : "uk";
+    navigate(`/${preferredLang}`, { replace: true });
+  }, [navigate]);
+
+  return null;
 }

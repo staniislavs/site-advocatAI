@@ -21,10 +21,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-1">
-            <div className="font-serif text-xl border-l-2 border-gold/30 pl-3 text-[var(--text-primary)]">
+            <div className="font-serif text-xl border-l-2 border-sage/30 pl-3 text-[var(--text-primary)]">
               {t('navbar.name')}
             </div>
-            <div className="text-[9px] uppercase tracking-[0.2em] text-gold font-light pl-3 mt-1 opacity-70">
+            <div className="text-[9px] uppercase tracking-[0.2em] text-sage font-light pl-3 mt-1 opacity-70">
               {t('navbar.role')}
             </div>
             <p className="mt-8 text-[var(--text-muted)] text-xs leading-relaxed max-w-[200px]">
@@ -33,11 +33,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="text-[10px] font-bold uppercase tracking-widest text-gold mb-6">{t('footer.nav_tag')}</div>
+            <div className="text-[10px] font-bold uppercase tracking-widest text-sage mb-6">{t('footer.nav_tag')}</div>
             <ul className="space-y-4">
               {navItems.map(item => (
                 <li key={item.name}>
-                  <Link to={item.href} className="text-[var(--text-secondary)] hover:text-gold text-xs transition-colors">
+                  <Link to={item.href} className="text-[var(--text-secondary)] hover:text-sage text-xs transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -46,7 +46,7 @@ export default function Footer() {
           </div>
 
           <div>
-             <div className="text-[10px] font-bold uppercase tracking-widest text-gold mb-6">{t('footer.loc_tag')}</div>
+             <div className="text-[10px] font-bold uppercase tracking-widest text-sage mb-6">{t('footer.loc_tag')}</div>
              <ul className="space-y-4">
                <li className="text-[var(--text-secondary)] text-xs leading-relaxed">
                  <strong className="text-[var(--text-primary)] block mb-1">{t('footer.kyiv')}</strong>
@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="text-[10px] font-bold uppercase tracking-widest text-gold mb-6">{t('footer.legal_tag')}</div>
+            <div className="text-[10px] font-bold uppercase tracking-widest text-sage mb-6">{t('footer.legal_tag')}</div>
             <div className="text-[var(--text-muted)] text-[10px] leading-relaxed">
               {t('footer.legal_text')}
             </div>
@@ -66,13 +66,13 @@ export default function Footer() {
         <div className="pt-8 border-t border-[var(--card-border)] flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-[var(--text-muted)] uppercase tracking-widest">
           <div className="flex items-center gap-4">
             <span>© {new Date().getFullYear()} {t('footer.rights')}</span>
-            <Link to="/admin" className="hover:text-gold transition-colors opacity-30 hover:opacity-100 border-l border-[var(--card-border)] pl-4">
+            <Link to="/admin" className="hover:text-sage transition-colors opacity-30 hover:opacity-100 border-l border-[var(--card-border)] pl-4">
               Вхід
             </Link>
           </div>
           <div className="flex gap-6">
-             <Link to={`/${currentLang}/${paths.privacy}`} className="hover:text-gold transition-colors">{t('footer.privacy')}</Link>
-             <Link to={`/${currentLang}/${paths.terms}`} className="hover:text-gold transition-colors">{t('footer.terms')}</Link>
+             <Link to={`/${currentLang}/${paths.privacy}`} className="hover:text-sage transition-colors">{t('footer.privacy')}</Link>
+             <Link to={`/${currentLang}/${paths.terms}`} className="hover:text-sage transition-colors">{t('footer.terms')}</Link>
           </div>
         </div>
       </div>

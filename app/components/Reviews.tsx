@@ -156,8 +156,8 @@ export const Reviews: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               className="flex items-center gap-3 mb-6"
             >
-              <div className="w-12 h-px bg-gold" />
-              <span className="text-gold uppercase tracking-[0.3em] text-[10px] font-bold">
+              <div className="w-12 h-px bg-sage" />
+              <span className="text-sage uppercase tracking-[0.3em] text-[10px] font-bold">
                 {t('reviews.tag')}
               </span>
             </motion.div>
@@ -167,20 +167,20 @@ export const Reviews: React.FC = () => {
               transition={{ delay: 0.1 }}
               className="text-4xl md:text-6xl font-serif text-[var(--text-primary)] leading-tight"
             >
-              {t('reviews.title')}<span className="italic text-gold">{t('reviews.title_italic')}</span>
+              {t('reviews.title')}<span className="italic text-sage">{t('reviews.title_italic')}</span>
             </motion.h2>
           </div>
 
           <div className="flex items-center gap-4">
             <button 
               onClick={prev}
-              className="w-14 h-14 rounded-full border border-gold/20 flex items-center justify-center text-gold hover:bg-gold hover:text-navy-deep transition-all group"
+              className="w-14 h-14 rounded-full border border-sage/20 flex items-center justify-center text-sage hover:bg-sage hover:text-white transition-all group"
             >
               <ChevronLeft size={24} className="group-active:scale-90 transition-transform" />
             </button>
             <button 
               onClick={next}
-              className="w-14 h-14 rounded-full border border-gold/20 flex items-center justify-center text-gold hover:bg-gold hover:text-navy-deep transition-all group"
+              className="w-14 h-14 rounded-full border border-sage/20 flex items-center justify-center text-sage hover:bg-sage hover:text-white transition-all group"
             >
               <ChevronRight size={24} className="group-active:scale-90 transition-transform" />
             </button>
@@ -223,19 +223,19 @@ export const Reviews: React.FC = () => {
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
                 {(slides[currentSlide] || []).map((review, idx) => (
-                  <div key={review.id || idx} className="relative bg-[var(--bg-secondary)]/30 backdrop-blur-sm p-8 md:p-12 border border-gold/5 rounded-2xl flex flex-col items-center lg:items-start text-center lg:text-left group hover:border-gold/20 transition-all duration-500">
-                    <Quote className="absolute -top-6 left-12 text-gold/5 w-20 h-20 -z-10 group-hover:text-gold/10 transition-colors" />
+                  <div key={review.id || idx} className="relative bg-[var(--bg-secondary)]/30 backdrop-blur-sm p-8 md:p-12 border border-sage/5 rounded-2xl flex flex-col items-center lg:items-start text-center lg:text-left group hover:border-sage/20 transition-all duration-500">
+                    <Quote className="absolute -top-6 left-12 text-sage/5 w-20 h-20 -z-10 group-hover:text-sage/10 transition-colors" />
                     <div className="space-y-6 flex flex-col items-center lg:items-start w-full">
                       <div className="flex gap-1 justify-center lg:justify-start">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} size={14} className="fill-gold text-gold" />
+                          <Star key={i} size={14} className="fill-sage text-sage" />
                         ))}
                       </div>
                       <p className="text-base md:text-lg lg:text-xl font-serif text-[var(--text-primary)] italic leading-relaxed min-h-[6rem]">
                         "{review.text}"
                       </p>
-                      <div className="pt-6 border-t border-gold/10 flex items-center justify-center lg:justify-start gap-4 w-full">
-                        <div className="w-10 h-10 bg-gold/5 rounded-full flex items-center justify-center text-gold border border-gold/10 group-hover:bg-gold group-hover:text-white transition-all">
+                      <div className="pt-6 border-t border-sage/10 flex items-center justify-center lg:justify-start gap-4 w-full">
+                        <div className="w-10 h-10 bg-sage/5 rounded-full flex items-center justify-center text-sage border border-sage/10 group-hover:bg-sage group-hover:text-white transition-all">
                           <MessageSquare size={20} />
                         </div>
                         <div className="text-left">
@@ -260,7 +260,7 @@ export const Reviews: React.FC = () => {
                 setDirection(i > currentSlide ? 1 : -1);
                 setCurrentSlide(i);
               }}
-              className={`h-1.5 transition-all duration-700 rounded-full ${currentSlide === i ? 'w-12 bg-gold' : 'w-3 bg-gold/20'}`}
+              className={`h-1.5 transition-all duration-700 rounded-full ${currentSlide === i ? 'w-12 bg-sage' : 'w-3 bg-sage/20'}`}
             />
           ))}
         </div>
@@ -274,7 +274,7 @@ export const Reviews: React.FC = () => {
         >
           <button 
             onClick={() => setIsModalOpen(true)}
-            className="group relative px-10 py-4 bg-gold hover:bg-gold-light text-[var(--navy-deep)] rounded-full transition-all duration-500 shadow-xl shadow-gold/10 active:scale-95 flex items-center gap-3"
+            className="group relative px-10 py-4 bg-sage hover:bg-sage-bright/95 text-white rounded-full transition-all duration-500 shadow-xl shadow-sage/10 active:scale-95 flex items-center gap-3"
           >
             <MessageSquare size={18} className="group-hover:rotate-12 transition-transform" />
             <span className="font-bold uppercase tracking-[0.2em] text-[11px]">
@@ -303,11 +303,11 @@ export const Reviews: React.FC = () => {
               className="relative w-full max-w-xl bg-white p-8 md:p-16 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] rounded-[2.5rem] overflow-hidden border border-[#141414]/5"
             >
               {/* Decorative Corner */}
-              <div className="absolute top-0 right-0 w-48 h-48 bg-gold/5 blur-3xl -z-10" />
+              <div className="absolute top-0 right-0 w-48 h-48 bg-sage/5 blur-3xl -z-10" />
               
               <button 
                 onClick={() => setIsModalOpen(false)}
-                className="absolute top-8 right-8 text-[#141414]/20 hover:text-gold transition-all p-2 hover:bg-[#141414]/5 rounded-full"
+                className="absolute top-8 right-8 text-[#141414]/20 hover:text-sage transition-all p-2 hover:bg-[#141414]/5 rounded-full"
                 disabled={isSubmitting}
               >
                 <X size={20} />
@@ -318,14 +318,14 @@ export const Reviews: React.FC = () => {
                   <motion.div 
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    className="w-20 h-20 bg-gold/10 rounded-full flex items-center justify-center mx-auto text-gold mb-8"
+                    className="w-20 h-20 bg-sage/10 rounded-full flex items-center justify-center mx-auto text-sage mb-8"
                   >
                     <CheckCircle2 size={32} />
                   </motion.div>
                   <h3 className="text-3xl md:text-4xl font-serif text-[#141414] italic">
                     {t('reviews.modal.thanks_title', { defaultValue: 'Дякуємо за довіру' })}
                   </h3>
-                  <div className="w-12 h-px bg-gold/30 mx-auto" />
+                  <div className="w-12 h-px bg-sage/30 mx-auto" />
                   <p className="text-[#141414]/60 text-base font-light leading-relaxed max-w-sm mx-auto">
                     {t('reviews.modal.thanks_text', { defaultValue: 'Ваш відгук буде опубліковано після короткої модерації.' })}
                   </p>
@@ -336,7 +336,7 @@ export const Reviews: React.FC = () => {
                     <h3 className="text-4xl md:text-5xl font-serif text-[#141414] mb-4 italic leading-tight">
                       Поділіться досвідом
                     </h3>
-                    <div className="w-12 h-px bg-gold/30 mx-auto md:mx-0 mb-4" />
+                    <div className="w-12 h-px bg-sage/30 mx-auto md:mx-0 mb-4" />
                     <p className="text-[#141414]/40 text-[9px] uppercase tracking-[0.3em] font-bold">
                       Ваша думка важлива для нас
                     </p>
@@ -344,19 +344,19 @@ export const Reviews: React.FC = () => {
 
                   <form onSubmit={handleSubmit} className="space-y-8">
                     <div className="space-y-3">
-                      <label className="text-[9px] uppercase tracking-[0.3em] text-gold font-bold ml-1">Ім'я та Прізвище</label>
+                      <label className="text-[9px] uppercase tracking-[0.3em] text-sage font-bold ml-1">Ім'я та Прізвище</label>
                       <input 
                         required
                         type="text"
                         value={newReview.name}
                         onChange={(e) => setNewReview({ ...newReview, name: e.target.value })}
-                        className="w-full bg-[#fdfdfd] border border-[#141414]/5 rounded-2xl px-6 py-4 outline-none focus:border-gold/30 transition-all text-[#141414] font-serif italic text-lg"
+                        className="w-full bg-[#fdfdfd] border border-[#141414]/5 rounded-2xl px-6 py-4 outline-none focus:border-sage/30 transition-all text-[#141414] font-serif italic text-lg"
                         placeholder="Олена Савченко"
                       />
                     </div>
 
                     <div className="space-y-3">
-                      <label className="text-[9px] uppercase tracking-[0.3em] text-gold font-bold ml-1">Оцінка роботи</label>
+                      <label className="text-[9px] uppercase tracking-[0.3em] text-sage font-bold ml-1">Оцінка роботи</label>
                       <div className="flex gap-3 justify-center md:justify-start">
                         {[1, 2, 3, 4, 5].map((star) => (
                           <button
@@ -369,7 +369,7 @@ export const Reviews: React.FC = () => {
                               size={28} 
                               className={cn(
                                 "transition-all duration-300",
-                                newReview.rating >= star ? "fill-gold text-gold" : "text-gold/10 scale-90"
+                                newReview.rating >= star ? "fill-sage text-sage" : "text-sage/10 scale-90"
                               )} 
                             />
                           </button>
@@ -378,13 +378,13 @@ export const Reviews: React.FC = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <label className="text-[9px] uppercase tracking-[0.3em] text-gold font-bold ml-1">Ваш відгук</label>
+                      <label className="text-[9px] uppercase tracking-[0.3em] text-sage font-bold ml-1">Ваш відгук</label>
                       <textarea 
                         required
                         rows={5}
                         value={newReview.text}
                         onChange={(e) => setNewReview({ ...newReview, text: e.target.value })}
-                        className="w-full bg-[#fdfdfd] border border-[#141414]/5 rounded-2xl px-6 py-4 outline-none focus:border-gold/30 transition-all text-[#141414] font-serif italic resize-none text-lg leading-relaxed"
+                        className="w-full bg-[#fdfdfd] border border-[#141414]/5 rounded-2xl px-6 py-4 outline-none focus:border-sage/30 transition-all text-[#141414] font-serif italic resize-none text-lg leading-relaxed"
                         placeholder="Напишіть ваші враження від співпраці..."
                       />
                     </div>
@@ -392,7 +392,7 @@ export const Reviews: React.FC = () => {
                     <button 
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full h-16 bg-[#c5a059] text-white font-bold uppercase tracking-[0.3em] text-[10px] rounded-full hover:bg-[#b08d4a] transition-all flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed mt-8 shadow-xl shadow-gold/20"
+                      className="w-full h-16 bg-sage text-white font-bold uppercase tracking-[0.3em] text-[10px] rounded-full hover:bg-sage-bright/95 transition-all flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed mt-8 shadow-xl shadow-sage/20"
                     >
                       {isSubmitting ? (
                         <Loader2 className="animate-spin" size={20} />
@@ -412,8 +412,8 @@ export const Reviews: React.FC = () => {
       </AnimatePresence>
 
       {/* Background Decorative */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-gold/5 blur-[120px] rounded-full -z-10" />
-      <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 blur-[80px] rounded-full -z-10" />
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-sage/5 blur-[120px] rounded-full -z-10" />
+      <div className="absolute top-0 right-0 w-64 h-64 bg-sage/5 blur-[80px] rounded-full -z-10" />
     </section>
   );
 };

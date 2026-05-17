@@ -104,7 +104,7 @@ export default function Contacts() {
   return (
     <section id="kontakty" className="py-24 md:py-40 bg-[var(--bg-primary)] relative overflow-hidden transition-all duration-700">
         {/* Decorative elements */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(184,149,90,0.02),transparent)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(94,105,77,0.02),transparent)] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-5 gap-16 md:items-center">
             <motion.div 
@@ -114,12 +114,12 @@ export default function Contacts() {
               transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
               className="md:col-span-2"
             >
-                <div className="inline-flex items-center gap-2 text-gold text-[10px] font-bold uppercase tracking-widest mb-4">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+                <div className="inline-flex items-center gap-2 text-sage text-[10px] font-bold uppercase tracking-widest mb-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-sage" />
                     {t('contacts.tag')}
                 </div>
                 <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[var(--text-primary)] leading-tight mb-6">
-                    {t('contacts.title')}<span className="text-gold italic">{t('contacts.title_italic')}</span>
+                    {t('contacts.title')}<span className="text-sage italic">{t('contacts.title_italic')}</span>
                 </h2>
                 <p className="text-[var(--text-secondary)] text-sm sm:text-base font-light mb-12 leading-relaxed">
                     {t('contacts.description')}
@@ -132,13 +132,13 @@ export default function Contacts() {
                       href={ch.href}
                       target={ch.href.startsWith('http') ? '_blank' : undefined}
                       rel="noreferrer"
-                      className="group flex flex-col items-start gap-3 p-5 rounded-2xl border border-[var(--card-border)] bg-[var(--card-bg)] hover:border-gold/30 transition-all shadow-sm"
+                      className="group flex flex-col items-start gap-3 p-5 rounded-2xl border border-[var(--card-border)] bg-[var(--card-bg)] hover:border-sage/30 transition-all shadow-sm"
                     >
-                        <div className="w-9 h-9 rounded-xl bg-gold/10 text-gold flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <div className="w-9 h-9 rounded-xl bg-sage/10 text-sage flex items-center justify-center group-hover:scale-110 transition-transform">
                             {ch.icon}
                         </div>
                         <div>
-                            <div className="text-[9px] uppercase tracking-wider text-gold font-bold mb-1 opacity-60">{ch.name}</div>
+                            <div className="text-[9px] uppercase tracking-wider text-sage font-bold mb-1 opacity-60">{ch.name}</div>
                             <div className="text-[var(--text-primary)] text-[13px] font-medium break-all opacity-90">{ch.val}</div>
                         </div>
                     </a>
@@ -154,7 +154,7 @@ export default function Contacts() {
                className="md:col-span-3 bg-[var(--bg-secondary)] p-8 sm:p-10 md:p-14 rounded-[3rem] border border-[var(--card-border)] shadow-[0_40px_100px_rgba(0,0,0,0.03)] relative overflow-hidden"
             >
                 {/* Form decorative glow */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 blur-3xl pointer-events-none rounded-full" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-sage/5 blur-3xl pointer-events-none rounded-full" />
 
                 <form className="space-y-6 relative z-10" onSubmit={handleSubmit}>
                   {/* Honeypot Field - Hidden from users */}
@@ -179,7 +179,7 @@ export default function Contacts() {
                         placeholder={t('contacts.form.name_placeholder')}
                         onInvalid={(e) => (e.target as HTMLInputElement).setCustomValidity(t('contacts.form.required_field'))}
                         onInput={(e) => (e.target as HTMLInputElement).setCustomValidity('')}
-                        className="w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-xl px-5 py-4 text-sm text-[var(--text-primary)] focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold/50 transition-all placeholder:text-[var(--text-muted)]"
+                        className="w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-xl px-5 py-4 text-sm text-[var(--text-primary)] focus:outline-none focus:ring-1 focus:ring-sage focus:border-sage/50 transition-all placeholder:text-[var(--text-muted)]"
                       />
                     </div>
                     <div className="space-y-2">
@@ -192,7 +192,7 @@ export default function Contacts() {
                         placeholder={t('contacts.form.phone_placeholder')}
                         onInvalid={(e) => (e.target as HTMLInputElement).setCustomValidity(t('contacts.form.required_field'))}
                         onInput={(e) => (e.target as HTMLInputElement).setCustomValidity('')}
-                        className="w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-xl px-5 py-4 text-sm text-[var(--text-primary)] focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold/50 transition-all placeholder:text-[var(--text-muted)]"
+                        className="w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-xl px-5 py-4 text-sm text-[var(--text-primary)] focus:outline-none focus:ring-1 focus:ring-sage focus:border-sage/50 transition-all placeholder:text-[var(--text-muted)]"
                       />
                     </div>
                   </div>
@@ -204,12 +204,12 @@ export default function Contacts() {
                         <button
                           type="button"
                           onClick={() => setIsTypeOpen(!isTypeOpen)}
-                          className={`w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-xl px-5 py-4 text-sm text-[var(--text-primary)] text-left flex items-center justify-between focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold/50 transition-all ${isTypeOpen ? 'ring-1 ring-gold border-gold/50' : ''}`}
+                          className={`w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-xl px-5 py-4 text-sm text-[var(--text-primary)] text-left flex items-center justify-between focus:outline-none focus:ring-1 focus:ring-sage focus:border-sage/50 transition-all ${isTypeOpen ? 'ring-1 ring-sage border-sage/50' : ''}`}
                         >
                           <span className={!formData.type ? 'text-[var(--text-muted)]' : ''}>
                             {formData.type || t('contacts.form.type_placeholder')}
                           </span>
-                          <div className={`text-gold/60 group-hover/select:text-gold transition-all duration-300 ${isTypeOpen ? 'rotate-180 text-gold' : ''}`}>
+                          <div className={`text-sage/60 group-hover/select:text-sage transition-all duration-300 ${isTypeOpen ? 'rotate-180 text-sage' : ''}`}>
                             <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
@@ -248,13 +248,13 @@ export default function Contacts() {
                                     }}
                                     className={`w-full text-left px-5 py-3 text-sm transition-all flex items-center justify-between group/option ${
                                       formData.type === option.label 
-                                      ? 'bg-gold/10 text-gold' 
-                                      : 'text-[var(--text-primary)] hover:bg-gold/5 hover:text-gold'
+                                      ? 'bg-sage/10 text-sage' 
+                                      : 'text-[var(--text-primary)] hover:bg-sage/5 hover:text-sage'
                                     }`}
                                   >
                                     {option.label}
                                     {formData.type === option.label && (
-                                      <div className="w-1.5 h-1.5 rounded-full bg-gold" />
+                                      <div className="w-1.5 h-1.5 rounded-full bg-sage" />
                                     )}
                                   </button>
                                 ))}
@@ -273,7 +273,7 @@ export default function Contacts() {
                       value={formData.description}
                       onChange={e => setFormData({...formData, description: e.target.value})}
                       placeholder={t('contacts.form.desc_placeholder')}
-                      className="w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-xl px-5 py-4 text-sm text-[var(--text-primary)] focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold/50 transition-all placeholder:text-[var(--text-muted)] resize-none"
+                      className="w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-xl px-5 py-4 text-sm text-[var(--text-primary)] focus:outline-none focus:ring-1 focus:ring-sage focus:border-sage/50 transition-all placeholder:text-[var(--text-muted)] resize-none"
                     ></textarea>
                   </div>
 
@@ -288,13 +288,13 @@ export default function Contacts() {
                       value={captchaInput}
                       onChange={(e) => setCaptchaInput(e.target.value)}
                       placeholder={t('contacts.form.captcha_placeholder')}
-                      className="w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-xl px-5 py-4 text-sm text-[var(--text-primary)] focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold/50 transition-all placeholder:text-[var(--text-muted)]"
+                      className="w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-xl px-5 py-4 text-sm text-[var(--text-primary)] focus:outline-none focus:ring-1 focus:ring-sage focus:border-sage/50 transition-all placeholder:text-[var(--text-muted)]"
                     />
                   </div>
 
                   <button 
                     disabled={loading}
-                    className="w-full bg-gold hover:bg-gold-light disabled:opacity-50 disabled:cursor-wait text-navy font-bold py-5 rounded-xl transition-all shadow-xl shadow-gold/10 mt-4 active:scale-[0.98] flex items-center justify-center gap-2"
+                    className="w-full bg-sage hover:bg-sage-bright disabled:opacity-50 disabled:cursor-wait text-white font-bold py-5 rounded-xl transition-all shadow-xl shadow-sage/10 mt-4 active:scale-[0.98] flex items-center justify-center gap-2"
                   >
                     {loading && <Loader2 size={18} className="animate-spin" />}
                     {t('contacts.form.submit')}

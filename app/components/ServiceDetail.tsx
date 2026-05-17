@@ -32,7 +32,7 @@ export default function ServiceDetail() {
     return (
       <div className="pt-40 pb-20 text-center">
         <h1 className="text-3xl font-serif">Послугу не знайдено</h1>
-        <Link to={`/${currentLang}`} className="text-gold mt-4 inline-block">Повернутися на головну</Link>
+        <Link to={`/${currentLang}`} className="text-sage mt-4 inline-block">Повернутися на головну</Link>
       </div>
     );
   }
@@ -47,7 +47,7 @@ export default function ServiceDetail() {
            animate={{ opacity: 1, x: 0 }}
            transition={{ duration: 0.8 }}
         >
-          <Link to={`/${currentLang}`} className="flex items-center gap-2 text-[var(--text-secondary)] hover:text-gold transition-colors mb-12 group">
+          <Link to={`/${currentLang}`} className="flex items-center gap-2 text-[var(--text-secondary)] hover:text-sage transition-colors mb-12 group">
             <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
             <span>{t('blog.back')}</span>
           </Link>
@@ -83,10 +83,10 @@ export default function ServiceDetail() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex items-start gap-4 p-6 rounded-2xl bg-[var(--card-bg)] border border-[var(--card-border)] hover:border-gold/30 transition-all shadow-sm"
+                  className="flex items-start gap-4 p-6 rounded-2xl bg-[var(--card-bg)] border border-[var(--card-border)] hover:border-sage/30 transition-all shadow-sm"
                 >
-                  <div className="w-6 h-6 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 mt-1">
-                    <CheckCircle2 size={14} className="text-gold" />
+                  <div className="w-6 h-6 rounded-full bg-sage/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle2 size={14} className="text-sage" />
                   </div>
                   <span className="text-lg leading-relaxed">{detail}</span>
                 </motion.div>
@@ -102,14 +102,14 @@ export default function ServiceDetail() {
           >
             <div className="bg-[var(--bg-secondary)] p-8 rounded-[2rem] border border-[var(--card-border)] shadow-xl relative overflow-hidden">
                <div className="relative z-10">
-                 <ShieldCheck size={40} className="text-gold mb-6" />
+                 <ShieldCheck size={40} className="text-sage mb-6" />
                  <h3 className="text-2xl font-serif mb-4">Потрібна допомога?</h3>
                  <p className="text-[var(--text-secondary)] mb-8">
                    Запишіться на безкоштовну консультацію з Дар'єю Богдашкіною для обговорення вашої ситуації.
                  </p>
                  <Link 
                    to={`/${currentLang}/${paths.contacts}`} 
-                   className="block w-full text-center py-4 rounded-xl bg-gold text-[var(--bg-secondary)] font-medium hover:bg-gold-dark transition-all"
+                   className="block w-full text-center py-4 rounded-xl bg-sage text-[var(--bg-secondary)] font-medium hover:bg-sage-dark transition-all"
                  >
                    {t('services.cta_button')}
                  </Link>

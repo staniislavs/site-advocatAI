@@ -47,12 +47,12 @@ export default function About() {
     {
       title: t('about.highlights.licensed.title'),
       sub: t('about.highlights.licensed.sub'),
-      icon: <ShieldCheck size={20} className="text-gold" />
+      icon: <ShieldCheck size={20} className="text-sage" />
     },
     {
       title: t('about.highlights.quick.title'),
       sub: t('about.highlights.quick.sub'),
-      icon: <PhoneCall size={20} className="text-gold" />
+      icon: <PhoneCall size={20} className="text-sage" />
     }
   ];
 
@@ -63,8 +63,8 @@ export default function About() {
         {/* Content */}
         <motion.div style={{ y: typeof window !== 'undefined' && window.innerWidth < 768 ? 0 : textY }} className="w-full space-y-12">
           <div className="max-w-2xl mx-auto text-center md:text-left">
-            <div className="inline-flex items-center gap-2 text-gold text-[10px] font-bold uppercase tracking-widest mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+            <div className="inline-flex items-center gap-2 text-sage text-[10px] font-bold uppercase tracking-widest mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-sage" />
               {t('about.tag')}
             </div>
             
@@ -93,9 +93,9 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.2, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-                className="flex items-center gap-4 p-5 rounded-2xl border border-[var(--card-border)] bg-[var(--card-bg)] hover:border-gold/30 transition-all text-left"
+                className="flex items-center gap-4 p-5 rounded-2xl border border-[var(--card-border)] bg-[var(--card-bg)] hover:border-sage/30 transition-all text-left"
               >
-                <div className="w-9 h-9 rounded-full bg-gold/5 text-gold flex items-center justify-center flex-shrink-0 transition-all duration-500">
+                <div className="w-9 h-9 rounded-full bg-sage/5 text-sage flex items-center justify-center flex-shrink-0 transition-all duration-500">
                   {h.icon}
                 </div>
                 <div>
@@ -107,7 +107,7 @@ export default function About() {
           </div>
 
           <div className="pt-4 text-center">
-            <a href="#kontakty" className="bg-gold hover:bg-gold-light text-navy font-bold px-10 py-4 rounded-full inline-block transition-all shadow-xl shadow-gold/10 active:scale-95">
+            <a href="#kontakty" className="bg-sage hover:bg-sage-bright/95 text-white font-bold px-10 py-4 rounded-full inline-block transition-all shadow-xl shadow-sage/10 active:scale-95">
               {t('about.cta')}
             </a>
           </div>

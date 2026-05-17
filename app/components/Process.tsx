@@ -31,7 +31,7 @@ export default function Process() {
           >
             {t('process.title_1')}<br />
             {t('process.title_2')}
-            <span className="text-gold italic">{t('process.title_italic')}</span>
+            <span className="text-sage italic">{t('process.title_italic')}</span>
           </motion.h2>
         </div>
 
@@ -72,9 +72,9 @@ export default function Process() {
                   transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] }
                 }
               }}
-              className="flex flex-col group relative p-6 md:p-8 rounded-[1.5rem] bg-[var(--bg-secondary)]/30 border border-[var(--card-border)] hover:border-gold/30 hover:bg-[var(--bg-secondary)] transition-all duration-700 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.5)]"
+              className="flex flex-col group relative p-6 md:p-8 rounded-[1.5rem] bg-[var(--bg-secondary)]/30 border border-[var(--card-border)] hover:border-sage/30 hover:bg-[var(--bg-secondary)] transition-all duration-700 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.5)]"
             >
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold/60 mb-6 block group-hover:text-gold transition-colors duration-500">
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-sage/60 mb-6 block group-hover:text-sage transition-colors duration-500">
                 {idx + 1}
               </span>
               

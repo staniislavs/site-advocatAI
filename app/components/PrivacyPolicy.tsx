@@ -18,9 +18,9 @@ export default function PrivacyPolicy() {
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
           onClick={() => navigate(-1)}
-          className="group inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--text-muted)] hover:text-gold transition-all mb-12"
+          className="group inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--text-muted)] hover:text-sage transition-all mb-12"
         >
-          <div className="w-8 h-8 rounded-full border border-[var(--card-border)] flex items-center justify-center group-hover:border-gold group-hover:bg-gold/5 transition-all">
+          <div className="w-8 h-8 rounded-full border border-[var(--card-border)] flex items-center justify-center group-hover:border-sage group-hover:bg-sage/5 transition-all">
             <ChevronLeft size={14} className="group-hover:-translate-x-1 transition-transform duration-500" />
           </div>
           {currentLang === 'en' ? 'Back' : currentLang === 'de' ? 'Zurück' : currentLang === 'ru' ? 'Назад' : 'Назад'}
@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
           transition={{ duration: 0.8 }}
         >
           <div className="flex items-center gap-4 mb-8">
-            <div className="w-12 h-12 rounded-2xl bg-gold/10 flex items-center justify-center text-gold">
+            <div className="w-12 h-12 rounded-2xl bg-sage/10 flex items-center justify-center text-sage">
               <Shield size={24} />
             </div>
             <h1 className="font-serif text-4xl md:text-5xl text-[var(--text-primary)]">

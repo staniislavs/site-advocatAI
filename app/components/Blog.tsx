@@ -222,7 +222,7 @@ const Blog: React.FC = () => {
     return (
       <div className="min-h-screen bg-[var(--bg-secondary)] flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">
-          <Clock size={48} className="text-gold animate-spin" />
+          <Clock size={48} className="text-sage animate-spin" />
           <p className="font-serif italic text-navy-deep/40">{t('common.loading') || 'Завантаження...'}</p>
         </div>
       </div>
@@ -256,9 +256,9 @@ const Blog: React.FC = () => {
             >
               <button 
                 onClick={() => navigate(-1)}
-                className="group inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--text-muted)] hover:text-gold transition-all"
+                className="group inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--text-muted)] hover:text-sage transition-all"
               >
-                <div className="w-8 h-8 rounded-full border border-[var(--card-border)] flex items-center justify-center group-hover:border-gold group-hover:bg-gold/5 transition-all">
+                <div className="w-8 h-8 rounded-full border border-[var(--card-border)] flex items-center justify-center group-hover:border-sage group-hover:bg-sage/5 transition-all">
                   <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform duration-500" />
                 </div>
                 Назад
@@ -272,7 +272,7 @@ const Blog: React.FC = () => {
             {isAdmin && (
               <button 
                 onClick={handleCreateNew}
-                className="bg-gold text-white p-4 rounded-full shadow-2xl shadow-gold/30 hover:scale-105 transition-transform"
+                className="bg-sage text-white p-4 rounded-full shadow-2xl shadow-sage/30 hover:scale-105 transition-transform"
               >
                 <Plus size={24} />
               </button>
@@ -288,11 +288,11 @@ const Blog: React.FC = () => {
               placeholder={t('blog.hero.search')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full h-14 md:h-18 bg-[var(--bg-secondary)] border border-[var(--card-border)] rounded-[1.5rem] md:rounded-[2rem] px-12 md:px-14 py-4 text-sm md:text-base text-[var(--text-primary)] focus:bg-[var(--bg-primary)] focus:ring-1 focus:ring-gold/50 focus:border-gold/30 outline-none transition-all shadow-sm"
+              className="w-full h-14 md:h-18 bg-[var(--bg-secondary)] border border-[var(--card-border)] rounded-[1.5rem] md:rounded-[2rem] px-12 md:px-14 py-4 text-sm md:text-base text-[var(--text-primary)] focus:bg-[var(--bg-primary)] focus:ring-1 focus:ring-sage/50 focus:border-sage/30 outline-none transition-all shadow-sm"
             />
-            <Search className="absolute left-5 md:left-6 top-1/2 -translate-y-1/2 text-gold" size={20} />
+            <Search className="absolute left-5 md:left-6 top-1/2 -translate-y-1/2 text-sage" size={20} />
             <div className="absolute right-2 md:right-3 top-1/2 -translate-y-1/2">
-               <button className="bg-gold text-white px-5 md:px-8 py-2 md:py-3 rounded-[1.2rem] md:rounded-[1.5rem] font-bold text-[10px] md:text-xs uppercase tracking-widest hover:bg-[#a6844d] transition-colors shadow-lg shadow-gold/20">
+               <button className="bg-sage text-white px-5 md:px-8 py-2 md:py-3 rounded-[1.2rem] md:rounded-[1.5rem] font-bold text-[10px] md:text-xs uppercase tracking-widest hover:bg-[#a6844d] transition-colors shadow-lg shadow-sage/20">
                 {t('blog.hero.find')}
               </button>
             </div>
@@ -306,9 +306,9 @@ const Blog: React.FC = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-9 gap-3">
             <Link
               to={`/${currentLang}/${paths.blog}`}
-              className={`flex flex-col items-center justify-center p-4 sm:p-6 rounded-3xl border transition-all group relative ${!category ? 'bg-gold border-gold text-white font-bold shadow-lg shadow-gold/20' : 'bg-[var(--bg-secondary)] border-[var(--card-border)] hover:border-gold/40'}`}
+              className={`flex flex-col items-center justify-center p-4 sm:p-6 rounded-3xl border transition-all group relative ${!category ? 'bg-sage border-sage text-white font-bold shadow-lg shadow-sage/20' : 'bg-[var(--bg-secondary)] border-[var(--card-border)] hover:border-sage/40'}`}
             >
-              <Library size={22} className={`mb-3 group-hover:scale-110 transition-transform ${!category ? 'text-white' : 'text-gold'}`} />
+              <Library size={22} className={`mb-3 group-hover:scale-110 transition-transform ${!category ? 'text-white' : 'text-sage'}`} />
               <span className="text-[9px] uppercase font-bold tracking-widest text-center">{t('blog.categories.all')}</span>
               <span className={`absolute top-2 right-2 text-[10px] font-mono ${!category ? 'text-white/80' : 'text-[var(--text-muted)]'}`}>{posts.length}</span>
             </Link>
@@ -318,9 +318,9 @@ const Blog: React.FC = () => {
                 <Link
                   key={cat.id}
                   to={`/${currentLang}/${paths.blog}/${cat.id}`}
-                  className={`flex flex-col items-center justify-center p-4 sm:p-6 rounded-3xl border transition-all group relative ${category === cat.id ? 'bg-gold border-gold text-white font-bold shadow-lg shadow-gold/20' : 'bg-[var(--bg-secondary)] border-[var(--card-border)] hover:border-gold/40'}`}
+                  className={`flex flex-col items-center justify-center p-4 sm:p-6 rounded-3xl border transition-all group relative ${category === cat.id ? 'bg-sage border-sage text-white font-bold shadow-lg shadow-sage/20' : 'bg-[var(--bg-secondary)] border-[var(--card-border)] hover:border-sage/40'}`}
                 >
-                  <cat.icon size={22} className={`mb-3 group-hover:scale-110 transition-transform ${category === cat.id ? 'text-white' : 'text-gold'}`} />
+                  <cat.icon size={22} className={`mb-3 group-hover:scale-110 transition-transform ${category === cat.id ? 'text-white' : 'text-sage'}`} />
                   <span className="text-[9px] uppercase font-bold tracking-widest text-center">{t(`blog.categories.items.${cat.id}`)}</span>
                   {cnt > 0 && (
                     <span className={`absolute top-2 right-2 text-[10px] font-mono ${category === cat.id ? 'text-white/80' : 'text-[var(--text-muted)]'}`}>{cnt}</span>
@@ -337,7 +337,7 @@ const Blog: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           {category && (
             <div className="mb-14 max-w-3xl">
-              <p className="text-[var(--text-secondary)] font-light leading-relaxed text-lg border-l-2 border-gold pl-8 py-2">
+              <p className="text-[var(--text-secondary)] font-light leading-relaxed text-lg border-l-2 border-sage pl-8 py-2">
                 Я, Дар'я Богдашкіна, надаю професійну допомогу у сфері "{getCategoryLabel(category, t)}". 
                 Завдяки багаторічному досвіду та глибокому розумінню цивільного права, я допоможу вам 
                 вирішити правові питання будь-якої складності.
@@ -348,7 +348,7 @@ const Blog: React.FC = () => {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="flex-1">
               {filteredPosts.length === 0 ? (
-                <div className="text-center py-20 bg-[var(--bg-secondary)] rounded-[3rem] border border-gold/10">
+                <div className="text-center py-20 bg-[var(--bg-secondary)] rounded-[3rem] border border-sage/10">
                   <p className="text-[var(--text-secondary)] font-light">{t('blog.no_posts')}</p>
                 </div>
               ) : (
@@ -375,7 +375,7 @@ const Blog: React.FC = () => {
                     <button
                       onClick={() => { setCurrentPage(p => Math.max(1, p - 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                       disabled={currentPage === 1}
-                      className="h-10 px-4 border border-gold/20 text-[10px] uppercase tracking-widest font-bold disabled:opacity-30 hover:bg-gold hover:text-white hover:border-gold transition"
+                      className="h-10 px-4 border border-sage/20 text-[10px] uppercase tracking-widest font-bold disabled:opacity-30 hover:bg-sage hover:text-white hover:border-sage transition"
                     >
                       <ChevronLeft size={14} />
                     </button>
@@ -383,7 +383,7 @@ const Blog: React.FC = () => {
                       <button
                         key={n}
                         onClick={() => { setCurrentPage(n); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                        className={`h-10 w-10 border text-sm font-bold transition ${currentPage === n ? 'bg-gold text-white border-gold' : 'border-gold/20 hover:border-gold/60'}`}
+                        className={`h-10 w-10 border text-sm font-bold transition ${currentPage === n ? 'bg-sage text-white border-sage' : 'border-sage/20 hover:border-sage/60'}`}
                       >
                         {n}
                       </button>
@@ -391,7 +391,7 @@ const Blog: React.FC = () => {
                     <button
                       onClick={() => { setCurrentPage(p => Math.min(Math.ceil(filteredPosts.length / POSTS_PER_PAGE), p + 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                       disabled={currentPage === Math.ceil(filteredPosts.length / POSTS_PER_PAGE)}
-                      className="h-10 px-4 border border-gold/20 text-[10px] uppercase tracking-widest font-bold disabled:opacity-30 hover:bg-gold hover:text-white hover:border-gold transition"
+                      className="h-10 px-4 border border-sage/20 text-[10px] uppercase tracking-widest font-bold disabled:opacity-30 hover:bg-sage hover:text-white hover:border-sage transition"
                     >
                       <ChevronRight size={14} />
                     </button>
@@ -404,17 +404,17 @@ const Blog: React.FC = () => {
             {/* Sidebar with Top Articles ( п. 2.4 ТЗ ) */}
             {!category && (
               <aside className="w-full lg:w-80 space-y-8">
-                <div className="bg-[var(--bg-secondary)]/50 p-8 rounded-3xl border border-gold/10 shadow-xl">
+                <div className="bg-[var(--bg-secondary)]/50 p-8 rounded-3xl border border-sage/10 shadow-xl">
                   <h4 className="font-serif text-xl text-[var(--text-primary)] mb-6 flex items-center gap-2">
-                    <MessageSquare size={18} className="text-gold" />
+                    <MessageSquare size={18} className="text-sage" />
                     Найчастіше запитують
                   </h4>
                   <ul className="space-y-4">
                     {posts.slice(0, 5).map((p, i) => (
                       <li key={p.id} className="group">
                         <Link to={`/${currentLang}/${paths.blog}/${p.category}/${p.slug}`} className="flex gap-3">
-                          <span className="text-gold font-serif text-lg">{i + 1}.</span>
-                          <span className="text-sm text-[var(--text-secondary)] group-hover:text-gold transition-colors line-clamp-2 leading-snug">
+                          <span className="text-sage font-serif text-lg">{i + 1}.</span>
+                          <span className="text-sm text-[var(--text-secondary)] group-hover:text-sage transition-colors line-clamp-2 leading-snug">
                             {p.title}
                           </span>
                         </Link>
@@ -423,10 +423,10 @@ const Blog: React.FC = () => {
                   </ul>
                 </div>
 
-                <div className="bg-gold p-8 rounded-3xl text-navy-deep">
+                <div className="bg-sage p-8 rounded-3xl text-navy-deep">
                   <h4 className="font-serif text-xl mb-2">Потрібна допомога?</h4>
                   <p className="text-xs opacity-80 mb-6">Отримайте консультацію адвоката онлайн або в офісі</p>
-                  <button onClick={() => navigate(`/${currentLang}/${paths.contacts}`)} className="w-full bg-navy-deep text-gold py-3 rounded-xl font-bold uppercase text-[10px] tracking-widest">
+                  <button onClick={() => navigate(`/${currentLang}/${paths.contacts}`)} className="w-full bg-white text-sage py-3 rounded-xl font-bold uppercase text-[10px] tracking-widest hover:bg-white/90 transition-all">
                     Записатися
                   </button>
                 </div>
@@ -464,7 +464,7 @@ const PostCard: React.FC<{ post: Post, idx: number, isAdmin: boolean, onEdit: ()
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: idx * 0.1 }}
-      className="group bg-[var(--bg-secondary)] rounded-[2.5rem] overflow-hidden border border-[var(--card-border)] hover:border-gold/30 transition-all duration-500 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] md:hover:shadow-[0_40px_80px_-20px_rgba(184,149,90,0.15)] flex flex-col h-full relative"
+      className="group bg-[var(--bg-secondary)] rounded-[2.5rem] overflow-hidden border border-[var(--card-border)] hover:border-sage/30 transition-all duration-500 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] md:hover:shadow-[0_40px_80px_-20px_rgba(94,105,77,0.15)] flex flex-col h-full relative"
     >
       <Link to={postUrl} className="flex flex-col h-full z-10">
         <div className="aspect-[16/10] overflow-hidden relative bg-[var(--bg-primary)]/50">
@@ -478,20 +478,20 @@ const PostCard: React.FC<{ post: Post, idx: number, isAdmin: boolean, onEdit: ()
             />
           ) : (
             <div className="w-full h-full flex flex-col items-center justify-center p-12 bg-[var(--bg-primary)] relative">
-               <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-bl-[80px]" />
-               <div className="w-16 h-16 rounded-3xl bg-gold/10 flex items-center justify-center text-gold mb-4 group-hover:scale-110 transition-transform duration-700">
+               <div className="absolute top-0 right-0 w-32 h-32 bg-sage/5 rounded-bl-[80px]" />
+               <div className="w-16 h-16 rounded-3xl bg-sage/10 flex items-center justify-center text-sage mb-4 group-hover:scale-110 transition-transform duration-700">
                   {React.createElement(categoryIcon, { size: 32 })}
                </div>
-               <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-gold/60">{getCategoryLabel(post.category, t)}</span>
+               <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-sage/60">{getCategoryLabel(post.category, t)}</span>
             </div>
           )}
           
-          <div className="absolute top-6 left-6 bg-gold text-white px-4 py-1.5 rounded-full text-[9px] uppercase font-bold tracking-widest shadow-xl">
+          <div className="absolute top-6 left-6 bg-sage text-white px-4 py-1.5 rounded-full text-[9px] uppercase font-bold tracking-widest shadow-xl">
             {getCategoryLabel(post.category, t)}
           </div>
           
           {post.status !== 'published' && (
-            <div className="absolute top-6 right-6 bg-[var(--bg-primary)]/90 text-gold px-4 py-1.5 rounded-full text-[9px] uppercase font-bold flex items-center gap-2 backdrop-blur-sm shadow-xl border border-gold/20">
+            <div className="absolute top-6 right-6 bg-[var(--bg-primary)]/90 text-sage px-4 py-1.5 rounded-full text-[9px] uppercase font-bold flex items-center gap-2 backdrop-blur-sm shadow-xl border border-sage/20">
               <EyeOff size={14} /> {t('blog.admin.draft')}
             </div>
           )}
@@ -499,11 +499,11 @@ const PostCard: React.FC<{ post: Post, idx: number, isAdmin: boolean, onEdit: ()
 
         <div className="p-8 md:p-10 flex-1 flex flex-col">
           <div className="flex items-center gap-6 text-[10px] uppercase tracking-widest text-[var(--text-muted)] mb-6 font-bold">
-            <span className="flex items-center gap-2"><Calendar size={14} className="text-gold" /> {formatDate(post.updatedAt || post.createdAt)}</span>
-            <span className="flex items-center gap-2"><Clock size={14} className="text-gold" /> {calculateReadingTime(post.content)} хв</span>
+            <span className="flex items-center gap-2"><Calendar size={14} className="text-sage" /> {formatDate(post.updatedAt || post.createdAt)}</span>
+            <span className="flex items-center gap-2"><Clock size={14} className="text-sage" /> {calculateReadingTime(post.content)} хв</span>
           </div>
           
-          <h3 className="font-serif text-2xl md:text-[28px] text-[var(--text-primary)] mb-4 leading-[1.2] group-hover:text-gold transition-colors line-clamp-3">
+          <h3 className="font-serif text-2xl md:text-[28px] text-[var(--text-primary)] mb-4 leading-[1.2] group-hover:text-sage transition-colors line-clamp-3">
             {post.title}
           </h3>
           
@@ -512,8 +512,8 @@ const PostCard: React.FC<{ post: Post, idx: number, isAdmin: boolean, onEdit: ()
           </p>
           
           <div className="mt-auto pt-6 border-t border-[var(--card-border)] flex items-center justify-between">
-            <div className="flex items-center gap-3 text-gold font-bold text-[10px] uppercase tracking-widest group/btn">
-              <span className="pb-1 border-b border-transparent group-hover:border-gold transition-all">Читати повністю</span>
+            <div className="flex items-center gap-3 text-sage font-bold text-[10px] uppercase tracking-widest group/btn">
+              <span className="pb-1 border-b border-transparent group-hover:border-sage transition-all">Читати повністю</span>
               <ArrowRight size={16} className="group-hover/btn:translate-x-2 transition-transform duration-500" />
             </div>
           </div>
@@ -524,7 +524,7 @@ const PostCard: React.FC<{ post: Post, idx: number, isAdmin: boolean, onEdit: ()
         <div className="absolute top-6 right-6 flex flex-col gap-2 z-20">
           <button 
             onClick={(e) => { e.preventDefault(); e.stopPropagation(); onEdit(); }}
-            className="p-3 bg-[var(--bg-primary)]/80 backdrop-blur-md text-gold rounded-full hover:bg-gold hover:text-white transition-all shadow-xl border border-gold/20"
+            className="p-3 bg-[var(--bg-primary)]/80 backdrop-blur-md text-sage rounded-full hover:bg-sage hover:text-white transition-all shadow-xl border border-sage/20"
           >
             <Edit2 size={14} />
           </button>
@@ -670,7 +670,7 @@ const BlogPostView: React.FC<{
                   value={ctaData.name}
                   onChange={e => setCtaData({...ctaData, name: e.target.value})}
                   placeholder="Олена Савченко" 
-                  className="w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-[1.2rem] px-6 py-4 text-sm focus:bg-[var(--bg-secondary)] focus:ring-1 focus:ring-gold/50 focus:border-gold/30 outline-none transition-all shadow-sm text-[var(--text-primary)]"
+                  className="w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-[1.2rem] px-6 py-4 text-sm focus:bg-[var(--bg-secondary)] focus:ring-1 focus:ring-sage/50 focus:border-sage/30 outline-none transition-all shadow-sm text-[var(--text-primary)]"
                 />
               </div>
               <div className="space-y-1">
@@ -681,7 +681,7 @@ const BlogPostView: React.FC<{
                   value={ctaData.phone}
                   onChange={e => setCtaData({...ctaData, phone: e.target.value})}
                   placeholder="+38 (0__) ___ __ __" 
-                  className="w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-[1.2rem] px-6 py-4 text-sm focus:bg-[var(--bg-secondary)] focus:ring-1 focus:ring-gold/50 focus:border-gold/30 outline-none transition-all shadow-sm text-[var(--text-primary)]"
+                  className="w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-[1.2rem] px-6 py-4 text-sm focus:bg-[var(--bg-secondary)] focus:ring-1 focus:ring-sage/50 focus:border-sage/30 outline-none transition-all shadow-sm text-[var(--text-primary)]"
                 />
               </div>
               <div className="space-y-1">
@@ -690,20 +690,20 @@ const BlogPostView: React.FC<{
                   value={ctaData.desc}
                   onChange={e => setCtaData({...ctaData, desc: e.target.value})}
                   placeholder="Напишіть коротко ваше запитання..." 
-                  className="w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-[1.2rem] px-6 py-4 text-sm focus:bg-[var(--bg-secondary)] focus:ring-1 focus:ring-gold/50 focus:border-gold/30 outline-none transition-all h-32 resize-none shadow-sm text-[var(--text-primary)]"
+                  className="w-full bg-[var(--bg-primary)] border border-[var(--card-border)] rounded-[1.2rem] px-6 py-4 text-sm focus:bg-[var(--bg-secondary)] focus:ring-1 focus:ring-sage/50 focus:border-sage/30 outline-none transition-all h-32 resize-none shadow-sm text-[var(--text-primary)]"
                 />
               </div>
               <button 
                 type="submit"
                 disabled={submitting}
-                className="w-full bg-gold text-white py-5 rounded-[1.2rem] font-bold uppercase text-[11px] tracking-[0.2em] hover:bg-[#a6844d] transition-all shadow-xl shadow-gold/20 disabled:opacity-50 flex items-center justify-center gap-3 active:scale-[0.98]"
+                className="w-full bg-sage text-white py-5 rounded-[1.2rem] font-bold uppercase text-[11px] tracking-[0.2em] hover:bg-sage-bright/95 transition-all shadow-xl shadow-sage/20 disabled:opacity-50 flex items-center justify-center gap-3 active:scale-[0.98]"
               >
                 {submitting && <Clock size={16} className="animate-spin" />}
                 Отримати консультацію <ArrowRight size={18} />
               </button>
             </form>
 
-            <div className="mt-6 pt-6 border-t border-gold/10 flex justify-center gap-6 text-gold">
+            <div className="mt-6 pt-6 border-t border-sage/10 flex justify-center gap-6 text-sage">
               <a href="https://t.me/Bohdashkina" target="_blank" rel="noreferrer" className="hover:scale-110 transition-transform"><Send size={20} /></a>
               <Link to={`/${currentLang}/${paths.contacts}`} className="hover:scale-110 transition-transform"><MessageSquare size={20} /></Link>
               <a href="tel:+380959098980" className="hover:scale-110 transition-transform"><Phone size={20} /></a>
@@ -716,7 +716,7 @@ const BlogPostView: React.FC<{
             <p className="text-sm opacity-70">Очікуйте на дзвінок адвоката протягом 15 хвилин.</p>
           </div>
         )}
-        <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-gold/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-1000" />
+        <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-sage/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-1000" />
       </div>
     );
   };
@@ -739,7 +739,7 @@ const BlogPostView: React.FC<{
 
       {/* Reading Progress Bar ( п. 4.1 ТЗ ) */}
       <motion.div 
-        className="fixed top-0 left-0 right-0 h-[3px] bg-gold z-[120] origin-left shadow-[0_0_10px_rgba(184,149,90,0.5)]" 
+        className="fixed top-0 left-0 right-0 h-[3px] bg-sage z-[120] origin-left shadow-[0_0_10px_rgba(94,105,77,0.5)]" 
         style={{ scaleX }}
       />
 
@@ -755,9 +755,9 @@ const BlogPostView: React.FC<{
           >
             <button 
               onClick={() => navigate(-1)}
-              className="group inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--text-muted)] hover:text-gold transition-all"
+              className="group inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--text-muted)] hover:text-sage transition-all"
             >
-              <div className="w-8 h-8 rounded-full border border-[var(--card-border)] flex items-center justify-center group-hover:border-gold group-hover:bg-gold/5 transition-all">
+              <div className="w-8 h-8 rounded-full border border-[var(--card-border)] flex items-center justify-center group-hover:border-sage group-hover:bg-sage/5 transition-all">
                 <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform duration-500" />
               </div>
               Назад
@@ -766,16 +766,16 @@ const BlogPostView: React.FC<{
 
           {/* Breadcrumbs ( п. 4.1 ТЗ ) */}
           <nav className="flex items-center gap-3 text-[10px] uppercase tracking-widest text-[var(--text-muted)] mb-10 font-bold">
-            <Link to={`/${currentLang}`} className="hover:text-gold transition-colors">Головна</Link>
+            <Link to={`/${currentLang}`} className="hover:text-sage transition-colors">Головна</Link>
             <ChevronRight size={12} className="opacity-30" />
-            <Link to={`/${currentLang}/${paths.blog}`} className="hover:text-gold transition-colors">Блог</Link>
+            <Link to={`/${currentLang}/${paths.blog}`} className="hover:text-sage transition-colors">Блог</Link>
             <ChevronRight size={12} className="opacity-30" />
-            <Link to={`/${currentLang}/${paths.blog}/${post.category}`} className="hover:text-gold transition-colors">{getCategoryLabel(post.category, t)}</Link>
+            <Link to={`/${currentLang}/${paths.blog}/${post.category}`} className="hover:text-sage transition-colors">{getCategoryLabel(post.category, t)}</Link>
             <ChevronRight size={12} className="opacity-30" />
-            <span className="text-gold truncate max-w-[200px]">{post.title}</span>
+            <span className="text-sage truncate max-w-[200px]">{post.title}</span>
           </nav>
 
-          <Link to={`/${currentLang}/${paths.blog}/${post.category}`} className="inline-block bg-gold/10 text-gold border border-gold/20 px-5 py-1.5 rounded-full text-[10px] uppercase font-bold mb-10 shadow-sm">
+          <Link to={`/${currentLang}/${paths.blog}/${post.category}`} className="inline-block bg-sage/10 text-sage border border-sage/20 px-5 py-1.5 rounded-full text-[10px] uppercase font-bold mb-10 shadow-sm">
             {getCategoryLabel(post.category, t)}
           </Link>
 
@@ -784,12 +784,12 @@ const BlogPostView: React.FC<{
           </h1>
 
           <div className="flex flex-wrap items-center gap-x-12 gap-y-6 text-[10px] uppercase tracking-widest text-[var(--text-muted)] border-b border-[var(--card-border)] pb-10 font-bold">
-            <span className="flex items-center gap-3"><Calendar size={16} className="text-gold" /> {t('blog.post.updated')}: {formatDate(post.updatedAt || post.createdAt)}</span>
-            <span className="flex items-center gap-3"><Clock size={16} className="text-gold" /> {calculateReadingTime(post.content)} хв читання</span>
-            <span className="flex items-center gap-3"><User size={16} className="text-gold" /> {post.author}</span>
+            <span className="flex items-center gap-3"><Calendar size={16} className="text-sage" /> {t('blog.post.updated')}: {formatDate(post.updatedAt || post.createdAt)}</span>
+            <span className="flex items-center gap-3"><Clock size={16} className="text-sage" /> {calculateReadingTime(post.content)} хв читання</span>
+            <span className="flex items-center gap-3"><User size={16} className="text-sage" /> {post.author}</span>
             {isAdmin && (
                <div className="flex gap-6 ml-auto">
-                <button onClick={onEdit} className="text-gold hover:underline flex items-center gap-2"><Edit2 size={12} /> Редагувати</button>
+                <button onClick={onEdit} className="text-sage hover:underline flex items-center gap-2"><Edit2 size={12} /> Редагувати</button>
                 <button onClick={onDelete} className="text-red-500 hover:underline flex items-center gap-2"><Trash2 size={12} /> Видалити</button>
                </div>
             )}
@@ -811,20 +811,20 @@ const BlogPostView: React.FC<{
             {/* Table of Contents ( п. 4.3 ТЗ ) */}
             {headings.length >= 3 && (
               <div className="bg-[var(--bg-secondary)] p-10 rounded-[2rem] border border-[var(--card-border)] mb-16 shadow-xl relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-bl-[80px]" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-sage/5 rounded-bl-[80px]" />
                 <h4 className="font-serif text-2xl text-[var(--text-primary)] mb-8 uppercase tracking-widest">{t('blog.post.toc')}</h4>
                 <ul className="space-y-4">
                   {headings.map(h => (
                     <li key={h.id}>
                       <a 
                         href={`#${h.id}`} 
-                        className={`text-[15px] transition-all flex items-center gap-3 ${activeHeading === h.id ? 'text-gold font-bold translate-x-3' : 'text-[var(--text-secondary)] hover:text-gold'}`}
+                        className={`text-[15px] transition-all flex items-center gap-3 ${activeHeading === h.id ? 'text-sage font-bold translate-x-3' : 'text-[var(--text-secondary)] hover:text-sage'}`}
                         onClick={(e) => {
                           e.preventDefault();
                           document.getElementById(h.id)?.scrollIntoView({ behavior: 'smooth' });
                         }}
                       >
-                        <span className={`w-1.5 h-1.5 rounded-full transition-all ${activeHeading === h.id ? 'bg-gold scale-150' : 'bg-[var(--card-border)]'}`} />
+                        <span className={`w-1.5 h-1.5 rounded-full transition-all ${activeHeading === h.id ? 'bg-sage scale-150' : 'bg-[var(--card-border)]'}`} />
                         {h.text}
                       </a>
                     </li>
@@ -850,10 +850,10 @@ const BlogPostView: React.FC<{
                         const cleaned = text.replace(/^\[![\wа-яіїєґ]+\]\s*/i, '');
                         if (isImportant) {
                           return (
-                            <div className="my-6 p-5 bg-gold/10 border-l-4 border-gold text-[var(--text-primary)] rounded-r-lg flex gap-3">
-                              <AlertTriangle className="text-gold shrink-0 mt-0.5" size={20} />
+                            <div className="my-6 p-5 bg-sage/10 border-l-4 border-sage text-[var(--text-primary)] rounded-r-lg flex gap-3">
+                              <AlertTriangle className="text-sage shrink-0 mt-0.5" size={20} />
                               <div>
-                                <p className="font-bold text-gold mb-1 text-sm uppercase tracking-wider">Важливо</p>
+                                <p className="font-bold text-sage mb-1 text-sm uppercase tracking-wider">Важливо</p>
                                 <div className="text-[var(--text-secondary)]">{cleaned || children}</div>
                               </div>
                             </div>
@@ -861,8 +861,8 @@ const BlogPostView: React.FC<{
                         }
                         if (isPractice) {
                           return (
-                            <div className="my-6 p-5 bg-[var(--bg-secondary)] border-l-4 border-gold/60 rounded-r-lg flex gap-3">
-                              <Gavel className="text-gold shrink-0 mt-0.5" size={20} />
+                            <div className="my-6 p-5 bg-[var(--bg-secondary)] border-l-4 border-sage/60 rounded-r-lg flex gap-3">
+                              <Gavel className="text-sage shrink-0 mt-0.5" size={20} />
                               <div>
                                 <p className="font-bold text-[var(--text-primary)] mb-1 text-sm uppercase tracking-wider">З практики</p>
                                 <div className="text-[var(--text-secondary)] italic">{cleaned || children}</div>
@@ -885,7 +885,7 @@ const BlogPostView: React.FC<{
 
             {/* FAQ Section ( п. 4.5 ТЗ ) */}
             {post.faq && post.faq.length > 0 && (
-              <div className="mt-20 pt-20 border-t border-gold/10">
+              <div className="mt-20 pt-20 border-t border-sage/10">
                 <h3 className="font-serif text-3xl text-[var(--text-primary)] mb-10">Часті питання</h3>
                 <div className="space-y-4">
                   {post.faq.map((item, id) => (
@@ -896,25 +896,25 @@ const BlogPostView: React.FC<{
             )}
 
             {/* Social Share */}
-            <div className="mt-16 pt-8 border-t border-gold/10 flex items-center gap-6">
+            <div className="mt-16 pt-8 border-t border-sage/10 flex items-center gap-6">
                <span className="text-[10px] uppercase tracking-widest text-[var(--text-muted)]">{t('blog.post.share')}</span>
                <div className="flex gap-4">
                   <button 
                     onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank')}
-                    className="w-10 h-10 rounded-full bg-[var(--bg-primary)] border border-gold/10 flex items-center justify-center text-gold hover:bg-gold hover:text-navy-deep transition-all shadow-sm"
+                    className="w-10 h-10 rounded-full bg-[var(--bg-primary)] border border-sage/10 flex items-center justify-center text-sage hover:bg-sage hover:text-navy-deep transition-all shadow-sm"
                   >
                     <Facebook size={18} />
                   </button>
                   <button
                     onClick={() => window.open(`https://t.me/share/url?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(post.title)}`, '_blank')}
-                    className="w-10 h-10 rounded-full bg-[var(--bg-primary)] border border-gold/10 flex items-center justify-center text-gold hover:bg-gold hover:text-navy-deep transition-all shadow-sm"
+                    className="w-10 h-10 rounded-full bg-[var(--bg-primary)] border border-sage/10 flex items-center justify-center text-sage hover:bg-sage hover:text-navy-deep transition-all shadow-sm"
                     aria-label="Telegram"
                   >
                     <Send size={18} />
                   </button>
                   <button
                     onClick={() => window.open(`viber://forward?text=${encodeURIComponent(post.title + ' ' + window.location.href)}`, '_blank')}
-                    className="w-10 h-10 rounded-full bg-[var(--bg-primary)] border border-gold/10 flex items-center justify-center text-gold hover:bg-gold hover:text-navy-deep transition-all shadow-sm"
+                    className="w-10 h-10 rounded-full bg-[var(--bg-primary)] border border-sage/10 flex items-center justify-center text-sage hover:bg-sage hover:text-navy-deep transition-all shadow-sm"
                     aria-label="Viber"
                   >
                     <MessageSquare size={18} />
@@ -925,7 +925,7 @@ const BlogPostView: React.FC<{
                       toast.success('Посилання скопійовано');
                     }}
                     aria-label="Copy link"
-                    className="w-10 h-10 rounded-full bg-[var(--bg-primary)] border border-gold/10 flex items-center justify-center text-gold hover:bg-gold hover:text-navy-deep transition-all shadow-sm"
+                    className="w-10 h-10 rounded-full bg-[var(--bg-primary)] border border-sage/10 flex items-center justify-center text-sage hover:bg-sage hover:text-navy-deep transition-all shadow-sm"
                   >
                     <Link2 size={18} />
                   </button>
@@ -941,17 +941,17 @@ const BlogPostView: React.FC<{
 
               {/* Author Bio ( п. 4.6 ТЗ ) */}
               <div className="bg-[var(--bg-secondary)] p-10 rounded-[2.5rem] border border-[var(--card-border)] shadow-[0_30px_70px_-20px_rgba(0,0,0,0.08)] relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gold/5 rounded-bl-[60px]" />
+                <div className="absolute top-0 right-0 w-24 h-24 bg-sage/5 rounded-bl-[60px]" />
                 <div className="relative z-10">
                   <div className="mb-6">
                     <h5 className="font-serif text-2xl text-[var(--text-primary)] leading-tight">{post.author}</h5>
-                    <p className="text-[9px] uppercase text-gold tracking-[0.3em] font-bold mt-3 leading-relaxed">Адвокат, 12+ років юридичної практики</p>
+                    <p className="text-[9px] uppercase text-sage tracking-[0.3em] font-bold mt-3 leading-relaxed">Адвокат, 12+ років юридичної практики</p>
                   </div>
-                  <div className="w-8 h-px bg-gold/30 mb-6" />
+                  <div className="w-8 h-px bg-sage/30 mb-6" />
                   <p className="text-sm text-[var(--text-secondary)] font-light leading-relaxed mb-8 opacity-80 italic">
                     "Спеціалізуюся на сімейних та цивільних справах. Моя мета — ваш спокій та захист ваших інтересів через закон."
                   </p>
-                  <Link to={`/${currentLang}`} className="group flex items-center gap-2 text-gold text-[10px] font-bold uppercase tracking-[0.2em] hover:translate-x-2 transition-transform duration-500">
+                  <Link to={`/${currentLang}`} className="group flex items-center gap-2 text-sage text-[10px] font-bold uppercase tracking-[0.2em] hover:translate-x-2 transition-transform duration-500">
                     Дізнатись більше <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -961,7 +961,7 @@ const BlogPostView: React.FC<{
               {relatedPosts.length > 0 && (
                 <div className="space-y-8 px-2">
                   <h4 className="font-serif text-2xl text-[var(--text-primary)] relative">
-                    <span className="absolute -left-4 top-0 bottom-0 w-1 bg-gold rounded-full" />
+                    <span className="absolute -left-4 top-0 bottom-0 w-1 bg-sage rounded-full" />
                     Схожі статті
                   </h4>
                   <div className="space-y-10">
@@ -971,8 +971,8 @@ const BlogPostView: React.FC<{
                         to={`/${currentLang}/${paths.blog}/${p.category}/${p.slug}`}
                         className="block group"
                       >
-                        <h6 className="text-[17px] text-[var(--text-primary)] font-medium leading-snug group-hover:text-gold transition-colors mb-3 line-clamp-2">{p.title}</h6>
-                        <span className="inline-block bg-[var(--bg-secondary)] text-[var(--text-muted)] text-[9px] uppercase font-bold px-3 py-1 rounded-full border border-[var(--card-border)] group-hover:border-gold/20 transition-all">
+                        <h6 className="text-[17px] text-[var(--text-primary)] font-medium leading-snug group-hover:text-sage transition-colors mb-3 line-clamp-2">{p.title}</h6>
+                        <span className="inline-block bg-[var(--bg-secondary)] text-[var(--text-muted)] text-[9px] uppercase font-bold px-3 py-1 rounded-full border border-[var(--card-border)] group-hover:border-sage/20 transition-all">
                           {getCategoryLabel(p.category, t)}
                         </span>
                       </Link>
@@ -996,8 +996,8 @@ const FAQItem: React.FC<{ question: string, answer: string, isOpenDefault?: bool
         onClick={() => setIsOpen(!isOpen)}
         className="w-full p-6 text-left flex items-center justify-between gap-4 group"
       >
-        <span className="font-medium text-[var(--text-primary)] group-hover:text-gold transition-colors">{question}</span>
-        <motion.div animate={{ rotate: isOpen ? 180 : 0 }} className="text-gold">
+        <span className="font-medium text-[var(--text-primary)] group-hover:text-sage transition-colors">{question}</span>
+        <motion.div animate={{ rotate: isOpen ? 180 : 0 }} className="text-sage">
           <ChevronRight size={18} />
         </motion.div>
       </button>
@@ -1045,13 +1045,13 @@ const EditorModal: React.FC<{ isOpen: boolean, post: Partial<Post>, onSave: () =
         initial={{ opacity: 0, y: 50, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 50, scale: 0.98 }}
-        className="relative w-full max-w-5xl bg-[var(--bg-primary)] p-6 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] border border-gold/30 shadow-2xl flex flex-col max-h-full overflow-hidden"
+        className="relative w-full max-w-5xl bg-[var(--bg-primary)] p-6 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] border border-sage/30 shadow-2xl flex flex-col max-h-full overflow-hidden"
       >
         <div className="flex items-center justify-between mb-8 flex-shrink-0">
-          <h3 className="font-serif text-2xl md:text-3xl text-gold">Редагування статті</h3>
+          <h3 className="font-serif text-2xl md:text-3xl text-sage">Редагування статті</h3>
           <button 
             onClick={onCancel}
-            className="w-10 h-10 rounded-full bg-[var(--bg-secondary)] border border-gold/10 flex items-center justify-center text-gold hover:border-gold transition-all"
+            className="w-10 h-10 rounded-full bg-[var(--bg-secondary)] border border-sage/10 flex items-center justify-center text-sage hover:border-sage transition-all"
           >
             <X size={20} />
           </button>
@@ -1066,7 +1066,7 @@ const EditorModal: React.FC<{ isOpen: boolean, post: Partial<Post>, onSave: () =
                   type="text" 
                   value={post.title} 
                   onChange={e => onChange({...post, title: e.target.value})}
-                  className="w-full bg-[var(--bg-secondary)] border border-gold/10 rounded-xl px-4 py-3 text-[var(--text-primary)] focus:border-gold outline-none transition-all"
+                  className="w-full bg-[var(--bg-secondary)] border border-sage/10 rounded-xl px-4 py-3 text-[var(--text-primary)] focus:border-sage outline-none transition-all"
                 />
               </div>
               <div>
@@ -1076,7 +1076,7 @@ const EditorModal: React.FC<{ isOpen: boolean, post: Partial<Post>, onSave: () =
                   value={post.slug} 
                   onChange={e => onChange({...post, slug: transliterate(e.target.value)})}
                   placeholder="наприклад: як-поділити-майно"
-                  className="w-full bg-[var(--bg-secondary)] border border-gold/10 rounded-xl px-4 py-3 text-[var(--text-primary)] font-mono text-sm outline-none focus:border-gold"
+                  className="w-full bg-[var(--bg-secondary)] border border-sage/10 rounded-xl px-4 py-3 text-[var(--text-primary)] font-mono text-sm outline-none focus:border-sage"
                 />
               </div>
               <div>
@@ -1084,7 +1084,7 @@ const EditorModal: React.FC<{ isOpen: boolean, post: Partial<Post>, onSave: () =
                 <select 
                   value={post.category} 
                   onChange={e => onChange({...post, category: e.target.value})}
-                  className="w-full bg-[var(--bg-secondary)] border border-gold/10 rounded-xl px-4 py-3 text-[var(--text-primary)] outline-none focus:border-gold"
+                  className="w-full bg-[var(--bg-secondary)] border border-sage/10 rounded-xl px-4 py-3 text-[var(--text-primary)] outline-none focus:border-sage"
                 >
                   {BLOG_CATEGORIES.map(c => <option key={c.id} value={c.id}>{t(`blog.categories.items.${c.id}`)}</option>)}
                 </select>
@@ -1094,7 +1094,7 @@ const EditorModal: React.FC<{ isOpen: boolean, post: Partial<Post>, onSave: () =
                 <textarea 
                   value={post.excerpt} 
                   onChange={e => onChange({...post, excerpt: e.target.value})}
-                  className="w-full bg-[var(--bg-secondary)] border border-gold/10 rounded-xl px-4 py-3 text-[var(--text-primary)] h-32 outline-none focus:border-gold resize-none overflow-y-auto custom-scrollbar"
+                  className="w-full bg-[var(--bg-secondary)] border border-sage/10 rounded-xl px-4 py-3 text-[var(--text-primary)] h-32 outline-none focus:border-sage resize-none overflow-y-auto custom-scrollbar"
                 />
               </div>
             </div>
@@ -1106,7 +1106,7 @@ const EditorModal: React.FC<{ isOpen: boolean, post: Partial<Post>, onSave: () =
                   type="text" 
                   value={post.coverImage} 
                   onChange={e => onChange({...post, coverImage: e.target.value})}
-                  className="w-full bg-[var(--bg-secondary)] border border-gold/10 rounded-xl px-4 py-3 text-[var(--text-primary)] outline-none focus:border-gold"
+                  className="w-full bg-[var(--bg-secondary)] border border-sage/10 rounded-xl px-4 py-3 text-[var(--text-primary)] outline-none focus:border-sage"
                 />
               </div>
               <div>
@@ -1116,20 +1116,20 @@ const EditorModal: React.FC<{ isOpen: boolean, post: Partial<Post>, onSave: () =
                     <button 
                       key={type}
                       onClick={() => onChange({...post, contentType: type as any})}
-                      className={`flex-1 py-3 rounded-xl text-xs font-bold border transition-all ${post.contentType === type ? 'bg-gold text-navy-deep border-gold' : 'border-gold/20 text-gold hover:bg-gold/5'}`}
+                      className={`flex-1 py-3 rounded-xl text-xs font-bold border transition-all ${post.contentType === type ? 'bg-sage text-white border-sage hover:bg-sage-bright/95' : 'border-sage/20 text-sage hover:bg-sage/5'}`}
                     >
                       {type.toUpperCase()}
                     </button>
                   ))}
                 </div>
               </div>
-              <div className="flex items-center gap-4 py-4 p-4 bg-gold/5 rounded-2xl border border-gold/10">
+              <div className="flex items-center gap-4 py-4 p-4 bg-sage/5 rounded-2xl border border-sage/10">
                 <input 
                   type="checkbox" 
                   id="edit-published" 
                   checked={post.status === 'published'} 
                   onChange={e => onChange({...post, status: e.target.checked ? 'published' : 'draft'})} 
-                  className="w-6 h-6 accent-gold cursor-pointer"
+                  className="w-6 h-6 accent-sage cursor-pointer"
                 />
                 <label htmlFor="edit-published" className="text-sm font-medium cursor-pointer">Опублікувати статтю</label>
               </div>
@@ -1141,7 +1141,7 @@ const EditorModal: React.FC<{ isOpen: boolean, post: Partial<Post>, onSave: () =
             <textarea 
               value={post.content} 
               onChange={e => onChange({...post, content: e.target.value})}
-              className="w-full h-96 bg-[var(--bg-secondary)] border border-gold/10 rounded-2xl p-6 text-[var(--text-primary)] font-mono text-sm outline-none focus:border-gold transition-all overflow-y-auto custom-scrollbar"
+              className="w-full h-96 bg-[var(--bg-secondary)] border border-sage/10 rounded-2xl p-6 text-[var(--text-primary)] font-mono text-sm outline-none focus:border-sage transition-all overflow-y-auto custom-scrollbar"
             />
           </div>
         </div>
@@ -1149,13 +1149,13 @@ const EditorModal: React.FC<{ isOpen: boolean, post: Partial<Post>, onSave: () =
         <div className="mt-8 flex flex-col md:flex-row gap-4 flex-shrink-0">
           <button 
             onClick={onSave}
-            className="flex-1 bg-gold text-navy-deep px-12 py-4 rounded-2xl font-bold uppercase text-sm tracking-widest shadow-xl shadow-gold/20 hover:scale-[1.02] active:scale-95 transition-all"
+            className="flex-1 bg-sage hover:bg-sage-bright/95 text-white px-12 py-4 rounded-2xl font-bold uppercase text-sm tracking-widest shadow-xl shadow-sage/20 hover:scale-[1.02] active:scale-95 transition-all"
           >
             Зберегти зміни
           </button>
           <button 
             onClick={onCancel}
-            className="flex-1 bg-[var(--bg-secondary)] text-[var(--text-primary)] px-12 py-4 rounded-2xl font-bold uppercase text-sm tracking-widest border border-gold/10 hover:bg-gold/5 transition-all"
+            className="flex-1 bg-[var(--bg-secondary)] text-[var(--text-primary)] px-12 py-4 rounded-2xl font-bold uppercase text-sm tracking-widest border border-sage/10 hover:bg-sage/5 transition-all"
           >
             Скасувати
           </button>

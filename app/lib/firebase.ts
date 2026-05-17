@@ -1,23 +1,19 @@
 import { initializeApp, getApps, getApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { initializeFirestore, getFirestore } from 'firebase/firestore';
-import firebaseConfigFromFile from '../../firebase-applet-config.json';
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || firebaseConfigFromFile.apiKey,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || firebaseConfigFromFile.authDomain,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || firebaseConfigFromFile.projectId,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || firebaseConfigFromFile.storageBucket,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || firebaseConfigFromFile.messagingSenderId,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID || firebaseConfigFromFile.appId,
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || firebaseConfigFromFile.measurementId,
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || 'AIzaSyBxIMH7VCV00po3-c5zvpKJAbpXNk3JoJg',
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || 'gen-lang-client-0153725022.firebaseapp.com',
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || 'gen-lang-client-0153725022',
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || 'gen-lang-client-0153725022.firebasestorage.app',
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '883415141173',
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || '1:883415141173:web:20aef4d1ba57e8adadda7c',
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || 'G-CE7YZ13WMJ',
 };
 
-// Prefer the database ID from the config file as it's provisioned specifically for this app
-const databaseId = firebaseConfigFromFile.firestoreDatabaseId || import.meta.env.VITE_FIREBASE_DATABASE_ID || '(default)';
-
-// We also ensure the databaseId is valid (not an API Key by mistake).
-const finalDatabaseId = (databaseId.startsWith('AIza')) ? (firebaseConfigFromFile.firestoreDatabaseId || '(default)') : databaseId;
+const databaseId = import.meta.env.VITE_FIREBASE_DATABASE_ID || 'ai-studio-ef075009-7f35-47ee-933b-1e2981ad8454';
+const finalDatabaseId = databaseId.startsWith('AIza') ? '(default)' : databaseId;
 
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
 

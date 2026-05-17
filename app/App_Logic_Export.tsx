@@ -5,9 +5,14 @@ import { LOCALIZED_PATHS, LanguageCode } from './lib/utils';
 
 // Public UI components
 import Hero from './components/Hero';
+import Cases from './components/Cases';
+import Situation from './components/Situation';
 import Services from './components/Services';
 import About from './components/About';
 import Process from './components/Process';
+import Calculator from './components/Calculator';
+import Pricing from './components/Pricing';
+import ConsultationCTA from './components/ConsultationCTA';
 import Blog from './components/Blog';
 import FAQ from './components/FAQ';
 import Contacts from './components/Contacts';
@@ -20,9 +25,14 @@ import TermsOfService from './components/TermsOfService';
 export const HomePage = () => (
   <main>
     <Hero />
+    <Cases />
+    <Situation />
     <Services />
     <About />
     <Process />
+    <Calculator />
+    <Pricing />
+    <ConsultationCTA />
     <Contacts />
     <Reviews />
     <FAQ />

@@ -18,12 +18,12 @@ export default function FAQ() {
     <section id="faq" className="py-24 md:py-32 bg-[var(--bg-primary)] border-t border-[var(--card-border)]">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 text-gold text-[10px] font-bold uppercase tracking-widest mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+          <div className="inline-flex items-center gap-2 text-sage text-[10px] font-bold uppercase tracking-widest mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-sage" />
             {t('faq.tag')}
           </div>
           <h2 className="font-serif text-3xl md:text-5xl text-[var(--text-primary)]">
-            {t('faq.title')} <span className="text-gold italic">{t('faq.title_italic')}</span>
+            {t('faq.title')} <span className="text-sage italic">{t('faq.title_italic')}</span>
           </h2>
         </div>
 
@@ -32,7 +32,7 @@ export default function FAQ() {
             <div 
               key={idx} 
               className={`border rounded-2xl transition-all duration-300 ${
-                openIndex === idx ? 'bg-[var(--bg-secondary)] border-gold/30 shadow-md' : 'bg-transparent border-[var(--card-border)] hover:border-gold/30'
+                openIndex === idx ? 'bg-[var(--bg-secondary)] border-sage/30 shadow-md' : 'bg-transparent border-[var(--card-border)] hover:border-sage/30'
               }`}
             >
               <button 
@@ -44,10 +44,10 @@ export default function FAQ() {
                 }`}>
                   {faq.q}
                 </span>
-                <div className={`flex-shrink-0 w-8 h-8 rounded-full border border-gold/30 flex items-center justify-center transition-transform duration-300 ${
-                  openIndex === idx ? 'rotate-45 bg-gold/10' : ''
+                <div className={`flex-shrink-0 w-8 h-8 rounded-full border border-sage/30 flex items-center justify-center transition-transform duration-300 ${
+                  openIndex === idx ? 'rotate-45 bg-sage/10' : ''
                 }`}>
-                  <Plus size={16} className="text-gold" />
+                  <Plus size={16} className="text-sage" />
                 </div>
               </button>
 

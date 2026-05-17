@@ -134,10 +134,10 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
   };
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        scrolled 
-          ? 'bg-[var(--bg-primary)]/95 backdrop-blur-md py-3 shadow-md' 
+        scrolled
+          ? 'bg-[var(--bg-primary)]/95 backdrop-blur-md py-3 shadow-md'
           : 'bg-transparent py-5'
       }`}
     >
@@ -153,10 +153,10 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
           }}
           className="group"
         >
-          <div className={`font-serif text-lg transition-colors border-l-2 border-gold/30 pl-3 text-[var(--text-primary)]`}>
+          <div className={`font-serif text-lg transition-colors border-l-2 border-sage/30 pl-3 text-[var(--text-primary)]`}>
             {t('navbar.name')}
           </div>
-          <div className="text-[10px] uppercase tracking-widest text-gold font-light pl-3 mt-1 opacity-70 group-hover:opacity-100 transition-opacity">
+          <div className="text-[10px] uppercase tracking-widest text-sage font-light pl-3 mt-1 opacity-70 group-hover:opacity-100 transition-opacity">
             {t('navbar.role')}
           </div>
         </Link>
@@ -177,7 +177,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                       href={link.href}
                       onClick={(e) => handleLinkClick(e, link.href)}
                       className={`flex items-center gap-1 text-xs font-medium uppercase tracking-wider transition-colors py-2 ${
-                        scrolled ? 'text-[var(--text-secondary)] hover:text-gold' : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                        scrolled ? 'text-[var(--text-secondary)] hover:text-sage' : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                       }`}
                     >
                       {link.name}
@@ -192,12 +192,12 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                           className="absolute top-full left-0 mt-0 pt-2 w-64 z-[100]"
                         >
-                          <div className="bg-[var(--bg-secondary)] border border-gold/20 rounded-xl shadow-2xl overflow-hidden py-3 backdrop-blur-xl">
+                          <div className="bg-[var(--bg-secondary)] border border-sage/20 rounded-xl shadow-2xl overflow-hidden py-3 backdrop-blur-xl">
                             {serviceItems.map((item) => (
                               <Link
                                 key={item.id}
                                 to={`/${currentLang}/${LOCALIZED_PATHS[currentLang].services}/${item.slug}`}
-                                className="block px-6 py-3 text-xs font-medium text-[var(--text-secondary)] hover:text-gold hover:bg-gold/5 transition-all"
+                                className="block px-6 py-3 text-xs font-medium text-[var(--text-secondary)] hover:text-sage hover:bg-sage/5 transition-all"
                               >
                                 {item.name}
                               </Link>
@@ -216,12 +216,12 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                     to={link.href}
                     onClick={(e) => handleLinkClick(e, link.href)}
                     className={`group relative text-xs font-medium uppercase tracking-wider transition-colors py-2 ${
-                      scrolled ? 'text-[var(--text-secondary)] hover:text-gold' : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                      scrolled ? 'text-[var(--text-secondary)] hover:text-sage' : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                     }`}
                   >
                     {link.name}
                     <motion.div 
-                      className="absolute -bottom-1 left-0 w-full h-[1px] bg-gold origin-left"
+                      className="absolute -bottom-1 left-0 w-full h-[1px] bg-sage origin-left"
                       initial={{ scaleX: 0 }}
                       whileHover={{ scaleX: 1 }}
                       transition={{ duration: 0.4 }}
@@ -231,15 +231,15 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
             })}
           </div>
           
-          <div className="h-4 w-[1px] bg-gold/30" />
+          <div className="h-4 w-[1px] bg-sage/30" />
 
           {/* Language Switcher */}
           <div className="relative">
             <button 
               onClick={() => setLangMenuOpen(!langMenuOpen)}
-              className={`flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest hover:text-gold transition-colors text-[var(--text-primary)]`}
+              className={`flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest hover:text-sage transition-colors text-[var(--text-primary)]`}
             >
-              <Languages size={14} className="text-gold" />
+              <Languages size={14} className="text-sage" />
               {i18n.language?.split('-')[0].toUpperCase()}
             </button>
             <AnimatePresence>
@@ -248,14 +248,14 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  className="absolute top-full right-0 mt-3 bg-[var(--bg-secondary)] border border-gold/20 rounded-lg overflow-hidden flex flex-col shadow-2xl"
+                  className="absolute top-full right-0 mt-3 bg-[var(--bg-secondary)] border border-sage/20 rounded-lg overflow-hidden flex flex-col shadow-2xl"
                 >
                   {languages.map((l) => (
                     <button
                       key={l.code}
                       onClick={() => changeLanguage(l.code)}
-                      className={`px-6 py-2.5 text-[10px] font-bold hover:bg-gold/10 transition-colors border-b border-[var(--card-border)] last:border-0 ${
-                        i18n.language?.startsWith(l.code) ? 'text-gold' : 'text-[var(--text-secondary)]'
+                      className={`px-6 py-2.5 text-[10px] font-bold hover:bg-sage/10 transition-colors border-b border-[var(--card-border)] last:border-0 ${
+                        i18n.language?.startsWith(l.code) ? 'text-sage' : 'text-[var(--text-secondary)]'
                       }`}
                     >
                       {l.name}
@@ -266,12 +266,12 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
             </AnimatePresence>
           </div>
 
-          <div className="h-4 w-[1px] bg-gold/30" />
+          <div className="h-4 w-[1px] bg-sage/30" />
 
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className={`p-2 rounded-lg hover:bg-gold/10 transition-all text-gold flex items-center justify-center`}
+            className={`p-2 rounded-lg hover:bg-sage/10 transition-all text-sage flex items-center justify-center`}
             aria-label="Toggle theme"
           >
             <AnimatePresence mode="wait">
@@ -291,9 +291,9 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
             to={`/${currentLang}/${LOCALIZED_PATHS[currentLang].contacts}`}
             onClick={(e) => handleLinkClick(e, `/${currentLang}/${LOCALIZED_PATHS[currentLang].contacts}`)}
             className={`px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-wider transition-all border ${
-              scrolled 
-                ? 'bg-gold text-navy border-gold hover:bg-gold-light hover:border-gold-light' 
-                : 'bg-gold/10 text-gold border-gold/30 hover:bg-gold/20 hover:border-gold'
+              scrolled
+                ? 'bg-sage text-white border-sage hover:bg-sage/90 hover:border-sage/90'
+                : 'bg-sage text-white border-sage hover:bg-sage/90'
             }`}
           >
             {t('navbar.consultation')}
@@ -305,7 +305,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
           {/* Mobile Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className="p-2 text-gold"
+            className="p-2 text-sage"
           >
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
           </button>
@@ -316,12 +316,12 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
               const nextIdx = (languages.findIndex(l => i18n.language?.startsWith(l.code)) + 1) % languages.length;
               changeLanguage(languages[nextIdx].code);
             }}
-            className="text-gold text-[10px] font-bold border border-gold/20 px-2 py-1 rounded"
+            className="text-sage text-[10px] font-bold border border-sage/20 px-2 py-1 rounded"
           >
             {i18n.language?.split('-')[0].toUpperCase()}
           </button>
           <button 
-            className="p-2 text-gold"
+            className="p-2 text-sage"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -336,7 +336,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-[var(--bg-secondary)] border-t border-gold/10 px-6 py-8 flex flex-col gap-2 shadow-2xl md:hidden max-h-[85vh] overflow-y-auto"
+            className="absolute top-full left-0 right-0 bg-[var(--bg-secondary)] border-t border-sage/10 px-6 py-8 flex flex-col gap-2 shadow-2xl md:hidden max-h-[85vh] overflow-y-auto"
           >
             {navLinks.map((link) => {
               if (link.hasDropdown) {
@@ -344,10 +344,10 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                   <div key={link.name} className="flex flex-col">
                     <button 
                       onClick={() => setServicesMenuOpen(!servicesMenuOpen)}
-                      className="flex items-center justify-between text-[var(--text-primary)] hover:text-gold transition-colors py-4 border-b border-[var(--card-border)] w-full text-left font-medium"
+                      className="flex items-center justify-between text-[var(--text-primary)] hover:text-sage transition-colors py-4 border-b border-[var(--card-border)] w-full text-left font-medium"
                     >
                       <span className="text-sm uppercase tracking-wider">{link.name}</span>
-                      <ChevronDown size={18} className={`transition-transform duration-300 ${servicesMenuOpen ? 'rotate-180' : ''} text-gold`} />
+                      <ChevronDown size={18} className={`transition-transform duration-300 ${servicesMenuOpen ? 'rotate-180' : ''} text-sage`} />
                     </button>
                     <AnimatePresence>
                       {servicesMenuOpen && (
@@ -363,7 +363,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                                 key={item.id}
                                 to={`/${currentLang}/${LOCALIZED_PATHS[currentLang].services}/${item.slug}`}
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="text-[13px] text-[var(--text-secondary)] hover:text-gold py-3 border-b border-white/5 last:border-0"
+                                className="text-[13px] text-[var(--text-secondary)] hover:text-sage py-3 border-b border-white/5 last:border-0"
                               >
                                 {item.name}
                               </Link>
@@ -384,7 +384,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                     handleLinkClick(e, link.href);
                     setMobileMenuOpen(false);
                   }}
-                  className="text-[var(--text-primary)] hover:text-gold transition-colors py-4 border-b border-[var(--card-border)] text-sm uppercase tracking-wider font-medium"
+                  className="text-[var(--text-primary)] hover:text-sage transition-colors py-4 border-b border-[var(--card-border)] text-sm uppercase tracking-wider font-medium"
                 >
                   {link.name}
                 </Link>
@@ -396,7 +396,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                 handleLinkClick(e, `/${currentLang}/${LOCALIZED_PATHS[currentLang].contacts}`);
                 setMobileMenuOpen(false);
               }}
-              className="mt-6 bg-gold hover:bg-gold-light text-navy font-bold py-4 rounded-xl flex items-center justify-center gap-3 shadow-lg shadow-gold/20 transition-all active:scale-95"
+              className="mt-6 bg-sage hover:bg-sage-bright/95 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-3 shadow-lg shadow-sage/20 transition-all active:scale-95"
             >
               <span className="text-xs uppercase tracking-widest">{t('navbar.consultation')}</span> 
               <ArrowRight size={18} />
