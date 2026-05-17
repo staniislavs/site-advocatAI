@@ -31,3 +31,11 @@ if (fs.existsSync(clientDir)) {
 } else {
   console.log('Postbuild: dist/client not found, skipping.');
 }
+
+// Copy index.html to 404.html for Cloudflare Pages SPA routing
+const indexHtml = path.join(distDir, 'index.html');
+const notFoundHtml = path.join(distDir, '404.html');
+if (fs.existsSync(indexHtml)) {
+  fs.copyFileSync(indexHtml, notFoundHtml);
+  console.log('Postbuild: Copied index.html to 404.html for SPA routing.');
+}
