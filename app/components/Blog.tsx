@@ -917,7 +917,13 @@ const BlogPostView: React.FC<{
                     className="w-10 h-10 rounded-full bg-[var(--bg-primary)] border border-sage/10 flex items-center justify-center text-sage hover:bg-sage hover:text-navy-deep transition-all shadow-sm"
                     aria-label="Viber"
                   >
-                    <MessageSquare size={18} />
+                    {/* Viber icon — stroke style matching site */}
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 21c5.523 0 10-4.03 10-9S17.523 3 12 3 2 7.03 2 12c0 2.07.756 3.972 2.01 5.468L3 21l3.725-1.11A9.96 9.96 0 0 0 12 21z"/>
+                      <path d="M9 10.5a5.5 5.5 0 0 0 5 5"/>
+                      <path d="M8.5 8.5c.3-.3.8-.3 1.1 0l1 1c.3.3.3.8 0 1.1"/>
+                      <path d="M14.4 15.5c.3.3.3.8 0 1.1l-.5.5c-.3.3-.8.3-1.1 0"/>
+                    </svg>
                   </button>
                   <button
                     onClick={() => {
