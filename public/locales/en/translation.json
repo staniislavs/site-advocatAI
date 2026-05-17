@@ -1,7 +1,7 @@
 {
   "navbar": {
-    "name": "Darya Bogdashkina",
-    "role": "Your Protection - With an Attorney",
+    "name": "Daria Bohdashkina",
+    "role": "Your defence — with a lawyer",
     "links": {
       "services": "Services",
       "about": "About",
@@ -15,16 +15,16 @@
     "role": "Attorney · Kyiv · {{years}} years of practice",
     "title_1": "Protecting your rights —",
     "title_2_italic": "with experience and care",
-    "description": "Darya Bogdashkina — professional civil law attorney. Solving complex cases involving divorce, alimony and property division since 2014.",
-    "img_alt": "Attorney Darya Bogdashkina - civil law specialist in Kyiv",
-    "cta_free": "Free Consultation",
+    "description": "Daria Bohdashkina — civil law attorney. Resolving the most complex divorce, alimony and property division cases since 2014.",
+    "img_alt": "Attorney Daria Bohdashkina — civil law specialist in Kyiv",
+    "cta_free": "Free consultation",
     "stats": {
       "practice": "years of practice",
       "practice_val": "{{years}}+",
       "won": "cases won",
       "won_val": "90%",
       "response": "response time",
-      "response_val": "24h",
+      "response_val": "24 h",
       "offices": "office in Kyiv",
       "offices_val": "1"
     },
@@ -34,129 +34,177 @@
     },
     "scroll": "Scroll"
   },
+  "cases": {
+    "tag": "Anonymous cases",
+    "title": "Results that",
+    "title_italic": "can be measured.",
+    "description": "No names or photos — just facts, figures and timelines. Client confidentiality matters more than our marketing.",
+    "items": [
+      {
+        "type": "Alimony",
+        "year": "2025",
+        "status": "Won",
+        "title": "Tripled alimony payments in 2 hearings",
+        "description": "The payer concealed official income. We gathered evidence of actual earnings and employment — the court set a share based on real income.",
+        "duration": "Timeline",
+        "durationValue": "48 days",
+        "cost": "Amount",
+        "costValue": "×3"
+      },
+      {
+        "type": "Property division",
+        "year": "2024",
+        "status": "Won",
+        "title": "Client kept her apartment and 60% of joint assets",
+        "description": "The apartment was purchased before marriage but registered later. We proved the funding sources and defended the position on other assets.",
+        "duration": "Saved",
+        "durationValue": "3.2M ₴",
+        "cost": "Timeline",
+        "costValue": "5 mo."
+      },
+      {
+        "type": "Divorce",
+        "year": "2024",
+        "status": "Completed",
+        "title": "Divorce with a foreign element in 4 months",
+        "description": "The husband was an EU citizen and refused to participate. We conducted the process via consultation and obtained a ruling in the absence of the other party.",
+        "duration": "Hearings",
+        "durationValue": "3",
+        "cost": "Timeline",
+        "costValue": "117 days"
+      }
+    ]
+  },
   "situation": {
-    "tag": "We Know Your Situation",
+    "tag": "We know the situation",
     "title": "If this sounds like you —",
     "title_italic": "you've come to the right place.",
     "description": "We understand the complexity of each situation and know how to help in the most challenging cases.",
     "items": [
       {
-        "quote": "My ex hasn't paid alimony in three months.",
-        "description": "We'll help you recover the arrears and establish enforcement without your participation in court proceedings."
+        "quote": "My ex hasn't paid child support for three months.",
+        "description": "We will help recover the debt and hold the payer accountable for evasion — without your attendance at court hearings."
       },
       {
-        "quote": "I'm afraid I'll lose the apartment in the divorce.",
-        "description": "We'll analyze the sources of acquisition, prepare evidence, and protect what legally belongs to you."
+        "quote": "I'm afraid I'll lose my apartment in the divorce.",
+        "description": "We will analyse the acquisition sources, build the evidence base and protect what is rightfully yours."
       },
       {
-        "quote": "I have no idea where to start — I'm lost in the terminology.",
-        "description": "At the first consultation, we'll explain everything in plain language and create a clear 3-step plan forward."
+        "quote": "I have no idea where to start — I just get confused by the legal terms.",
+        "description": "At the first consultation we will explain everything in plain language and draw up a clear 3-step plan."
       }
     ]
   },
   "services": {
-    "tag": "Competencies",
+    "tag": "Expertise",
     "title": "What I ",
-    "title_italic": "specialize in",
-    "description": "Deep expertise in civil law, based on {{years}} years of practice and hundreds of successful cases.",
-    "more": "Learn More",
-    "cta_title": "Have questions?",
-    "cta_desc": "Describe your problem, and we will help.",
+    "title_italic": "specialise in",
+    "description": "Deep expertise in civil law, built on {{years}} years of practice and hundreds of successful cases.",
+    "more": "Learn more",
+    "cta_title": "Have a question?",
+    "cta_desc": "Describe your issue — we will help.",
     "cta_button": "Consultation",
     "items": {
       "divorce": {
-        "name": "Marriage and Divorce",
-        "desc": "Professional support for marriage dissolution. Assistance in court and out-of-court settlements.",
+        "name": "Marriage & divorce",
+        "desc": "Professional support throughout the divorce procedure. Assistance in resolving disputes through court and out-of-court proceedings.",
+        "content": "A divorce attorney specialises in civil law. This field can be emotionally charged and full of life-changing decisions. A family law practitioner must handle a wide range of issues delicately yet fairly: from divorce and annulment to child custody, alimony and visitation rights.\n\nThe divorce process can take from three to twelve months, depending on how the documents are filed and the number of disputed issues involved.",
         "details": [
-          "Consultations on divorce procedures",
-          "Preparation of divorce claims",
-          "Representation in court without client presence",
-          "Marriage annulment",
-          "Establishment of separate residence regime"
+          "Advice on divorce procedures",
+          "Preparation of divorce petitions",
+          "Court representation without the client's attendance",
+          "Recognition of marriage as invalid",
+          "Establishing a separate residence regime"
         ]
       },
       "alimony": {
         "name": "Alimony",
-        "desc": "Protection of child rights and ensuring financial well-being. Collection and review of payments.",
+        "desc": "Protecting the child's rights and securing their financial well-being. Recovery and review of payment amounts.",
+        "content": "Alimony will be one of the most discussed topics in your divorce negotiations. Also known as spousal support, alimony is money paid by one former spouse to the other after a divorce.\n\nThe goal is for both spouses, regardless of income level, to maintain a standard of living after divorce similar to that during the marriage. It also helps the spouse who raised children and managed the household to avoid being left without means of support.\n\nThere are various types of spousal support arrangements for a divorcing couple to consider. Consult a qualified attorney to find out which option is best for you.",
         "details": [
-          "Collection of alimony in fixed amount or share of income",
-          "Collection of additional expenses for the child",
+          "Recovery of alimony as a fixed sum or a share of income",
+          "Recovery of additional child expenses",
           "Reduction or increase of alimony amount",
-          "Spousal support collection",
-          "Enforcement of alimony payment responsibility"
+          "Recovery of spousal maintenance",
+          "Holding the payer liable for non-payment"
         ]
       },
       "property": {
-        "name": "Property Division",
-        "desc": "Fair distribution of jointly acquired marital property, protection of rights to housing and business.",
+        "name": "Property division",
+        "desc": "Fair distribution of jointly acquired marital property, protection of ownership rights to housing and business.",
+        "content": "When a marriage breaks down, a wide range of legal decisions must be made regarding the couple's assets — determining what must be divided and what constitutes marital property. This can be a confusing and complex process.\n\nWhen this happens — or, ideally, before it does — you should consult an experienced family law attorney.\n\nMake sure your needs and rights are properly represented in court from the outset, and seek the help of an experienced attorney who will work closely with you to ensure your case is handled properly.",
         "details": [
-          "Division of real estate (apartments, houses, land plots)",
-          "Division of vehicles and shared business",
-          "Disputes over joint credit obligations and debts",
-          "Recognition of property as personal private property",
-          "Execution of property division agreements"
+          "Division of real estate (apartments, houses, land)",
+          "Division of vehicles and joint businesses",
+          "Disputes over division of loans and debts",
+          "Recognition of property as personal private ownership",
+          "Conclusion of property division agreements"
         ]
       },
       "children": {
-        "name": "Custody and Children",
-        "desc": "Solving complex issues of child upbringing and residence with their best interests in mind.",
+        "name": "Custody & children",
+        "desc": "Resolution of the most complex issues relating to the upbringing and residence of children, with their best interests in mind.",
+        "content": "Struggling to prove that you are the best parent in the eyes of the court? Understanding the 'best interests of the child' standard and what courts are really looking for will help you win custody and relieve the stress of your current situation.\n\nParents hoping to win custody of their children should first familiarise themselves with the custody laws in their jurisdiction and be prepared to present themselves in the best light in court. It is also important to understand that the sole goal of the court is the best interests of the child, which may or may not include sole custody.",
         "details": [
-          "Determination of child's place of residence",
-          "Establishment of communication and upbringing schedule",
-          "Deprivation and restoration of parental rights",
-          "Obtaining permission for child's travel abroad",
-          "Removal of obstacles in communication with the child"
+          "Determination of the child's place of residence",
+          "Establishing a schedule for communication and participation in upbringing",
+          "Termination and restoration of parental rights",
+          "Obtaining permission for the child to travel abroad",
+          "Removing obstacles to communication with the child"
         ]
       },
       "inheritance": {
         "name": "Inheritance",
-        "desc": "Legal assistance in heritage registration and resolution of inheritance disputes in court.",
+        "desc": "Legal assistance with inheritance processing and resolution of inheritance disputes through the courts.",
+        "content": "If you have been wrongfully excluded from a will, or if your lawful inheritance is under threat due to the actions of others, you have the right to protection. It is important to act quickly, as there are strict deadlines that must not be missed when protecting or recovering an inheritance.\n\nThe first step is to contact me for an assessment of your situation. An experienced inheritance attorney will help protect your property rights.",
         "details": [
-          "Registration of inheritance by law and by will",
-          "Restoration of terms for inheritance acceptance",
-          "Recognition of ownership through inheritance",
+          "Processing inheritance by law and by will",
+          "Renewal of the deadline for accepting an inheritance",
+          "Recognition of ownership rights through inheritance",
           "Contesting wills in court",
-          "Determination of additional term for inheritance application"
+          "Determination of an additional deadline for submitting an inheritance acceptance application"
         ]
       },
       "domestic_violence": {
-        "name": "Domestic Violence",
-        "desc": "Urgent legal protection for victims of domestic violence. Obtaining protection orders.",
+        "name": "Domestic violence",
+        "desc": "Urgent legal protection for domestic violence victims. Obtaining restraining orders.",
+        "content": "The law on combating domestic violence focuses on protection from violence within the family and between partners. It provides criminal and administrative penalties for those who cause emotional or physical harm to persons with whom they share a family or other close relationship.",
         "details": [
-          "Obtaining a restrictive order against the offender",
-          "Defense in administrative offense cases",
-          "Representation in police and law enforcement",
-          "Legal support for responsibility procedures"
+          "Obtaining a restraining order against the abuser",
+          "Defence of interests in administrative offence proceedings",
+          "Representation with the police and law enforcement agencies",
+          "Legal support throughout the prosecution process"
         ]
       },
       "housing": {
-        "name": "Housing Disputes",
-        "desc": "Protection of rights to use housing, resolution of registration and eviction conflicts.",
+        "name": "Housing disputes",
+        "desc": "Protection of housing rights, resolution of conflicts regarding registration and eviction.",
         "details": [
-          "Eviction or move-in to housing premises",
+          "Eviction from or moving into residential premises",
           "Recognition of a person as having lost the right to use housing",
-          "Disputes over the procedure for using housing premises",
+          "Disputes over the use of residential premises",
           "Removal of obstacles to the use of property"
         ]
       },
       "adoption": {
         "name": "Adoption",
-        "desc": "Full support for the adoption process. Help in preparing documents for guardianship authorities.",
+        "desc": "Full support throughout the adoption procedure. Assistance with document preparation for guardianship authorities.",
         "details": [
-          "Legal consultations on adoption issues",
-          "Preparation of document package for court submission",
-          "Representation in guardianship and trusteeship authorities",
-          "Child adoption by one spouse (stepparent)"
+          "Legal consultations on adoption matters",
+          "Preparation of a document package for submission to court",
+          "Representation before guardianship and custody authorities",
+          "Adoption of a child by a stepparent"
         ]
       },
       "property_rights": {
-        "name": "Property Rights",
-        "desc": "Protection and registration of ownership rights for real estate and other valuable property.",
+        "name": "Property rights",
+        "desc": "Protection and registration of ownership rights to real estate and other valuable assets.",
+        "content": "The legal definition of property is 'everything belonging to a natural or legal person'. Property can be a tangible or intangible object or, in some cases, an idea owned by someone. Ownership rights give the owner the right to possess and use property, as well as the right to exclude any other rights to possess and use that property.\n\nProperty rights and personal freedom are interrelated. The mission of a property rights attorney is to steadfastly protect clients' property rights against state and private abuses.",
         "details": [
-          "Protection of ownership rights in court",
-          "Recognition of ownership for new buildings and unauthorized construction",
-          "Registration of real estate documents",
-          "Support for real estate transactions"
+          "Protection of property rights through the courts",
+          "Recognition of ownership of new buildings and unauthorised construction",
+          "Preparation of real estate documents",
+          "Support of real estate transactions"
         ]
       }
     }
@@ -164,24 +212,24 @@
   "about": {
     "tag": "About me",
     "title": "An attorney you can trust",
-    "p1": "I am Darya Oleksandrivna Bogdashkina, an attorney with {{years}} years of experience in civil law. My approach is based not only on dry legislation but also on empathy.",
-    "p2": "I understand that civil disputes are always an emotional trial. Each client receives my personal attention and honest assessment of the situation.",
-    "p3": "I don't strive to take on hundreds of cases at once. My philosophy is a deep immersion into each separate story to find a solution that protects your interests to the maximum.",
+    "p1": "I am Daria Oleksandrivna Bohdashkina, an attorney with {{years}} years of experience in civil law. My approach is based not only on legislation, but also on empathy.",
+    "p2": "I understand that civil disputes are always an emotional ordeal. Every client receives my personal attention and an honest assessment of their situation.",
+    "p3": "I do not aim to take on hundreds of cases simultaneously. My philosophy is deep immersion in each individual story to find the solution that best protects your interests.",
     "highlights": {
       "licensed": {
-        "title": "Licensed Ukrainian Attorney",
-        "sub": "Certificate ZP 001001 from 28.02.2014"
+        "title": "Licensed attorney of Ukraine",
+        "sub": "Certificate ZP 001001 dated 28.02.2014"
       },
       "offices": {
         "title": "Office in Kyiv",
-        "sub": "23 Baseina St, Office 25"
+        "sub": "23 Baseina St."
       },
       "quick": {
-        "title": "I answer personally",
+        "title": "I respond personally",
         "sub": "+38 095 909 89 80 · Quick contact"
       }
     },
-    "cta": "Free Consultation"
+    "cta": "Free consultation"
   },
   "process": {
     "tag": "Process",
@@ -192,75 +240,108 @@
     "items": [
       {
         "id": "01",
-        "name": "First Call",
-        "desc": "30 minutes on Zoom or in the office. Free of charge. You explain the situation — I tell you what to do with it."
+        "name": "First conversation",
+        "desc": "30 minutes on Zoom or in the office. Free. You describe your situation — I tell you what to do about it."
       },
       {
         "id": "02",
         "name": "Strategy",
-        "desc": "Written legal position with realistic scenarios, deadlines, and budget. No surprises."
+        "desc": "A written legal position with realistic scenarios, timelines and a budget. No surprises."
       },
       {
         "id": "03",
         "name": "Documents",
-        "desc": "I prepare the claim, evidence, motions. You sign. I file and conduct the case further."
+        "desc": "I prepare the claim, evidence, motions. You sign. I file and handle the case from there."
       },
       {
         "id": "04",
-        "name": "Court & Execution",
-        "desc": "Representation at all hearings. Control of the decision enforcement until the actual result."
+        "name": "Court & enforcement",
+        "desc": "Representation at all hearings. Monitoring enforcement of the ruling until the actual result is achieved."
       }
     ]
   },
   "reviews": {
     "tag": "Reviews",
-    "title": "What ",
+    "title": "What our ",
     "title_italic": "clients say",
     "stat": "reviews",
+    "cta": "Leave a review",
+    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "modal": {
+      "title": "Share your experience",
+      "subtitle": "Your opinion matters to us",
+      "name_label": "Full name",
+      "name_placeholder": "John Smith",
+      "rating_label": "Rating",
+      "text_label": "Your review",
+      "text_placeholder": "Write about your experience working with us...",
+      "submit": "Submit review",
+      "thanks_title": "Thank you for your trust",
+      "thanks_subtitle": "Your review will be published after a brief moderation."
+    },
     "items": [
       {
         "name": "Olena Savchenko",
         "date": "March 2024",
-        "text": "Asked for help in an alimony case. The result exceeded expectations — decision in 2 hearings. Extremely grateful for clarity and support."
+        "text": "I sought help with an alimony case. The result exceeded expectations — a ruling in 2 hearings. Very grateful for the clarity and support."
       },
       {
         "name": "Mykhailo Tkachenko",
         "date": "December 2023",
-        "text": "Divorce with property division went much smoother than I expected. Darya Oleksandrivna is a true professional who knows how to protect the client's interests."
+        "text": "The divorce with property division went much more smoothly than I expected. Daria Oleksandrivna is a true professional who knows how to protect the client's interests."
       },
       {
         "name": "Iryna Kovalenko",
         "date": "August 2024",
-        "text": "Fought for child custody. Darya Oleksandrivna was available almost 24/7. Her confidence in court gave me strength. Positive result!"
+        "text": "We fought for custody of our child. Daria Oleksandrivna was available almost 24/7. Her confidence in court gave me strength. The outcome was positive!"
       }
     ]
   },
   "calculator": {
-    "tag": "What the Court Can Award",
-    "title": "How much can the ",
-    "title_italic": "court award?",
-    "description": "Anonymous case data shows typical court awards for similar cases in Ukrainian courts. These are realistic scenarios based on 10 years of practice.",
+    "tag": "Court awards",
+    "title": "How much can ",
+    "title_italic": "the court award?",
+    "description": "Anonymised case data shows typical award amounts in similar cases in Ukrainian courts. These are realistic scenarios based on 10 years of practice.",
     "form": {
-      "caseType": "Case Type",
+      "caseType": "Case type",
       "children": "Children",
       "period": "Period (months)",
       "calculate": "Calculate",
       "reset": "Reset",
       "result": "{{amount}} ₴/mo.",
       "period_label": "estimated period",
-      "info": "This calculator is for reference only. The actual court award depends on many individual factors.",
+      "info": "The calculator is for reference only. The actual award amount depends on many individual factors.",
       "types": {
-        "alimony": "Child Alimony",
-        "spousal": "Spousal Support",
-        "property": "Property Claim"
+        "alimony": "Child support",
+        "spousal": "Alimony for joint children",
+        "property": "Property division"
       }
-    }
+    },
+    "units": {
+      "month_short": "mo.",
+      "year_short": "yr."
+    },
+    "children": {
+      "one": "child",
+      "few": "children",
+      "many": "children"
+    },
+    "range_label": "Range",
+    "range_note": "Depending on the payer's income and the court ruling.",
+    "placeholder_title": "Select parameters",
+    "placeholder_desc": "Enter the case type, number of children and estimated period — and get your calculation"
   },
   "pricing": {
     "tag": "Pricing",
-    "title": "No \"buts\" ",
-    "title_italic": "in the final invoice.",
-    "description": "Professional support, transparent pricing and fixed cost — no surprises. For complex cases, we offer individual packages.",
+    "title": "No hidden ",
+    "title_italic": "fees.",
+    "description": "Professional support, transparent pricing and a fixed fee — no surprises. For complex cases we offer individual packages.",
+    "featured_badge": "Recommended",
+    "cta": {
+      "first": "Book now",
+      "featured": "Discuss your case",
+      "default": "Request price"
+    },
     "items": [
       {
         "name": "Consultation",
@@ -269,122 +350,122 @@
         "description": "Professional legal assessment",
         "features": [
           "30-minute consultation",
-          "Situational analysis",
-          "Legal position outline",
-          "Next steps clarity"
+          "Situation analysis",
+          "Legal position",
+          "Clarity on next steps"
         ]
       },
       {
-        "name": "Basic Package",
+        "name": "Basic package",
         "price": "25 000₴",
-        "currency": "complete service",
+        "currency": "full service",
         "description": "Full case support",
         "featured": true,
         "features": [
           "Strategy development",
           "Document preparation",
           "Court representation",
-          "Case supervision"
+          "Case monitoring"
         ]
       },
       {
-        "name": "Premium Support",
-        "price": "Individual",
-        "currency": "negotiated",
+        "name": "Premium support",
+        "price": "Custom",
+        "currency": "by arrangement",
         "description": "Full case management",
         "features": [
           "Personal attention",
-          "24/7 contact availability",
+          "24/7 availability",
           "Appeals support",
-          "Execution support"
+          "Enforcement monitoring"
         ]
       }
     ]
   },
   "consultation": {
-    "tag": "30 Minutes",
+    "tag": "30 minutes",
     "title": "30 minutes of conversation ",
-    "title_italic": "— and you'll have a PLAN.",
-    "description": "Personal legal assessment. We analyze your situation, explain everything in plain language, and outline the next steps. No obligations.",
+    "title_italic": "— and you will have a PLAN.",
+    "description": "A personal legal assessment. We analyse your situation, explain everything in plain language and outline the next steps. No obligations.",
     "features": [
       {
         "icon": "phone",
-        "title": "Phone Consultation",
+        "title": "Phone consultation",
         "desc": "Call +38 095 909 89 80 or book online"
       },
       {
         "icon": "video",
-        "title": "Video Meeting",
-        "desc": "Zoom or Teams, choose your time"
+        "title": "Video meeting",
+        "desc": "Zoom or Teams — choose a time"
       },
       {
         "icon": "office",
-        "title": "Office Visit",
-        "desc": "23 Baseina St, Kyiv, Office 25"
+        "title": "Office",
+        "desc": "23 Baseina St., Kyiv, office 25"
       },
       {
         "icon": "check",
-        "title": "Guaranteed Result",
-        "desc": "Clear plan and next steps defined"
+        "title": "Guaranteed outcome",
+        "desc": "A clear plan with defined next steps"
       }
     ],
-    "cta": "Book Free Consultation"
+    "cta": "Book a consultation"
   },
   "faq": {
-    "tag": "Frequently Asked Questions",
+    "tag": "Frequently asked questions",
     "title": "Need ",
     "title_italic": "answers?",
     "items": [
       {
         "q": "How much does the first consultation cost?",
-        "a": "The first consultation is free. During it, we get to know each other, I analyze your situation and propose a defense strategy. No obligations after the first conversation."
+        "a": "The first consultation is free. During it we get acquainted, I analyse your situation and propose a defence strategy. No obligations after the first conversation."
       },
       {
-        "q": "How quickly can an appointment be scheduled?",
-        "a": "An appointment (offline or online) is usually scheduled within 24 hours of contact. In urgent situations — within a few hours."
+        "q": "How quickly can a meeting be arranged?",
+        "a": "Usually a meeting (in person or online) can be arranged within 24 hours of your enquiry. In urgent situations — within a few hours."
       },
       {
-        "q": "Is my presence mandatory at hearings?",
-        "a": "In most cases (divorce, property division), I can represent your interests entirely independently. Your presence is not mandatory if we issue appropriate representation."
+        "q": "Do I need to attend the hearings?",
+        "a": "In most cases (divorce, property division) I can represent your interests entirely on my own. Your attendance is not required if we arrange the appropriate power of attorney."
       },
       {
-        "q": "How long does a divorce process take?",
-        "a": "Through the registry office — 1 month. Through court — from 2 to 6 months, depending on disputes regarding children or property. I always try to speed up the process as much as possible."
+        "q": "How long does the divorce process take?",
+        "a": "Through the civil registry office — 1 month. Through court — from 2 to 6 months, depending on disputes over children or property. I always strive to speed up the process as much as possible."
       }
     ]
   },
   "contacts": {
     "tag": "Contact",
-    "title": "Tell me about ",
+    "title": "Tell us about ",
     "title_italic": "your situation",
-    "description": "The first consultation is free and confidential. Choose a convenient way to contact or fill out the form — I will respond within 24 hours.",
+    "description": "The first consultation is free and confidential. Choose a convenient contact method or fill in the form — I will respond within 24 hours.",
     "phone": "Phone",
     "telegram": "Telegram",
     "whatsapp": "WhatsApp",
     "facebook": "Facebook",
     "form": {
       "name": "Your name *",
-      "name_placeholder": "Yaroslav the Wise",
+      "name_placeholder": "John Smith",
       "phone": "Phone number *",
       "phone_placeholder": "+38 0__ ___ __ __",
-      "type": "Type of case",
-      "type_placeholder": "Select category",
-      "description": "Short description",
-      "desc_placeholder": "Describe your problem with basic information...",
-      "submit": "Submit",
-      "agreement": "By clicking the button, you agree to the processing of personal data. Confidentiality guaranteed.",
-      "required_field": "Please fill out this field",
+      "type": "Case type",
+      "type_placeholder": "Select a category",
+      "description": "Brief description",
+      "desc_placeholder": "Describe your issue and provide key information...",
+      "submit": "Send request",
+      "agreement": "By clicking the button, you agree to the processing of personal data. Confidentiality is guaranteed.",
+      "required_field": "Please fill in this field",
       "success": "Thank you! Your request has been sent. I will contact you shortly.",
-      "captcha_label": "Verification: {{num1}} + {{num2}} = ?",
+      "captcha_label": "Check: {{num1}} + {{num2}} = ?",
       "captcha_placeholder": "Your answer",
-      "captcha_error": "Incorrect verification answer. Please try again.",
-      "bot_error": "Sorry, you seem like a bot.",
+      "captcha_error": "Incorrect answer. Please try again.",
+      "bot_error": "Sorry, you appear to be a bot.",
       "types": {
         "divorce": "Divorce",
         "alimony": "Alimony",
-        "property": "Property Division",
-        "children": "Custody",
-        "custody": "Custody",
+        "property": "Property division",
+        "children": "Child custody",
+        "custody": "Child custody",
         "inheritance": "Inheritance",
         "other": "Other"
       },
@@ -400,12 +481,12 @@
     "nav_tag": "Navigation",
     "loc_tag": "Locations",
     "kyiv": "Kyiv",
-    "kyiv_addr": "23 Baseina St, Office 25",
-    "legal_tag": "Legal Information",
-    "legal_text": "Attorney certificate ZP 001001 from 28.02.2014 issued by the Bar Council of Zaporizhzhia region",
+    "kyiv_addr": "23 Baseina St., office 25",
+    "legal_tag": "Legal information",
+    "legal_text": "Attorney's certificate ZP 001001 dated 28.02.2014, issued by the Bar Council of Zaporizhzhia Region",
     "rights": "All rights reserved",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Use"
+    "privacy": "Privacy policy",
+    "terms": "Terms of use"
   },
   "blog": {
     "tag": "Blog",
@@ -414,11 +495,18 @@
     "read_more": "Read more",
     "no_posts": "No publications yet.",
     "back": "Back to list",
+    "loading": "Loading...",
+    "untitled": "Untitled",
+    "send_success": "Request sent",
+    "send_error": "Sending error",
+    "send_offline": "Network error: client is offline. Please try again later.",
+    "breadcrumb_name": "Blog",
+    "breadcrumb_home": "Home",
     "admin": {
-      "title": "Blog Management",
-      "login": "Author Login",
-      "logout": "Logout",
-      "new_post": "New Post",
+      "title": "Blog management",
+      "login": "Author login",
+      "logout": "Log out",
+      "new_post": "New post",
       "edit": "Edit",
       "delete": "Delete",
       "save": "Save",
@@ -427,54 +515,55 @@
       "draft": "Draft",
       "fields": {
         "title": "Title",
-        "excerpt": "Excerpt",
+        "excerpt": "Short description",
         "content": "Content",
-        "contentType": "Content Type",
+        "contentType": "Content type",
         "image": "Image URL",
         "category": "Category",
         "slug": "Slug (URL)",
-        "tags": "Tags (comma separated)"
+        "slug_placeholder": "e.g. how-to-divide-property",
+        "tags": "Tags (comma-separated)"
       }
     },
     "hero": {
-      "title": "Legal Blog",
-      "subtitle": "Attorney advice on civil law: divorce, alimony, property division.",
-      "search": "Search blog...",
-      "find": "Find"
+      "title": "Legal blog",
+      "subtitle": "Civil law attorney's advice: divorce, alimony, property division.",
+      "search": "Search the blog...",
+      "find": "Search"
     },
     "categories": {
       "tag": "Categories",
-      "all": "All Articles",
+      "all": "All articles",
       "posts_count": "{{count}} articles",
       "items": {
-        "rozluchennya": "Marriage and Divorce",
-        "podil-mayna": "Property Division",
+        "rozluchennya": "Marriage & divorce",
+        "podil-mayna": "Property division",
         "alimony": "Alimony",
-        "opika": "Custody and Children",
+        "opika": "Custody & children",
         "spadkuvannya": "Inheritance",
-        "nasylstvo": "Domestic Violence",
-        "zhytlovi-spory": "Housing Disputes",
+        "nasylstvo": "Domestic violence",
+        "zhytlovi-spory": "Housing disputes",
         "usynovlennya": "Adoption",
-        "pravo-vlasnosti": "Property Rights",
-        "general": "General Topics"
+        "pravo-vlasnosti": "Property rights",
+        "general": "General topics"
       }
     },
     "post": {
-      "updated": "Updated",
+      "updated": "Last updated",
       "reading_time": "{{min}} min read",
-      "toc": "Table of Contents",
+      "toc": "Contents",
       "share": "Share",
-      "next_posts": "Related Articles",
+      "next_posts": "Related articles",
       "cta_sidebar": {
-        "title": "Free Case Assessment",
-        "subtitle": "Answer in 15 minutes — based on your situation",
-        "button": "Get Consultation"
+        "title": "Free case assessment",
+        "subtitle": "Get a personal attorney's response in 15 minutes",
+        "button": "Get a consultation"
       }
     }
   },
   "preloader": {
-    "slogan": "Your Protection with an Attorney",
-    "initials_1": "D",
-    "initials_2": "B"
+    "slogan": "Your defence with a lawyer",
+    "initials_1": "Д",
+    "initials_2": "Б"
   }
 }

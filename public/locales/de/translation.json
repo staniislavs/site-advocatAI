@@ -1,7 +1,7 @@
 {
   "navbar": {
-    "name": "Darya Bogdashkina",
-    "role": "Ihr Schutz - Mit einer Anwältin",
+    "name": "Daria Bohdashkina",
+    "role": "Ihr Schutz — mit einer Anwältin",
     "links": {
       "services": "Leistungen",
       "about": "Über mich",
@@ -12,10 +12,11 @@
     "consultation": "Beratung"
   },
   "hero": {
-    "role": "Anwältin · Kiew · {{years}} Jahre Praxis",
+    "role": "Rechtsanwältin · Kyiv · {{years}} Jahre Praxis",
     "title_1": "Schutz Ihrer Rechte —",
-    "title_2_italic": "mit Erfahrung und Sorgfalt",
-    "description": "Anwältin für Zivilrecht Darya Bogdashkina. Lösung komplexester Zivilsachen professionell und vertraulich.",
+    "title_2_italic": "mit Erfahrung und Fürsorge",
+    "description": "Daria Bohdashkina — Rechtsanwältin für Zivilrecht. Ich löse die schwierigsten Scheidungs-, Unterhalts- und Vermögensaufteilungsfälle seit 2014.",
+    "img_alt": "Rechtsanwältin Daria Bohdashkina — Zivilrechtsspezialistin in Kyiv",
     "cta_free": "Kostenlose Beratung",
     "stats": {
       "practice": "Jahre Praxis",
@@ -23,8 +24,8 @@
       "won": "gewonnene Fälle",
       "won_val": "90%",
       "response": "Reaktionszeit",
-      "response_val": "24h",
-      "offices": "Büro in Kiew",
+      "response_val": "24 Std.",
+      "offices": "Büro in Kyiv",
       "offices_val": "1"
     },
     "badge": {
@@ -33,109 +34,177 @@
     },
     "scroll": "Scrollen"
   },
+  "cases": {
+    "tag": "Anonyme Fälle",
+    "title": "Ergebnisse, die",
+    "title_italic": "messbar sind.",
+    "description": "Keine Namen, keine Fotos — nur Fakten, Zahlen und Fristen. Die Vertraulichkeit des Mandanten ist wichtiger als unser Marketing.",
+    "items": [
+      {
+        "type": "Unterhalt",
+        "year": "2025",
+        "status": "Gewonnen",
+        "title": "Unterhaltszahlungen in 2 Verhandlungen verdreifacht",
+        "description": "Der Zahlungspflichtige verschwieg sein offizielles Einkommen. Wir sammelten Beweise über tatsächliche Zahlungen und Erwerbstätigkeit — das Gericht legte einen Anteil am realen Einkommen fest.",
+        "duration": "Zeitraum",
+        "durationValue": "48 Tage",
+        "cost": "Betrag",
+        "costValue": "×3"
+      },
+      {
+        "type": "Vermögensaufteilung",
+        "year": "2024",
+        "status": "Gewonnen",
+        "title": "Mandantin behielt ihre Wohnung und 60 % des gemeinsamen Vermögens",
+        "description": "Die Wohnung wurde vor der Ehe gekauft, aber später eingetragen. Wir bewiesen die Finanzierungsquellen und verteidigten die Position bei den übrigen Vermögenswerten.",
+        "duration": "Gesichert",
+        "durationValue": "3,2 Mio. ₴",
+        "cost": "Zeitraum",
+        "costValue": "5 Mon."
+      },
+      {
+        "type": "Scheidung",
+        "year": "2024",
+        "status": "Abgeschlossen",
+        "title": "Scheidung mit internationalem Element in 4 Monaten",
+        "description": "Der Ehemann war EU-Bürger und weigerte sich zu kooperieren. Wir führten das Verfahren per Beratung durch und erhielten ein Urteil in Abwesenheit der anderen Partei.",
+        "duration": "Verhandlungen",
+        "durationValue": "3",
+        "cost": "Zeitraum",
+        "costValue": "117 Tage"
+      }
+    ]
+  },
+  "situation": {
+    "tag": "Wir kennen die Situation",
+    "title": "Wenn das nach Ihnen klingt —",
+    "title_italic": "sind Sie genau richtig hier.",
+    "description": "Wir verstehen die Komplexität jeder Situation und wissen, wie wir in den schwierigsten Fällen helfen können.",
+    "items": [
+      {
+        "quote": "Mein Ex zahlt seit drei Monaten keinen Unterhalt.",
+        "description": "Wir helfen, den Rückstand einzutreiben und den Zahlungspflichtigen für seine Pflichtverletzung zur Rechenschaft zu ziehen — ohne Ihre Anwesenheit bei den Gerichtsverhandlungen."
+      },
+      {
+        "quote": "Ich befürchte, bei der Scheidung meine Wohnung zu verlieren.",
+        "description": "Wir analysieren die Erwerbsquellen, bauen die Beweisgrundlage auf und schützen, was Ihnen rechtmäßig gehört."
+      },
+      {
+        "quote": "Ich weiß nicht, wo ich anfangen soll — ich verliere mich nur in den Rechtsbegriffen.",
+        "description": "Beim ersten Beratungsgespräch erklären wir alles in einfacher Sprache und erstellen einen klaren 3-Schritte-Plan."
+      }
+    ]
+  },
   "services": {
-    "tag": "Kompetenzen",
+    "tag": "Fachgebiete",
     "title": "Worauf ich mich ",
     "title_italic": "spezialisiere",
-    "description": "Umfassende Expertise im Zivilrecht, basierend auf {{years}} Jahren Praxis und hunderten erfolgreichen Fällen.",
+    "description": "Tiefgreifende Expertise im Zivilrecht, aufgebaut auf {{years}}-jähriger Praxis und Hunderten erfolgreicher Fälle.",
     "more": "Mehr erfahren",
-    "cta_title": "Haben Sie Fragen?",
-    "cta_desc": "Beschreiben Sie Ihr Problem, wir helfen Ihnen.",
+    "cta_title": "Haben Sie eine Frage?",
+    "cta_desc": "Schildern Sie Ihr Problem — wir helfen.",
     "cta_button": "Beratung",
     "items": {
       "divorce": {
-        "name": "Ehe und Scheidung",
-        "desc": "Professionelle Begleitung des Ehescheidungsverfahrens. Unterstützung bei gerichtlichen und außergerichtlichen Beilegungen.",
+        "name": "Ehe & Scheidung",
+        "desc": "Professionelle Begleitung des Scheidungsverfahrens. Unterstützung bei der Beilegung von Streitigkeiten durch Gericht und außergerichtliche Einigung.",
+        "content": "Eine Scheidungsanwältin ist auf Zivilrecht spezialisiert. Dieses Fachgebiet kann emotional belastet sein und lebensverändernde Entscheidungen erfordern. Eine Familienrechtsanwältin muss sensibel, aber gerecht ein breites Spektrum an familienrechtlichen Fragen behandeln: von Scheidung und Eheannullierung bis hin zu Sorgerecht, Unterhalt und Besuchsrechten.\n\nDas Scheidungsverfahren kann zwischen drei und zwölf Monaten dauern, je nach Art der Einreichung und Anzahl der strittigen Punkte.",
         "details": [
           "Beratung zum Scheidungsverfahren",
-          "Vorbereitung von Scheidungsklagen",
-          "Vertretung vor Gericht ohne Anwesenheit des Mandanten",
-          "Annullierung der Ehe",
-          "Festlegung des getrennten Wohnsitzes"
+          "Vorbereitung der Scheidungsklage",
+          "Gerichtliche Vertretung ohne Anwesenheit des Mandanten",
+          "Feststellung der Ungültigkeit der Ehe",
+          "Festlegung einer Regelung zum getrennten Wohnen"
         ]
       },
       "alimony": {
         "name": "Unterhalt",
-        "desc": "Schutz der Kinderrechte und Sicherstellung des finanziellen Wohlergehens. Einzug und Überprüfung von Zahlungen.",
+        "desc": "Schutz der Kindesrechte und Sicherung seines finanziellen Wohlergehens. Einziehung und Überprüfung der Zahlungsbeträge.",
+        "content": "Der Unterhalt wird eines der meistdiskutierten Themen in Ihren Scheidungsverhandlungen sein. Unterhalt, auch als Ehegattenunterhalt bezeichnet, ist ein Betrag, den ein früherer Ehegatte dem anderen nach der Scheidung zahlt.\n\nDas Ziel ist es, dass beide Ehegatten unabhängig vom Einkommensniveau nach der Scheidung einen ähnlichen Lebensstandard aufrechterhalten können wie während der Ehe. Außerdem hilft diese Unterstützung dem Ehegatten, der Kinder erzogen und den Haushalt geführt hat, nicht ohne Existenzmittel dazustehen.\n\nEs gibt verschiedene Arten von Unterhaltsvereinbarungen, die ein sich scheidendes Paar in Betracht ziehen kann. Wenden Sie sich an einen qualifizierten Anwalt, um herauszufinden, welche Option für Sie am besten geeignet ist.",
         "details": [
-          "Einzug von Unterhalt in fester Summe oder Einkommensanteil",
-          "Einzug zusätzlicher Kosten für das Kind",
-          "Senkung oder Erhöhung des Unterhaltsbetrags",
-          "Ehegattenunterhalt",
-          "Durchsetzung der Verantwortung bei Nichtzahlung"
+          "Einziehung von Unterhalt als Festbetrag oder Einkommensanteil",
+          "Einziehung zusätzlicher Kinderkosten",
+          "Verringerung oder Erhöhung des Unterhaltsbetrags",
+          "Einziehung von Ehegattenunterhalt",
+          "Haftbarmachung für Nichtzahlung von Unterhalt"
         ]
       },
       "property": {
-        "name": "Vermögensteilung",
-        "desc": "Faire Aufteilung des während der Ehe erworbenen Vermögens, Schutz der Rechte an Wohnraum und Unternehmen.",
+        "name": "Vermögensaufteilung",
+        "desc": "Gerechte Aufteilung des gemeinsam erworbenen ehelichen Vermögens, Schutz der Eigentumsrechte an Immobilien und Unternehmen.",
+        "content": "Bei einer Scheidung müssen zahlreiche rechtliche Entscheidungen in Bezug auf das Vermögen des Paares getroffen werden — nämlich die Bestimmung dessen, was aufgeteilt werden muss, und was als eheliches Vermögen gilt. Dies kann ein verwirrender und komplexer Prozess sein.\n\nWenn dies geschieht — oder idealerweise bevor es geschieht — sollten Sie einen erfahrenen Scheidungsanwalt aufsuchen.\n\nStellen Sie sicher, dass Ihre Bedürfnisse und Rechte von Anfang an ordnungsgemäß vor Gericht vertreten werden, und wenden Sie sich an einen erfahrenen Anwalt, der eng mit Ihnen zusammenarbeitet.",
         "details": [
           "Aufteilung von Immobilien (Wohnungen, Häuser, Grundstücke)",
           "Aufteilung von Fahrzeugen und gemeinsamen Unternehmen",
-          "Streitigkeiten über Kreditverpflichtungen und Schulden",
+          "Streitigkeiten über die Aufteilung von Krediten und Schulden",
           "Anerkennung von Eigentum als persönliches Privateigentum",
-          "Abschluss von Vereinbarungen über die Vermögensteilung"
+          "Abschluss von Vermögensaufteilungsvereinbarungen"
         ]
       },
       "children": {
-        "name": "Sorgerecht und Kinder",
-        "desc": "Lösung komplexer Fragen der Kindererziehung und des Wohnsitzes unter Berücksichtigung des Kindeswols.",
+        "name": "Sorgerecht & Kinder",
+        "desc": "Lösung der komplexesten Fragen zur Erziehung und zum Wohnsitz von Kindern unter Berücksichtigung ihrer besten Interessen.",
+        "content": "Haben Sie Schwierigkeiten zu beweisen, dass Sie der beste Elternteil in den Augen des Gerichts sind? Das Verständnis des Standards des 'Kindeswohls' und dessen, was Gerichte wirklich suchen, wird Ihnen helfen, das Sorgerecht zu gewinnen.\n\nEltern, die das Sorgerecht gewinnen möchten, sollten sich zunächst mit den Sorgerechtsgesetzen in ihrer Gerichtsbarkeit vertraut machen und sich darauf vorbereiten, sich von ihrer besten Seite zu zeigen. Es ist auch wichtig zu verstehen, dass das einzige Ziel des Gerichts das Wohl des Kindes ist.",
         "details": [
           "Bestimmung des Wohnsitzes des Kindes",
-          "Erstellung eines Umgangs- und Erziehungsplans",
-          "Entzug und Wiederherstellung des elterlichen Sorgerechts",
-          "Einholung der Erlaubnis für Reisen des Kindes ins Ausland",
-          "Beseitigung von Hindernissen im Umgang mit dem Kind"
+          "Festlegung eines Umgangs- und Erziehungsplans",
+          "Entzug und Wiederherstellung des Sorgerechts",
+          "Einholung der Genehmigung für die Ausreise des Kindes ins Ausland",
+          "Beseitigung von Hindernissen beim Umgang mit dem Kind"
         ]
       },
       "inheritance": {
-        "name": "Erbrecht",
-        "desc": "Rechtliche Unterstützung bei der Erbschaftsregistrierung und Beilegung von Erbrechtsstreitigkeiten vor Gericht.",
+        "name": "Erbschaft",
+        "desc": "Rechtliche Unterstützung bei der Erbschaftsabwicklung und Beilegung von Erbstreitigkeiten vor Gericht.",
+        "content": "Wenn Sie zu Unrecht aus einem Testament ausgeschlossen wurden oder Ihr rechtmäßiges Erbe durch die Handlungen anderer Personen bedroht ist, haben Sie das Recht auf Schutz. Es ist wichtig, schnell zu handeln, da es klare Fristen gibt, die nicht verpasst werden dürfen.\n\nDer erste Schritt ist, mich für eine Beurteilung Ihrer Situation zu kontaktieren. Eine erfahrene Erbschaftsanwältin hilft dabei, Ihre Eigentumsrechte zu schützen.",
         "details": [
-          "Erbschaftsabwicklung nach Gesetz und Testament",
-          "Wiederherstellung von Fristen für die Erbschaftsannahme",
-          "Anerkennung von Eigentum durch Erbschaft",
+          "Abwicklung der Erbschaft nach Gesetz und Testament",
+          "Verlängerung der Frist zur Annahme einer Erbschaft",
+          "Anerkennung des Eigentumsrechts im Erbwege",
           "Anfechtung von Testamenten vor Gericht",
-          "Festlegung einer zusätzlichen Frist für den Erbschaftsantrag"
+          "Festlegung einer zusätzlichen Frist für die Einreichung des Erbschaftsannahmeantrags"
         ]
       },
       "domestic_violence": {
         "name": "Häusliche Gewalt",
-        "desc": "Dringender Rechtsschutz für Opfer häuslicher Gewalt. Einholung von Schutzanordnungen.",
+        "desc": "Dringender Rechtsschutz für Opfer häuslicher Gewalt. Erwirkung von Schutzanordnungen.",
+        "content": "Das Gesetz zur Bekämpfung häuslicher Gewalt konzentriert sich auf den Schutz vor Gewalt in der Familie und zwischen Partnern. Es sieht strafrechtliche und verwaltungsrechtliche Sanktionen für diejenigen vor, die Personen, mit denen sie eine Familie oder eine andere enge Beziehung teilen, emotionalen oder körperlichen Schaden zufügen.",
         "details": [
-          "Einholung einer Schutzanordnung gegen den Täter",
-          "Verteidigung in Ordnungswidrigkeitsverfahren",
-          "Vertretung bei Polizei und Strafverfolgungsbehörden",
-          "Rechtliche Unterstützung bei Verantwortungsverfahren"
+          "Erwirkung einer Schutzanordnung gegen den Täter",
+          "Interessenvertretung in Verwaltungsverfahren",
+          "Vertretung bei der Polizei und den Strafverfolgungsbehörden",
+          "Rechtliche Begleitung des Strafverfolgungsverfahrens"
         ]
       },
       "housing": {
-        "name": "Wohnungsstreitigkeiten",
-        "desc": "Schutz der Wohnnutzungsrechte, Beilegung von Registrierungs- und Räumungskonflikten.",
+        "name": "Wohnstreitigkeiten",
+        "desc": "Schutz der Wohnrechte, Beilegung von Konflikten bezüglich Anmeldung und Räumung.",
         "details": [
           "Räumung oder Einzug in Wohnräume",
-          "Anerkennung des Verlusts des Wohnnutzungsrechts",
-          "Streitigkeiten über das Verfahren zur Nutzung von Wohnräumen",
-          "Beseitigung von Eigentumsnutzungshindernissen"
+          "Feststellung des Verlusts des Wohnnutzungsrechts",
+          "Streitigkeiten über die Nutzung von Wohnräumen",
+          "Beseitigung von Hindernissen bei der Nutzung von Eigentum"
         ]
       },
       "adoption": {
         "name": "Adoption",
-        "desc": "Vollständige Unterstützung des Adoptionsprozesses. Hilfe bei der Vorbereitung von Dokumenten für Behörden.",
+        "desc": "Vollständige Begleitung des Adoptionsverfahrens. Unterstützung bei der Vorbereitung von Dokumenten für die Vormundschaftsbehörden.",
         "details": [
-          "Rechtliche Beratung zu Adoptionsfragen",
-          "Vorbereitung des Dokumentenpakets für das Gericht",
-          "Vertretung vor Vormundschaftsbehörden",
-          "Adoption durch einen Ehepartner (Stiefelternteil)"
+          "Rechtsberatung in Adoptionsfragen",
+          "Vorbereitung eines Dokumentenpakets zur Einreichung beim Gericht",
+          "Vertretung vor den Vormundschafts- und Pflegebehörden",
+          "Adoption eines Kindes durch einen Stiefelternteil"
         ]
       },
       "property_rights": {
         "name": "Eigentumsrechte",
-        "desc": "Schutz und Registrierung von Eigentumsrechten für Immobilien und andere wertvolle Güter.",
+        "desc": "Schutz und Eintragung von Eigentumsrechten an Immobilien und anderen wertvollen Vermögenswerten.",
+        "content": "Die rechtliche Definition von Eigentum lautet: 'alles, was einer natürlichen oder juristischen Person gehört'. Eigentum kann ein materielles oder immaterielles Objekt oder in manchen Fällen eine Idee sein. Eigentumsrechte geben dem Eigentümer das Recht, das Eigentum zu besitzen und zu nutzen.\n\nEigentumsrechte und persönliche Freiheit sind miteinander verbunden. Die Mission einer Eigentumsrechtsanwältin besteht darin, die Eigentumsrechte der Mandanten konsequent vor staatlichem und privatem Missbrauch zu schützen.",
         "details": [
-          "Schutz von Eigentumsrechten vor Gericht",
-          "Anerkennung von Eigentum bei Neubauten und unbefugtem Bauen",
-          "Registrierung von Immobiliendokumenten",
-          "Unterstützung bei Immobilientransaktionen"
+          "Schutz von Eigentumsrechten auf dem Gerichtsweg",
+          "Anerkennung des Eigentumsrechts an Neubauten und eigenmächtigen Bauten",
+          "Vorbereitung von Immobiliendokumenten",
+          "Begleitung von Immobilientransaktionen"
         ]
       }
     }
@@ -143,17 +212,17 @@
   "about": {
     "tag": "Über mich",
     "title": "Eine Anwältin, der Sie vertrauen können",
-    "p1": "Ich bin Darya Oleksandrivna Bogdashkina, eine Anwältin mit {{years}} Jahren Erfahrung im Zivilrecht. Mein Ansatz basiert nicht nur auf trockenen Gesetzen, sondern auch auf Empathie.",
+    "p1": "Ich bin Daria Oleksandrivna Bohdashkina, Rechtsanwältin mit {{years}}-jähriger Erfahrung im Zivilrecht. Mein Ansatz basiert nicht nur auf der Gesetzgebung, sondern auch auf Empathie.",
     "p2": "Ich verstehe, dass Zivilstreitigkeiten immer eine emotionale Belastung sind. Jeder Mandant erhält meine persönliche Aufmerksamkeit und eine ehrliche Einschätzung der Situation.",
-    "p3": "Ich strebe nicht danach, hunderte Fälle gleichzeitig zu übernehmen. Meine Philosophie ist ein tiefes Eintauchen in jede einzelne Geschichte, um eine Lösung zu finden, die Ihre Interessen optimal schützt.",
+    "p3": "Ich strebe nicht danach, Hunderte von Fällen gleichzeitig zu übernehmen. Meine Philosophie ist das tiefe Eintauchen in jede einzelne Geschichte, um die Lösung zu finden, die Ihre Interessen am besten schützt.",
     "highlights": {
       "licensed": {
-        "title": "Zugelassene ukrainische Anwältin",
+        "title": "Zugelassene Rechtsanwältin der Ukraine",
         "sub": "Zertifikat ZP 001001 vom 28.02.2014"
       },
       "offices": {
-        "title": "Büro in Kiew",
-        "sub": "Baseina Str. 23, Büro 25"
+        "title": "Büro in Kyiv",
+        "sub": "Baseina-Str. 23"
       },
       "quick": {
         "title": "Ich antworte persönlich",
@@ -163,183 +232,152 @@
     "cta": "Kostenlose Beratung"
   },
   "process": {
-    "tag": "Prozess",
+    "tag": "Ablauf",
     "title_1": "Vier Schritte vom",
     "title_2": "ersten Anruf bis zum ",
     "title_italic": "Ergebnis.",
-    "subtitle": "№ 04 · PROZESS",
+    "subtitle": "№ 04 · ABLAUF",
     "items": [
       {
         "id": "01",
         "name": "Erstes Gespräch",
-        "desc": "30 Minuten Zoom oder im Büro. Kostenlos. Sie schildern — ich sage, was zu tun ist."
+        "desc": "30 Minuten per Zoom oder im Büro. Kostenlos. Sie schildern Ihre Situation — ich sage Ihnen, was zu tun ist."
       },
       {
         "id": "02",
         "name": "Strategie",
-        "desc": "Schriftliche Position mit Szenarien, Terminen und Budget. Ohne Überraschungen."
+        "desc": "Eine schriftliche Rechtsposition mit realistischen Szenarien, Fristen und Budget. Keine Überraschungen."
       },
       {
         "id": "03",
         "name": "Dokumente",
-        "desc": "Ich erstelle Klagen, Beweise, Anträge. Sie unterschreiben. Ich reiche ein."
+        "desc": "Ich bereite die Klage, Beweise und Anträge vor. Sie unterschreiben. Ich reiche ein und führe den Fall weiter."
       },
       {
         "id": "04",
         "name": "Gericht & Vollstreckung",
-        "desc": "Vertretung bei allen Terminen. Kontrolle der Vollstreckung der Entscheidung bis zum Ergebnis."
+        "desc": "Vertretung bei allen Verhandlungen. Überwachung der Urteilsvollstreckung bis zum tatsächlichen Ergebnis."
       }
     ]
   },
   "reviews": {
     "tag": "Bewertungen",
-    "title": "Was ",
-    "title_italic": "Kunden sagen",
+    "title": "Was unsere ",
+    "title_italic": "Mandanten sagen",
     "stat": "Bewertungen",
+    "cta": "Bewertung hinterlassen",
+    "months": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+    "modal": {
+      "title": "Erfahrung teilen",
+      "subtitle": "Ihre Meinung ist uns wichtig",
+      "name_label": "Vor- und Nachname",
+      "name_placeholder": "Max Mustermann",
+      "rating_label": "Bewertung",
+      "text_label": "Ihre Bewertung",
+      "text_placeholder": "Schreiben Sie über Ihre Erfahrungen mit uns...",
+      "submit": "Bewertung absenden",
+      "thanks_title": "Danke für Ihr Vertrauen",
+      "thanks_subtitle": "Ihre Bewertung wird nach einer kurzen Moderation veröffentlicht."
+    },
     "items": [
       {
-        "name": "Olena Sawtschenko",
+        "name": "Olena Savchenko",
         "date": "März 2024",
-        "text": "Habe Hilfe in einem Unterhaltsfall gesucht. Das Ergebnis übertraf die Erwartungen — Entscheidung in 2 Anhörungen. Sehr dankbar für Klarheit und Unterstützung."
+        "text": "Ich habe Hilfe in einer Unterhaltsangelegenheit gesucht. Das Ergebnis übertraf die Erwartungen — ein Urteil in 2 Verhandlungen. Sehr dankbar für die Klarheit und Unterstützung."
       },
       {
-        "name": "Mychailo Tkachenko",
+        "name": "Mykhailo Tkachenko",
         "date": "Dezember 2023",
-        "text": "Die Scheidung mit Güterteilung verlief viel ruhiger als erwartet. Darya Oleksandrivna ist ein echter Profi, der weiß, wie man die Interessen der Mandanten schützt."
+        "text": "Die Scheidung mit Vermögensaufteilung verlief viel ruhiger, als ich erwartet hatte. Daria Oleksandrivna ist eine echte Fachfrau, die weiß, wie man die Interessen des Mandanten schützt."
       },
       {
-        "name": "Iryna Kowalenko",
+        "name": "Iryna Kovalenko",
         "date": "August 2024",
-        "text": "Wir haben um das Sorgerecht für das Kind gekämpft. Darya Oleksandrivna war fast rund um die Uhr erreichbar. Ihre Sicherheit vor Gericht gab mir Kraft. Positives Ergebnis!"
-      }
-    ]
-  },
-  "cases": {
-    "tag": "Anonym verfolgten Fälle",
-    "title": "Ergebnisse, die ",
-    "title_italic": "messbar sind",
-    "description": "Ohne Namen und Fotos — nur Fakten, Zahlen und Fristen...",
-    "items": [
-      {
-        "id": 1,
-        "type": "Unterhalt",
-        "year": "2025",
-        "status": "Gewonnen",
-        "title": "Unterhaltsbetrag verfaßt",
-        "description": "Unterhaltsbetrag in 2 Anhörungen verdreifacht",
-        "duration": "Dauer",
-        "durationValue": "48 Tage",
-        "cost": "Ergebnis",
-        "costValue": "×3"
-      },
-      {
-        "id": 2,
-        "type": "Vermögensteilung",
-        "year": "2024",
-        "status": "Gewonnen",
-        "title": "Immobilie geschützt",
-        "description": "Mandantin behielt die Wohnung und 60% der Gemeinschaftsgüter",
-        "duration": "Dauer",
-        "durationValue": "5 Monate",
-        "cost": "Ergebnis",
-        "costValue": "3.2M gespart"
-      },
-      {
-        "id": 3,
-        "type": "Scheidung",
-        "year": "2024",
-        "status": "Gewonnen",
-        "title": "Internationale Scheidung",
-        "description": "Scheidung mit ausländischem Element in 4 Monaten abgeschlossen",
-        "duration": "Dauer",
-        "durationValue": "117 Tage",
-        "cost": "Verfahren",
-        "costValue": "3 Anhörungen"
-      }
-    ]
-  },
-  "situation": {
-    "tag": "Wir kennen die Situation",
-    "title": "Falls das auf Sie zutrifft —",
-    "title_italic": "sind Sie hier richtig.",
-    "description": "Wir verstehen die Komplexität jeder Situation und wissen, wie wir in den schwierigsten Fällen helfen können.",
-    "items": [
-      {
-        "quote": "Mein Ex hat drei Monate lang keinen Unterhalt gezahlt.",
-        "description": "Wir helfen Ihnen, den Rückstand einzutreiben und die Durchsetzung zu sichern, ohne dass Sie an Gerichtsverfahren teilnehmen müssen."
-      },
-      {
-        "quote": "Ich fürchte, mich in der Scheidung die Wohnung zu verlieren.",
-        "description": "Wir analysieren die Erwerbungsquellen, bereiten Beweise vor und schützen das, das Ihnen rechtlich gehört."
-      },
-      {
-        "quote": "Ich weiß nicht, wo ich anfangen soll — ich bin verloren in der Terminologie.",
-        "description": "Bei der ersten Beratung erklären wir alles in einfacher Sprache und erstellen einen klaren 3-Schritte-Plan nach vorne."
+        "text": "Wir haben für das Sorgerecht unseres Kindes gekämpft. Daria Oleksandrivna war fast rund um die Uhr erreichbar. Ihr Selbstvertrauen vor Gericht gab mir Kraft. Das Ergebnis war positiv!"
       }
     ]
   },
   "calculator": {
-    "tag": "Was das Gericht vergibt",
-    "title": "Wie viel kann das ",
-    "title_italic": "Gericht zusprechen?",
-    "description": "Anonyme Falldate zeigen typische Gerichte Sprüche in ähnlichen Fällen bei ukrainischen Gerichten. Dies sind realistische Szenarien auf Basis von 10 Jahren Praxis.",
+    "tag": "Gerichtliche Urteile",
+    "title": "Wie viel kann ",
+    "title_italic": "das Gericht zusprechen?",
+    "description": "Anonymisierte Falldaten zeigen typische Zuspruchbeträge in ähnlichen Fällen vor ukrainischen Gerichten. Dies sind realistische Szenarien auf Basis von 10 Jahren Praxis.",
     "form": {
-      "caseType": "Fall-Typ",
+      "caseType": "Falltyp",
       "children": "Kinder",
       "period": "Zeitraum (Monate)",
       "calculate": "Berechnen",
       "reset": "Zurücksetzen",
-      "result": "{{amount}} ₴/Mo.",
+      "result": "{{amount}} ₴/Mon.",
       "period_label": "geschätzter Zeitraum",
-      "info": "Dieser Rechner dient nur zu Referenzzwecken. Der tatsächliche Gerichtsbeschluss hängt von vielen einzelnen Faktoren ab.",
+      "info": "Der Rechner dient nur als Orientierung. Der tatsächliche Betrag hängt von vielen individuellen Faktoren ab.",
       "types": {
-        "alimony": "Kinderunter halt",
-        "spousal": "Ehegattenunterhalt",
-        "property": "Vermögensanspruch"
+        "alimony": "Kindesunterhalt",
+        "spousal": "Unterhalt für gemeinsame Kinder",
+        "property": "Vermögensaufteilung"
       }
-    }
+    },
+    "units": {
+      "month_short": "Mon.",
+      "year_short": "J."
+    },
+    "children": {
+      "one": "Kind",
+      "few": "Kinder",
+      "many": "Kinder"
+    },
+    "range_label": "Spanne",
+    "range_note": "Abhängig vom Einkommen des Zahlungspflichtigen und dem Gerichtsurteil.",
+    "placeholder_title": "Parameter auswählen",
+    "placeholder_desc": "Geben Sie den Falltyp, die Anzahl der Kinder und den geschätzten Zeitraum ein — und erhalten Sie Ihre Berechnung"
   },
   "pricing": {
-    "tag": "Preisgestaltung",
-    "title": "Keine \"aber\" ",
-    "title_italic": "in der Endrechnung.",
-    "description": "Professionelle Unterstützung, transparente Preisgestaltung und feste Kosten — keine Überraschungen. Für komplexe Fälle bieten wir individuelle Pakete an.",
+    "tag": "Preise",
+    "title": "Keine versteckten ",
+    "title_italic": "Kosten.",
+    "description": "Professionelle Unterstützung, transparente Preise und ein Festhonorar — keine Überraschungen. Für komplexe Fälle bieten wir individuelle Pakete an.",
+    "featured_badge": "Empfohlen",
+    "cta": {
+      "first": "Termin buchen",
+      "featured": "Fall besprechen",
+      "default": "Preis anfragen"
+    },
     "items": [
       {
         "name": "Beratung",
         "price": "1 500₴",
         "currency": "pro Sitzung",
-        "description": "Professionelle Rechtsberatung",
+        "description": "Professionelle Rechtsbewertung",
         "features": [
-          "30-Minuten-Beratung",
+          "30-minütige Beratung",
           "Situationsanalyse",
-          "Rechtliche Grundposition",
-          "Klarheit der nächsten Schritte"
+          "Rechtliche Position",
+          "Klarheit über nächste Schritte"
         ]
       },
       {
         "name": "Basispaket",
         "price": "25 000₴",
-        "currency": "kompletter Service",
-        "description": "Vollständige Fallunterstützung",
+        "currency": "Vollservice",
+        "description": "Vollständige Fallbetreuung",
         "featured": true,
         "features": [
           "Strategieentwicklung",
-          "Dokumentvorbereitung",
-          "Gerichtsvertretung",
+          "Dokumentenvorbereitung",
+          "Gerichtliche Vertretung",
           "Fallüberwachung"
         ]
       },
       {
-        "name": "Premium Support",
+        "name": "Premium-Betreuung",
         "price": "Individuell",
-        "currency": "verhandelt",
+        "currency": "nach Vereinbarung",
         "description": "Vollständiges Fallmanagement",
         "features": [
-          "Persönliche Aufmerksamkeit",
-          "24/7 Kontaktverfügbarkeit",
-          "Berufungsunterstützung",
-          "Vollstreckungsunterstützung"
+          "Persönliche Betreuung",
+          "Erreichbarkeit 24/7",
+          "Berufungsbegleitung",
+          "Vollstreckungsüberwachung"
         ]
       }
     ]
@@ -348,7 +386,7 @@
     "tag": "30 Minuten",
     "title": "30 Minuten Gespräch ",
     "title_italic": "— und Sie haben einen PLAN.",
-    "description": "Persönliche Rechtsberatung. Wir analysieren Ihre Situation, erklären alles in einfacher Sprache und skizzieren die nächsten Schritte. Keine Verpflichtungen.",
+    "description": "Eine persönliche Rechtsbewertung. Wir analysieren Ihre Situation, erklären alles in einfacher Sprache und skizzieren die nächsten Schritte. Keine Verpflichtungen.",
     "features": [
       {
         "icon": "phone",
@@ -358,103 +396,115 @@
       {
         "icon": "video",
         "title": "Videokonferenz",
-        "desc": "Zoom oder Teams, wählen Sie Ihre Zeit"
+        "desc": "Zoom oder Teams — wählen Sie einen Termin"
       },
       {
         "icon": "office",
         "title": "Büro",
-        "desc": "Baseina Str. 23, Kiew, Büro 25"
+        "desc": "Baseina-Str. 23, Kyiv, Büro 25"
       },
       {
         "icon": "check",
         "title": "Garantiertes Ergebnis",
-        "desc": "Klarer Plan und definierte nächste Schritte"
+        "desc": "Ein klarer Plan mit definierten nächsten Schritten"
       }
     ],
-    "cta": "Kostenlose Beratung buchen"
+    "cta": "Beratung buchen"
   },
   "faq": {
     "tag": "Häufig gestellte Fragen",
-    "title": "Brauchen Sie ",
-    "title_italic": "Antworten?",
+    "title": "Antworten ",
+    "title_italic": "gesucht?",
     "items": [
       {
-        "q": "Wie viel kostet die Erstberatung?",
-        "a": "Die Erstberatung ist kostenlos. Dabei lernen wir uns kennen, ich analysiere Ihre Situation und schlage eine Verteidigungsstrategie vor. Keine Verpflichtungen nach dem ersten Gespräch."
+        "q": "Was kostet die erste Beratung?",
+        "a": "Die erste Beratung ist kostenlos. Dabei lernen wir uns kennen, ich analysiere Ihre Situation und schlage eine Verteidigungsstrategie vor. Keine Verpflichtungen nach dem ersten Gespräch."
       },
       {
         "q": "Wie schnell kann ein Termin vereinbart werden?",
-        "a": "Ein Termin (offline oder online) wird in der Regel innerhalb von 24 Stunden nach der Kontaktaufnahme vereinbart. In dringenden Situationen — innerhalb weniger Stunden."
+        "a": "In der Regel kann ein Termin (persönlich oder online) innerhalb von 24 Stunden nach Ihrer Anfrage vereinbart werden. In dringenden Fällen — innerhalb weniger Stunden."
       },
       {
-        "q": "Ist meine Anwesenheit bei Anhörungen obligatorisch?",
-        "a": "In den meisten Fällen (Scheidung, Vermögensteilung) kann ich Ihre Interessen völlig unabhängig vertreten. Ihre Anwesenheit ist nicht obligatorisch, wenn wir eine entsprechende Vertretung ausstellen."
+        "q": "Muss ich bei den Verhandlungen anwesend sein?",
+        "a": "In den meisten Fällen (Scheidung, Vermögensaufteilung) kann ich Ihre Interessen vollständig selbst vertreten. Ihre Anwesenheit ist nicht erforderlich, wenn wir die entsprechende Vollmacht ausstellen."
       },
       {
-        "q": "Wie lange dauert ein Scheidungsprozess?",
-        "a": "Über das Standesamt — 1 Monat. Über das Gericht — 2 bis 6 Monate, abhängig von Streitigkeiten über Kinder oder Eigentum. Ich versuche immer, den Prozess so weit wie möglich zu beschleunigen."
+        "q": "Wie lange dauert das Scheidungsverfahren?",
+        "a": "Über das Standesamt — 1 Monat. Über das Gericht — von 2 bis 6 Monate, abhängig von Streitigkeiten über Kinder oder Vermögen. Ich bemühe mich stets, den Prozess so weit wie möglich zu beschleunigen."
       }
     ]
   },
   "contacts": {
     "tag": "Kontakt",
-    "title": "Erzählen Sie mir von ",
-    "title_italic": "Ihrer Situation",
-    "description": "Die Erstberatung ist kostenlos und vertraulich. Wählen Sie einen bequemen Weg zur Kontaktaufnahme oder füllen Sie das Formular aus — ich antworte innerhalb von 24 Stunden.",
+    "title": "Schildern Sie uns ",
+    "title_italic": "Ihre Situation",
+    "description": "Die erste Beratung ist kostenlos und vertraulich. Wählen Sie eine bequeme Kontaktmethode oder füllen Sie das Formular aus — ich antworte innerhalb von 24 Stunden.",
     "phone": "Telefon",
     "telegram": "Telegram",
     "whatsapp": "WhatsApp",
     "facebook": "Facebook",
     "form": {
       "name": "Ihr Name *",
-      "name_placeholder": "Jaroslaw der Weise",
+      "name_placeholder": "Max Mustermann",
       "phone": "Telefonnummer *",
       "phone_placeholder": "+38 0__ ___ __ __",
-      "type": "Art des Falls",
-      "type_placeholder": "Kategorie wählen",
-      "description": "Kurzbeschreibung",
-      "desc_placeholder": "Beschreiben Sie Ihr Problem mit den wichtigsten Informationen...",
+      "type": "Falltyp",
+      "type_placeholder": "Kategorie auswählen",
+      "description": "Kurze Beschreibung",
+      "desc_placeholder": "Schildern Sie Ihr Problem und geben Sie die wichtigsten Informationen an...",
       "submit": "Anfrage senden",
-      "agreement": "Mit dem Klick auf den Button stimmen Sie der Verarbeitung personenbezogener Daten zu. Vertraulichkeit garantiert.",
+      "agreement": "Mit dem Klick auf die Schaltfläche stimmen Sie der Verarbeitung personenbezogener Daten zu. Vertraulichkeit ist garantiert.",
       "required_field": "Bitte füllen Sie dieses Feld aus",
-      "success": "Danke! Ihre Anfrage wurde gesendet. Ich werde mich in Kürze bei Ihnen melden.",
-      "captcha_label": "Verifizierung: {{num1}} + {{num2}} = ?",
+      "success": "Vielen Dank! Ihre Anfrage wurde gesendet. Ich werde mich in Kürze bei Ihnen melden.",
+      "captcha_label": "Überprüfung: {{num1}} + {{num2}} = ?",
       "captcha_placeholder": "Ihre Antwort",
-      "captcha_error": "Falsche Verifizierungsantwort. Bitte versuchen Sie es erneut.",
+      "captcha_error": "Falsche Antwort. Bitte versuchen Sie es erneut.",
       "bot_error": "Entschuldigung, Sie scheinen ein Bot zu sein.",
       "types": {
         "divorce": "Scheidung",
         "alimony": "Unterhalt",
-        "property": "Vermögensteilung",
+        "property": "Vermögensaufteilung",
         "children": "Sorgerecht",
         "custody": "Sorgerecht",
-        "inheritance": "Erbrecht",
-        "other": "Andere"
+        "inheritance": "Erbschaft",
+        "other": "Sonstiges"
+      },
+      "theme": {
+        "ai": "KI:",
+        "light": "Für Tageslicht optimiert",
+        "dark": "Für Nachtmodus optimiert"
       }
     }
   },
   "footer": {
-    "desc": "Professioneller Rechtsschutz in Zivilsachen. Wir arbeiten seit 2014 für Ergebnisse.",
+    "desc": "Professioneller Rechtsschutz in Zivilsachen. Seit 2014 auf Ergebnisse ausgerichtet.",
     "nav_tag": "Navigation",
     "loc_tag": "Standorte",
-    "kyiv": "Kiew",
-    "kyiv_addr": "Baseina Str. 23, Büro 25",
+    "kyiv": "Kyiv",
+    "kyiv_addr": "Baseina-Str. 23, Büro 25",
     "legal_tag": "Rechtliche Informationen",
-    "legal_text": "Anwaltszertifikat ZP 001001 vom 28.02.2014, ausgestellt durch den Anwaltsrat der Region Saporischschja",
+    "legal_text": "Anwaltszertifikat ZP 001001 vom 28.02.2014, ausgestellt vom Anwaltsrat der Region Saporischschja",
     "rights": "Alle Rechte vorbehalten",
     "privacy": "Datenschutzrichtlinie",
     "terms": "Nutzungsbedingungen"
   },
   "blog": {
     "tag": "Blog",
-    "title": "Aktuelle ",
-    "title_italic": "Veröffentlichungen",
+    "title": "Neueste ",
+    "title_italic": "Beiträge",
     "read_more": "Weiterlesen",
-    "no_posts": "Noch keine Veröffentlichungen.",
+    "no_posts": "Noch keine Beiträge.",
     "back": "Zurück zur Liste",
+    "loading": "Wird geladen...",
+    "untitled": "Ohne Titel",
+    "send_success": "Anfrage gesendet",
+    "send_error": "Sendefehler",
+    "send_offline": "Netzwerkfehler: Client ist offline. Bitte versuchen Sie es später erneut.",
+    "breadcrumb_name": "Blog",
+    "breadcrumb_home": "Startseite",
     "admin": {
       "title": "Blog-Verwaltung",
-      "login": "Autoren-Login",
+      "login": "Autorenlogin",
       "logout": "Abmelden",
       "new_post": "Neuer Beitrag",
       "edit": "Bearbeiten",
@@ -465,17 +515,55 @@
       "draft": "Entwurf",
       "fields": {
         "title": "Titel",
-        "excerpt": "Auszug",
+        "excerpt": "Kurzbeschreibung",
         "content": "Inhalt",
         "contentType": "Inhaltstyp",
         "image": "Bild-URL",
+        "category": "Kategorie",
+        "slug": "Slug (URL)",
+        "slug_placeholder": "z. B. wie-man-vermögen-aufteilt",
         "tags": "Tags (kommagetrennt)"
+      }
+    },
+    "hero": {
+      "title": "Rechtsblog",
+      "subtitle": "Ratschläge einer Zivilrechtsanwältin: Scheidung, Unterhalt, Vermögensaufteilung.",
+      "search": "Blog durchsuchen...",
+      "find": "Suchen"
+    },
+    "categories": {
+      "tag": "Kategorien",
+      "all": "Alle Artikel",
+      "posts_count": "{{count}} Artikel",
+      "items": {
+        "rozluchennya": "Ehe & Scheidung",
+        "podil-mayna": "Vermögensaufteilung",
+        "alimony": "Unterhalt",
+        "opika": "Sorgerecht & Kinder",
+        "spadkuvannya": "Erbschaft",
+        "nasylstvo": "Häusliche Gewalt",
+        "zhytlovi-spory": "Wohnstreitigkeiten",
+        "usynovlennya": "Adoption",
+        "pravo-vlasnosti": "Eigentumsrechte",
+        "general": "Allgemeine Themen"
+      }
+    },
+    "post": {
+      "updated": "Letzte Aktualisierung",
+      "reading_time": "{{min}} Min. Lesezeit",
+      "toc": "Inhalt",
+      "share": "Teilen",
+      "next_posts": "Ähnliche Artikel",
+      "cta_sidebar": {
+        "title": "Kostenlose Fallbewertung",
+        "subtitle": "Erhalten Sie in 15 Minuten eine persönliche Anwaltsantwort",
+        "button": "Beratung erhalten"
       }
     }
   },
   "preloader": {
     "slogan": "Ihr Schutz mit einer Anwältin",
-    "initials_1": "D",
-    "initials_2": "B"
+    "initials_1": "Д",
+    "initials_2": "Б"
   }
 }
