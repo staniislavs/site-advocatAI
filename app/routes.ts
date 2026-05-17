@@ -11,6 +11,7 @@ export default [
     route("analytics", "admin/pages/AdminAnalytics.tsx"),
     route("email", "admin/pages/AdminEmail.tsx"),
     route("seo", "admin/pages/AdminSEO.tsx"),
+    route("blocks", "admin/pages/AdminBlocks.tsx"),
     route("admins", "admin/pages/AdminAdmins.tsx"),
     route("backup", "admin/pages/AdminBackup.tsx"),
     route("settings", "admin/pages/AdminSettings.tsx"),

@@ -22,7 +22,8 @@ import {
   Zap,
   WifiOff,
   Shield,
-  Download
+  Download,
+  Layers
 } from 'lucide-react';
 import { auth, db } from '../../lib/firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
@@ -32,6 +33,7 @@ import { cn } from '../../lib/utils';
 const sidebarItems = [
   { id: 'dashboard', label: 'Дашборд', icon: LayoutDashboard, path: '/admin' },
   { id: 'leads', label: 'Заявки', icon: Users, path: '/admin/leads' },
+  { id: 'blocks', label: 'Блоки', icon: Layers, path: '/admin/blocks' },
   { id: 'content', label: 'Контент', icon: FileText, path: '/admin/content' },
   { id: 'calendar', label: 'Календар', icon: Calendar, path: '/admin/calendar' },
   { id: 'media', label: 'Медіа', icon: ImageIcon, path: '/admin/media' },

@@ -17,38 +17,42 @@ import Blog from './components/Blog';
 import FAQ from './components/FAQ';
 import Contacts from './components/Contacts';
 import { Reviews } from './components/Reviews';
+import { useBlockSettings, BlockId } from './lib/useBlockSettings';
 import ServiceDetail from './components/ServiceDetail';
 import ServicesListPage from './components/ServicesListPage';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
 
-export const HomePage = () => (
-  <main>
-    {/* 1. AWARENESS */}
-    <Hero />
-    {/* 2. INTEREST — біль / ідентифікація */}
-    <Situation />
-    {/* 3. INTEREST — рішення */}
-    <Services />
-    {/* 4. TRUST — докази результатів */}
-    <Cases />
-    {/* 5. TRUST — хто за цими результатами */}
-    <About />
-    {/* 6. DESIRE — як це працює */}
-    <Process />
-    {/* 7. DESIRE — демонстрація цінності */}
-    <Calculator />
-    {/* 8. DESIRE — ціна після демонстрації цінності */}
-    <Pricing />
-    {/* 9. TRUST — фінальний соціальний доказ перед CTA */}
-    <Reviews />
-    {/* 10. OBJECTIONS — зняття заперечень перед CTA */}
-    <FAQ />
-    {/* 11. ACTION — об'єднана зона дії */}
-    <ConsultationCTA />
-    <Contacts />
-  </main>
-);
+/**
+ * Block ordering on the homepage — AIDA marketing funnel.
+ * Rendering is gated by `useBlockSettings()` (Firestore: settings/blocks),
+ * which is editable from /admin/blocks.
+ */
+const HOMEPAGE_BLOCKS: { id: BlockId; Component: React.FC }[] = [
+  { id: 'Hero',            Component: Hero },             // 1. AWARENESS
+  { id: 'Situation',       Component: Situation },        // 2. INTEREST — pain
+  { id: 'Services',        Component: Services },         // 3. INTEREST — solution
+  { id: 'Cases',           Component: Cases },            // 4. TRUST — proof of results
+  { id: 'About',           Component: About },            // 5. TRUST — who delivers
+  { id: 'Process',         Component: Process },          // 6. DESIRE — how it works
+  { id: 'Calculator',      Component: Calculator },       // 7. DESIRE — value demonstration
+  { id: 'Pricing',         Component: Pricing },          // 8. DESIRE — price after value
+  { id: 'Reviews',         Component: Reviews },          // 9. TRUST — final social proof
+  { id: 'FAQ',             Component: FAQ },              // 10. OBJECTIONS
+  { id: 'ConsultationCTA', Component: ConsultationCTA },  // 11. ACTION
+  { id: 'Contacts',        Component: Contacts },         // 11. ACTION (combined zone)
+];
+
+export const HomePage = () => {
+  const { blocks } = useBlockSettings();
+  return (
+    <main>
+      {HOMEPAGE_BLOCKS.map(({ id, Component }) =>
+        blocks[id] ? <Component key={id} /> : null
+      )}
+    </main>
+  );
+};
 
 export const BlogPage = () => (
   <main className="pt-20 lg:pt-24">
