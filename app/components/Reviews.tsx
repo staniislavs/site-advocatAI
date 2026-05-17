@@ -115,11 +115,9 @@ export const Reviews: React.FC = () => {
     setIsSubmitting(true);
     try {
       const now = new Date();
-      const monthNames = [
-        "Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень",
-        "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"
-      ];
-      const dateStr = `${monthNames[now.getMonth()]} ${now.getFullYear()}`;
+      const monthsRaw = t('reviews.months', { returnObjects: true });
+      const monthNames = Array.isArray(monthsRaw) ? monthsRaw : [];
+      const dateStr = `${monthNames[now.getMonth()] || ''} ${now.getFullYear()}`;
 
       await addDoc(collection(db, 'reviews'), {
         ...newReview,
@@ -295,7 +293,7 @@ export const Reviews: React.FC = () => {
           >
             <MessageSquare size={18} className="group-hover:rotate-12 transition-transform" />
             <span className="font-bold uppercase tracking-[0.2em] text-[11px]">
-              Залишити відгук
+              {t('reviews.cta')}
             </span>
           </button>
         </motion.div>
@@ -340,40 +338,40 @@ export const Reviews: React.FC = () => {
                     <CheckCircle2 size={32} />
                   </motion.div>
                   <h3 className="text-3xl md:text-4xl font-serif text-[#141414] italic">
-                    {t('reviews.modal.thanks_title', { defaultValue: 'Дякуємо за довіру' })}
+                    {t('reviews.modal.thanks_title')}
                   </h3>
                   <div className="w-12 h-px bg-sage/30 mx-auto" />
                   <p className="text-[#141414]/60 text-base font-light leading-relaxed max-w-sm mx-auto">
-                    {t('reviews.modal.thanks_text', { defaultValue: 'Ваш відгук буде опубліковано після короткої модерації.' })}
+                    {t('reviews.modal.thanks_subtitle')}
                   </p>
                 </div>
               ) : (
                 <>
                   <div className="mb-12 text-center md:text-left">
                     <h3 className="text-4xl md:text-5xl font-serif text-[#141414] mb-4 italic leading-tight">
-                      Поділіться досвідом
+                      {t('reviews.modal.title')}
                     </h3>
                     <div className="w-12 h-px bg-sage/30 mx-auto md:mx-0 mb-4" />
                     <p className="text-[#141414]/40 text-[9px] uppercase tracking-[0.3em] font-bold">
-                      Ваша думка важлива для нас
+                      {t('reviews.modal.subtitle')}
                     </p>
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-8">
                     <div className="space-y-3">
-                      <label className="text-[9px] uppercase tracking-[0.3em] text-sage font-bold ml-1">Ім'я та Прізвище</label>
-                      <input 
+                      <label className="text-[9px] uppercase tracking-[0.3em] text-sage font-bold ml-1">{t('reviews.modal.name_label')}</label>
+                      <input
                         required
                         type="text"
                         value={newReview.name}
                         onChange={(e) => setNewReview({ ...newReview, name: e.target.value })}
                         className="w-full bg-[#fdfdfd] border border-[#141414]/5 rounded-2xl px-6 py-4 outline-none focus:border-sage/30 transition-all text-[#141414] font-serif italic text-lg"
-                        placeholder="Олена Савченко"
+                        placeholder={t('reviews.modal.name_placeholder')}
                       />
                     </div>
 
                     <div className="space-y-3">
-                      <label className="text-[9px] uppercase tracking-[0.3em] text-sage font-bold ml-1">Оцінка роботи</label>
+                      <label className="text-[9px] uppercase tracking-[0.3em] text-sage font-bold ml-1">{t('reviews.modal.rating_label')}</label>
                       <div className="flex gap-3 justify-center md:justify-start">
                         {[1, 2, 3, 4, 5].map((star) => (
                           <button
@@ -395,14 +393,14 @@ export const Reviews: React.FC = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <label className="text-[9px] uppercase tracking-[0.3em] text-sage font-bold ml-1">Ваш відгук</label>
-                      <textarea 
+                      <label className="text-[9px] uppercase tracking-[0.3em] text-sage font-bold ml-1">{t('reviews.modal.text_label')}</label>
+                      <textarea
                         required
                         rows={5}
                         value={newReview.text}
                         onChange={(e) => setNewReview({ ...newReview, text: e.target.value })}
                         className="w-full bg-[#fdfdfd] border border-[#141414]/5 rounded-2xl px-6 py-4 outline-none focus:border-sage/30 transition-all text-[#141414] font-serif italic resize-none text-lg leading-relaxed"
-                        placeholder="Напишіть ваші враження від співпраці..."
+                        placeholder={t('reviews.modal.text_placeholder')}
                       />
                     </div>
 
@@ -415,7 +413,7 @@ export const Reviews: React.FC = () => {
                         <Loader2 className="animate-spin" size={20} />
                       ) : (
                         <span className="flex items-center gap-3">
-                          Надіслати відгук
+                          {t('reviews.modal.submit')}
                           <ArrowRight size={16} />
                         </span>
                       )}

@@ -71,7 +71,7 @@ export default function Pricing() {
               {item.featured && (
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
                   <span className="bg-white text-sage text-[9px] font-bold uppercase tracking-[0.2em] px-4 py-1.5 rounded-full shadow-sm">
-                    Рекомендовано
+                    {t('pricing.featured_badge')}
                   </span>
                 </div>
               )}
@@ -126,7 +126,7 @@ export default function Pricing() {
                       : 'border border-[var(--card-border)] text-[var(--text-secondary)] hover:border-sage hover:text-sage'
                 }`}
               >
-                {item.featured ? 'Обговорити справу' : idx === 0 ? 'Записатись' : 'Запит ціни'}
+                {item.featured ? t('pricing.cta.featured') : idx === 0 ? t('pricing.cta.first') : t('pricing.cta.default')}
               </button>
             </motion.div>
           ))}

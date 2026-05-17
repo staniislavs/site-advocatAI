@@ -176,7 +176,7 @@ const Blog: React.FC = () => {
       const finalSlug = transliterate(baseText) || `post-${Date.now()}`;
 
       const dataToSave = {
-        title: editPost.title || 'Без назви',
+        title: editPost.title || t('blog.untitled'),
         slug: finalSlug,
         category: editPost.category || 'rozluchennya',
         excerpt: editPost.excerpt || '',
@@ -223,7 +223,7 @@ const Blog: React.FC = () => {
       <div className="min-h-screen bg-[var(--bg-secondary)] flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">
           <Clock size={48} className="text-sage animate-spin" />
-          <p className="font-serif italic text-navy-deep/40">{t('common.loading') || 'Завантаження...'}</p>
+          <p className="font-serif italic text-navy-deep/40">{t('blog.loading')}</p>
         </div>
       </div>
     );
@@ -590,8 +590,8 @@ const BlogPostView: React.FC<{
   const origin = typeof window !== 'undefined' ? window.location.origin : '';
   const href = typeof window !== 'undefined' ? window.location.href : '';
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: 'Головна', url: `${origin}/${currentLang}` },
-    { name: 'Блог', url: `${origin}/${currentLang}/${paths.blog}` },
+    { name: t('blog.breadcrumb_home'), url: `${origin}/${currentLang}` },
+    { name: t('blog.breadcrumb_name'), url: `${origin}/${currentLang}/${paths.blog}` },
     { name: getCategoryLabel(post.category, t), url: `${origin}/${currentLang}/${paths.blog}/${post.category}` },
     { name: post.title, url: href },
   ]);
@@ -640,14 +640,14 @@ const BlogPostView: React.FC<{
         // Це вирішує проблему CORS на Cloudflare
 
         setFormSubmitted(true);
-        toast.success('Заявку відправлено');
+        toast.success(t('blog.send_success'));
       } catch (err: any) {
         console.error('CTA error:', err);
         if (err.message && err.message.includes('offline')) {
-          toast.error('Помилка мережі: клієнт в офлайні. Спробуйте пізніше.');
+          toast.error(t('blog.send_offline'));
         } else {
           handleFirestoreError(err, OperationType.WRITE, 'leads');
-          toast.error('Помилка відправки');
+          toast.error(t('blog.send_error'));
         }
       } finally {
         setSubmitting(false);
@@ -658,8 +658,8 @@ const BlogPostView: React.FC<{
       <div className="bg-[var(--bg-secondary)] p-10 rounded-[2.5rem] text-[var(--text-primary)] border border-[var(--card-border)] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.1)] relative overflow-hidden group">
         {!formSubmitted ? (
           <div className="relative z-10">
-            <h4 className="font-serif text-3xl mb-3 leading-tight tracking-tight">Безкоштовна<br/>оцінка справи</h4>
-            <p className="text-xs opacity-60 mb-10 font-light text-[var(--text-secondary)]">Залишіть заявку — отримайте особисту відповідь адвоката за 15 хвилин</p>
+            <h4 className="font-serif text-3xl mb-3 leading-tight tracking-tight">{t('blog.post.cta_sidebar.title')}</h4>
+            <p className="text-xs opacity-60 mb-10 font-light text-[var(--text-secondary)]">{t('blog.post.cta_sidebar.subtitle')}</p>
             
             <form className="space-y-5" onSubmit={handleCtaSubmit}>
               <div className="space-y-1">
@@ -1081,7 +1081,7 @@ const EditorModal: React.FC<{ isOpen: boolean, post: Partial<Post>, onSave: () =
                   type="text" 
                   value={post.slug} 
                   onChange={e => onChange({...post, slug: transliterate(e.target.value)})}
-                  placeholder="наприклад: як-поділити-майно"
+                  placeholder={t('blog.admin.fields.slug_placeholder')}
                   className="w-full bg-[var(--bg-secondary)] border border-sage/10 rounded-xl px-4 py-3 text-[var(--text-primary)] font-mono text-sm outline-none focus:border-sage"
                 />
               </div>

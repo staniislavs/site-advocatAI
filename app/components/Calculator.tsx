@@ -37,12 +37,14 @@ export default function Calculator() {
   };
 
   const periodLabel = (p: number) => {
-    if (p === 1) return '1 міс.';
-    if (p < 12) return `${p} міс.`;
+    const m = t('calculator.units.month_short');
+    const y = t('calculator.units.year_short');
+    if (p === 1) return `1 ${m}`;
+    if (p < 12) return `${p} ${m}`;
     const years = Math.floor(p / 12);
     const months = p % 12;
-    if (months === 0) return `${years} р.`;
-    return `${years} р. ${months} міс.`;
+    if (months === 0) return `${years} ${y}`;
+    return `${years} ${y} ${months} ${m}`;
   };
 
   return (
@@ -127,11 +129,11 @@ export default function Calculator() {
                   className="w-full h-1.5 rounded-full appearance-none cursor-pointer accent-sage bg-[var(--card-border)]"
                 />
                 <div className="flex justify-between mt-1 text-[10px] text-[var(--text-muted)] font-medium">
-                  <span>1 міс.</span>
-                  <span>1 р.</span>
-                  <span>2 р.</span>
-                  <span>3 р.</span>
-                  <span>5 р.</span>
+                  <span>1 {t('calculator.units.month_short')}</span>
+                  <span>1 {t('calculator.units.year_short')}</span>
+                  <span>2 {t('calculator.units.year_short')}</span>
+                  <span>3 {t('calculator.units.year_short')}</span>
+                  <span>5 {t('calculator.units.year_short')}</span>
                 </div>
               </div>
             </div>
@@ -181,11 +183,11 @@ export default function Calculator() {
                     <span className="text-2xl ml-1">₴</span>
                   </p>
                   <p className="text-white/70 text-sm mb-6">
-                    на місяць · {periodLabel(period)} · {children} {children === 1 ? 'дитина' : children < 5 ? 'дитини' : 'дітей'}
+                    на місяць · {periodLabel(period)} · {children} {children === 1 ? t('calculator.children.one') : children < 5 ? t('calculator.children.few') : t('calculator.children.many')}
                   </p>
                   <div className="bg-white/15 rounded-xl px-4 py-3 text-white/80 text-xs leading-relaxed">
-                    Діапазон: {Math.round(result * 0.75).toLocaleString('uk-UA')} – {Math.round(result * 1.3).toLocaleString('uk-UA')} ₴/міс.
-                    <br />Залежно від доходу платника та рішення суду.
+                    {t('calculator.range_label')}: {Math.round(result * 0.75).toLocaleString('uk-UA')} – {Math.round(result * 1.3).toLocaleString('uk-UA')} ₴/{t('calculator.units.month_short')}
+                    <br />{t('calculator.range_note')}
                   </div>
                 </motion.div>
               ) : (
@@ -200,10 +202,10 @@ export default function Calculator() {
                     <CalcIcon size={28} className="text-white/70" />
                   </div>
                   <p className="text-white font-serif text-lg mb-2">
-                    Оберіть параметри
+                    {t('calculator.placeholder_title')}
                   </p>
                   <p className="text-white/60 text-sm leading-relaxed max-w-xs mx-auto">
-                    Вкажіть тип справи, кількість дітей та орієнтовний строк — і отримайте розрахунок
+                    {t('calculator.placeholder_desc')}
                   </p>
                 </motion.div>
               )}
