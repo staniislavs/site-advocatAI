@@ -3,11 +3,21 @@ main = "worker.ts"
 compatibility_date = "2024-12-19"
 compatibility_flags = ["nodejs_compat"]
 
+# Static assets binding (dist/ after build + postbuild)
 [assets]
 directory = "./dist"
 binding = "ASSETS"
-not_found_handling = "single-page-application"
+# "none" = 404 falls through to our SSR handler
+not_found_handling = "none"
 
 [vars]
-ENVIRONMENT = "production"
 NODE_ENV = "production"
+ENVIRONMENT = "production"
+VITE_FIREBASE_API_KEY = "AIzaSyBxIMH7VCV00po3-c5zvpKJAbpXNk3JoJg"
+VITE_FIREBASE_AUTH_DOMAIN = "gen-lang-client-0153725022.firebaseapp.com"
+VITE_FIREBASE_PROJECT_ID = "gen-lang-client-0153725022"
+VITE_FIREBASE_STORAGE_BUCKET = "gen-lang-client-0153725022.firebasestorage.app"
+VITE_FIREBASE_MESSAGING_SENDER_ID = "883415141173"
+VITE_FIREBASE_APP_ID = "1:883415141173:web:20aef4d1ba57e8adadda7c"
+VITE_FIREBASE_DATABASE_ID = "ai-studio-ef075009-7f35-47ee-933b-1e2981ad8454"
+# TELEGRAM_BOT_TOKEN = "ваш_токен_тут"  # необов'язково, читається з Firestore

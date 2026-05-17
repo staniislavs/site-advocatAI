@@ -8,6 +8,8 @@
     "react-router": "react-router",
     "build": "react-router build",
     "postbuild": "node postbuild.cjs",
+    "deploy": "npm run build && wrangler deploy",
+    "wrangler:dev": "npm run build && wrangler dev",
     "start": "node server.ts",
     "preview": "vite preview",
     "clean": "rm -rf dist",
@@ -48,6 +50,7 @@
     "vite": "^6.2.3"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260517.1",
     "@firebase/eslint-plugin-security-rules": "^0.0.2",
     "@react-router/dev": "^7.15.0",
     "@types/express": "^4.17.21",
@@ -57,6 +60,7 @@
     "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
-    "vite": "^6.2.3"
+    "vite": "^6.2.3",
+    "wrangler": "^4.92.0"
   }
 }
