@@ -17,7 +17,8 @@ import Blog from './components/Blog';
 import FAQ from './components/FAQ';
 import Contacts from './components/Contacts';
 import { Reviews } from './components/Reviews';
-import { useBlockSettings, BlockId } from './lib/useBlockSettings';
+import { useBlockSettings } from './lib/useBlockSettings';
+import { useContentOverride } from './lib/useContentOverride';
 import ServiceDetail from './components/ServiceDetail';
 import ServicesListPage from './components/ServicesListPage';
 import PrivacyPolicy from './components/PrivacyPolicy';
@@ -44,12 +45,21 @@ const HOMEPAGE_BLOCKS: { id: BlockId; Component: React.FC }[] = [
 ];
 
 export const HomePage = () => {
-  const { blocks } = useBlockSettings();
+  // Apply Firestore content overrides on top of i18n (no component changes needed)
+  useContentOverride();
+
+  const { resolved } = useBlockSettings();
+
   return (
     <main>
-      {HOMEPAGE_BLOCKS.map(({ id, Component }) =>
-        blocks[id] ? <Component key={id} /> : null
-      )}
+      {resolved.map(({ id, enabled, settings }) => {
+        if (!enabled) return null;
+        const entry = HOMEPAGE_BLOCKS.find((b) => b.id === id);
+        if (!entry) return null;
+        const { Component } = entry;
+        // Pass settings as prop — only components that accept it will use it
+        return <Component key={id} blockSettings={settings as never} />;
+      })}
     </main>
   );
 };

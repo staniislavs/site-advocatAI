@@ -17,8 +17,14 @@ interface Review {
   isApproved?: boolean;
 }
 
-export const Reviews: React.FC = () => {
+interface ReviewsProps {
+  blockSettings?: { maxItems?: number; showAddForm?: boolean };
+}
+
+export const Reviews: React.FC<ReviewsProps> = ({ blockSettings } = {}) => {
   const { t } = useTranslation();
+  const maxItems    = blockSettings?.maxItems    ?? 20;
+  const showAddForm = blockSettings?.showAddForm ?? true;
   const [isMobile, setIsMobile] = useState(false);
   const [reviews, setReviews] = useState<Review[]>([]);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -69,7 +75,7 @@ export const Reviews: React.FC = () => {
       collection(db, 'reviews'), 
       where('isApproved', '==', true),
       orderBy('createdAt', 'desc'),
-      limit(20) // Increased limit to have more pairs
+      limit(maxItems) // controlled via admin block settings
     );
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
@@ -287,8 +293,9 @@ export const Reviews: React.FC = () => {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <button 
+          <button
             onClick={() => setIsModalOpen(true)}
+            style={{ display: showAddForm ? undefined : 'none' }}
             className="group relative px-10 py-4 bg-sage hover:bg-sage-bright/95 text-white rounded-full transition-all duration-500 shadow-xl shadow-sage/10 active:scale-95 flex items-center gap-3"
           >
             <MessageSquare size={18} className="group-hover:rotate-12 transition-transform" />

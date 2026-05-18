@@ -2,8 +2,15 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
 import { CheckCircle2, Clock, DollarSign } from 'lucide-react';
 
-export default function Cases() {
+interface CasesProps {
+  blockSettings?: { maxItems?: number; showType?: boolean; showYear?: boolean };
+}
+
+export default function Cases({ blockSettings }: CasesProps = {}) {
   const { t } = useTranslation();
+  const maxItems  = blockSettings?.maxItems  ?? 3;
+  const showType  = blockSettings?.showType  ?? true;
+  const showYear  = blockSettings?.showYear  ?? true;
 
   const cases = [
     {
@@ -98,7 +105,7 @@ export default function Cases() {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
         >
-          {cases.map((caseItem) => (
+          {cases.slice(0, maxItems).map((caseItem) => (
             <motion.div
               key={caseItem.id}
               variants={itemVariants}
@@ -110,7 +117,7 @@ export default function Cases() {
                 <div className="mb-4 pb-4 border-b border-[var(--card-border)]">
                   <div className="flex items-center justify-between gap-4 mb-2">
                     <span className="text-[10px] uppercase tracking-[0.15em] text-[var(--text-muted)] font-semibold">
-                      {caseItem.type} · {caseItem.year}
+                      {showType && caseItem.type}{showType && showYear && ' · '}{showYear && caseItem.year}
                     </span>
                     <span className="flex items-center gap-1 text-[10px] uppercase tracking-[0.15em] text-sage font-semibold">
                       <CheckCircle2 size={14} />

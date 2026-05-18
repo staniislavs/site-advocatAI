@@ -10,11 +10,17 @@ interface FAQItem {
   a: string;
 }
 
-export default function FAQ() {
+interface FAQProps {
+  blockSettings?: { maxItems?: number };
+}
+
+export default function FAQ({ blockSettings }: FAQProps = {}) {
   const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const maxItems = blockSettings?.maxItems ?? 10;
   const localizedFaqsRaw = t('faq.items', { returnObjects: true });
-  const localizedFaqs = Array.isArray(localizedFaqsRaw) ? localizedFaqsRaw : [];
+  const localizedFaqsAll = Array.isArray(localizedFaqsRaw) ? localizedFaqsRaw : [];
+  const localizedFaqs = localizedFaqsAll.slice(0, maxItems);
 
   const faqSchema = useMemo(
     () => buildFaqSchema(localizedFaqs),
