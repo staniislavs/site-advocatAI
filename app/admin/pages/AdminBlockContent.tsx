@@ -108,9 +108,29 @@ const EDITABLE_FIELDS: Record<string, Field[]> = {
     { label: 'Заголовок',           key: 'calculator.title' },
     { label: 'Курсив',              key: 'calculator.title_italic' },
     { label: 'Опис',                key: 'calculator.description',        multiline: true },
-    { label: 'Інфо-підказка',       key: 'calculator.form.info',          multiline: true },
-    { label: 'Заголовок пустого',   key: 'calculator.placeholder_title' },
-    { label: 'Опис пустого',        key: 'calculator.placeholder_desc',   multiline: true },
+    // ── Форма ──
+    { section: 'Форма', label: 'Мітка: тип справи', key: 'calculator.form.caseType' },
+    { label: 'Мітка: діти',                          key: 'calculator.form.children' },
+    { label: 'Мітка: період',                        key: 'calculator.form.period' },
+    { label: 'Кнопка «Розрахувати»',                 key: 'calculator.form.calculate' },
+    { label: 'Кнопка «Очистити»',                    key: 'calculator.form.reset' },
+    { label: 'Позначка результату',                  key: 'calculator.form.period_label' },
+    { label: 'Інфо-підказка під калькулятором',      key: 'calculator.form.info', multiline: true },
+    // ── Типи справ ──
+    { section: 'Типи справ', label: 'Дитячі аліменти',          key: 'calculator.form.types.alimony' },
+    { label: 'Аліменти на спільних дітей',                       key: 'calculator.form.types.spousal' },
+    { label: 'Поділ майна',                                      key: 'calculator.form.types.property' },
+    // ── Одиниці вимірювання ──
+    { section: 'Одиниці', label: 'Скорочення: місяць',  key: 'calculator.units.month_short' },
+    { label: 'Скорочення: рік',                         key: 'calculator.units.year_short' },
+    { label: 'Форма: 1 дитина',                         key: 'calculator.children.one' },
+    { label: 'Форма: 2-4 дитини',                       key: 'calculator.children.few' },
+    { label: 'Форма: 5+ дітей',                         key: 'calculator.children.many' },
+    // ── Результат ──
+    { section: 'Результат', label: 'Позначка діапазону',   key: 'calculator.range_label' },
+    { label: 'Примітка під діапазоном',                    key: 'calculator.range_note', multiline: true },
+    { label: 'Заголовок порожнього стану',                 key: 'calculator.placeholder_title' },
+    { label: 'Опис порожнього стану',                      key: 'calculator.placeholder_desc', multiline: true },
   ],
   Pricing: [
     { label: 'Тег розділу',    key: 'pricing.tag' },
