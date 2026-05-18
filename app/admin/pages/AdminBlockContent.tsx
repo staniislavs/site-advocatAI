@@ -8,7 +8,9 @@ import { db, handleFirestoreError, OperationType } from '../../lib/firebase';
 import { cn } from '../../lib/utils';
 
 // ─── Editable fields per block ───────────────────────────────────────────────
-const EDITABLE_FIELDS: Record<string, { label: string; key: string; multiline?: boolean }[]> = {
+type Field = { label: string; key: string; multiline?: boolean; section?: string };
+
+const EDITABLE_FIELDS: Record<string, Field[]> = {
   Hero: [
     { label: 'Заголовок 1',          key: 'hero.title_1' },
     { label: 'Заголовок 2 (курсив)', key: 'hero.title_2_italic' },
@@ -22,6 +24,15 @@ const EDITABLE_FIELDS: Record<string, { label: string; key: string; multiline?: 
     { label: 'Заголовок',      key: 'situation.title' },
     { label: 'Курсив',         key: 'situation.title_italic' },
     { label: 'Опис',           key: 'situation.description', multiline: true },
+    // ── Картка 1 ──
+    { section: 'Картка 1', label: 'Цитата',  key: 'situation.items.0.quote' },
+    { label: 'Опис картки',                  key: 'situation.items.0.description', multiline: true },
+    // ── Картка 2 ──
+    { section: 'Картка 2', label: 'Цитата',  key: 'situation.items.1.quote' },
+    { label: 'Опис картки',                  key: 'situation.items.1.description', multiline: true },
+    // ── Картка 3 ──
+    { section: 'Картка 3', label: 'Цитата',  key: 'situation.items.2.quote' },
+    { label: 'Опис картки',                  key: 'situation.items.2.description', multiline: true },
   ],
   Services: [
     { label: 'Тег розділу',    key: 'services.tag' },
@@ -34,6 +45,33 @@ const EDITABLE_FIELDS: Record<string, { label: string; key: string; multiline?: 
     { label: 'Заголовок',      key: 'cases.title' },
     { label: 'Курсив',         key: 'cases.title_italic' },
     { label: 'Опис',           key: 'cases.description',     multiline: true },
+    // ── Кейс 1 ──
+    { section: 'Кейс 1', label: 'Тип',        key: 'cases.items.0.type' },
+    { label: 'Статус',                         key: 'cases.items.0.status' },
+    { label: 'Заголовок кейсу',                key: 'cases.items.0.title' },
+    { label: 'Опис кейсу',                     key: 'cases.items.0.description', multiline: true },
+    { label: 'Позначка терміну',               key: 'cases.items.0.duration' },
+    { label: 'Значення терміну',               key: 'cases.items.0.durationValue' },
+    { label: 'Позначка суми',                  key: 'cases.items.0.cost' },
+    { label: 'Значення суми',                  key: 'cases.items.0.costValue' },
+    // ── Кейс 2 ──
+    { section: 'Кейс 2', label: 'Тип',        key: 'cases.items.1.type' },
+    { label: 'Статус',                         key: 'cases.items.1.status' },
+    { label: 'Заголовок кейсу',                key: 'cases.items.1.title' },
+    { label: 'Опис кейсу',                     key: 'cases.items.1.description', multiline: true },
+    { label: 'Позначка терміну',               key: 'cases.items.1.duration' },
+    { label: 'Значення терміну',               key: 'cases.items.1.durationValue' },
+    { label: 'Позначка суми',                  key: 'cases.items.1.cost' },
+    { label: 'Значення суми',                  key: 'cases.items.1.costValue' },
+    // ── Кейс 3 ──
+    { section: 'Кейс 3', label: 'Тип',        key: 'cases.items.2.type' },
+    { label: 'Статус',                         key: 'cases.items.2.status' },
+    { label: 'Заголовок кейсу',                key: 'cases.items.2.title' },
+    { label: 'Опис кейсу',                     key: 'cases.items.2.description', multiline: true },
+    { label: 'Позначка терміну',               key: 'cases.items.2.duration' },
+    { label: 'Значення терміну',               key: 'cases.items.2.durationValue' },
+    { label: 'Позначка суми',                  key: 'cases.items.2.cost' },
+    { label: 'Значення суми',                  key: 'cases.items.2.costValue' },
   ],
   About: [
     { label: 'Тег розділу',    key: 'about.tag' },
@@ -42,12 +80,28 @@ const EDITABLE_FIELDS: Record<string, { label: string; key: string; multiline?: 
     { label: 'Параграф 2',     key: 'about.p2',              multiline: true },
     { label: 'Параграф 3',     key: 'about.p3',              multiline: true },
     { label: 'CTA кнопка',     key: 'about.cta' },
+    // ── Highlights ──
+    { section: 'Ліцензія', label: 'Заголовок', key: 'about.highlights.licensed.title' },
+    { label: 'Підзаголовок',                    key: 'about.highlights.licensed.sub' },
+    { section: 'Офіс',     label: 'Заголовок', key: 'about.highlights.offices.title' },
+    { label: 'Підзаголовок',                    key: 'about.highlights.offices.sub' },
+    { section: 'Зв\'язок', label: 'Заголовок', key: 'about.highlights.quick.title' },
+    { label: 'Підзаголовок',                    key: 'about.highlights.quick.sub' },
   ],
   Process: [
     { label: 'Тег розділу',    key: 'process.tag' },
     { label: 'Заголовок 1',    key: 'process.title_1' },
     { label: 'Заголовок 2',    key: 'process.title_2' },
     { label: 'Курсив',         key: 'process.title_italic' },
+    // ── Кроки ──
+    { section: 'Крок 1', label: 'Назва', key: 'process.items.0.name' },
+    { label: 'Опис кроку',               key: 'process.items.0.desc', multiline: true },
+    { section: 'Крок 2', label: 'Назва', key: 'process.items.1.name' },
+    { label: 'Опис кроку',               key: 'process.items.1.desc', multiline: true },
+    { section: 'Крок 3', label: 'Назва', key: 'process.items.2.name' },
+    { label: 'Опис кроку',               key: 'process.items.2.desc', multiline: true },
+    { section: 'Крок 4', label: 'Назва', key: 'process.items.3.name' },
+    { label: 'Опис кроку',               key: 'process.items.3.desc', multiline: true },
   ],
   Calculator: [
     { label: 'Тег розділу',         key: 'calculator.tag' },
@@ -63,22 +117,58 @@ const EDITABLE_FIELDS: Record<string, { label: string; key: string; multiline?: 
     { label: 'Заголовок',      key: 'pricing.title' },
     { label: 'Курсив',         key: 'pricing.title_italic' },
     { label: 'Опис',           key: 'pricing.description',   multiline: true },
+    // ── Пакет 1: Консультація ──
+    { section: 'Пакет 1 (Консультація)', label: 'Назва',   key: 'pricing.items.0.name' },
+    { label: 'Ціна',                                        key: 'pricing.items.0.price' },
+    { label: 'Одиниця (за сеанс…)',                         key: 'pricing.items.0.currency' },
+    { label: 'Підзаголовок',                                key: 'pricing.items.0.description' },
+    { label: 'Перевага 1',                                  key: 'pricing.items.0.features.0' },
+    { label: 'Перевага 2',                                  key: 'pricing.items.0.features.1' },
+    { label: 'Перевага 3',                                  key: 'pricing.items.0.features.2' },
+    { label: 'Перевага 4',                                  key: 'pricing.items.0.features.3' },
+    // ── Пакет 2: Базовий ──
+    { section: 'Пакет 2 (Базовий — рекомендований)', label: 'Назва', key: 'pricing.items.1.name' },
+    { label: 'Ціна',                                                   key: 'pricing.items.1.price' },
+    { label: 'Одиниця',                                                key: 'pricing.items.1.currency' },
+    { label: 'Підзаголовок',                                           key: 'pricing.items.1.description' },
+    { label: 'Перевага 1',                                             key: 'pricing.items.1.features.0' },
+    { label: 'Перевага 2',                                             key: 'pricing.items.1.features.1' },
+    { label: 'Перевага 3',                                             key: 'pricing.items.1.features.2' },
+    { label: 'Перевага 4',                                             key: 'pricing.items.1.features.3' },
+    // ── Пакет 3: Преміум ──
+    { section: 'Пакет 3 (Преміум)', label: 'Назва',  key: 'pricing.items.2.name' },
+    { label: 'Ціна',                                  key: 'pricing.items.2.price' },
+    { label: 'Одиниця',                               key: 'pricing.items.2.currency' },
+    { label: 'Підзаголовок',                          key: 'pricing.items.2.description' },
+    { label: 'Перевага 1',                            key: 'pricing.items.2.features.0' },
+    { label: 'Перевага 2',                            key: 'pricing.items.2.features.1' },
+    { label: 'Перевага 3',                            key: 'pricing.items.2.features.2' },
+    { label: 'Перевага 4',                            key: 'pricing.items.2.features.3' },
   ],
   Reviews: [
     { label: 'Тег розділу',    key: 'reviews.tag' },
     { label: 'Заголовок',      key: 'reviews.title' },
     { label: 'Курсив',         key: 'reviews.title_italic' },
     { label: 'CTA кнопка',     key: 'reviews.cta' },
-    { label: 'Заголовок модалки', key: 'reviews.modal.title' },
+    { label: 'Заголовок модалки',    key: 'reviews.modal.title' },
     { label: 'Підзаголовок модалки', key: 'reviews.modal.subtitle' },
-    { label: 'Кнопка надіслати', key: 'reviews.modal.submit' },
-    { label: 'Дякуємо заголовок', key: 'reviews.modal.thanks_title' },
-    { label: 'Дякуємо текст', key: 'reviews.modal.thanks_subtitle', multiline: true },
+    { label: 'Кнопка надіслати',     key: 'reviews.modal.submit' },
+    { label: 'Дякуємо заголовок',    key: 'reviews.modal.thanks_title' },
+    { label: 'Дякуємо текст',        key: 'reviews.modal.thanks_subtitle', multiline: true },
   ],
   FAQ: [
     { label: 'Тег розділу',    key: 'faq.tag' },
     { label: 'Заголовок',      key: 'faq.title' },
     { label: 'Курсив',         key: 'faq.title_italic' },
+    // ── Питання ──
+    { section: 'Питання 1', label: 'Питання',  key: 'faq.items.0.q' },
+    { label: 'Відповідь',                       key: 'faq.items.0.a', multiline: true },
+    { section: 'Питання 2', label: 'Питання',  key: 'faq.items.1.q' },
+    { label: 'Відповідь',                       key: 'faq.items.1.a', multiline: true },
+    { section: 'Питання 3', label: 'Питання',  key: 'faq.items.2.q' },
+    { label: 'Відповідь',                       key: 'faq.items.2.a', multiline: true },
+    { section: 'Питання 4', label: 'Питання',  key: 'faq.items.3.q' },
+    { label: 'Відповідь',                       key: 'faq.items.3.a', multiline: true },
   ],
   ConsultationCTA: [
     { label: 'Тег розділу',    key: 'consultation.tag' },
@@ -86,6 +176,15 @@ const EDITABLE_FIELDS: Record<string, { label: string; key: string; multiline?: 
     { label: 'Курсив',         key: 'consultation.title_italic' },
     { label: 'Опис',           key: 'consultation.description', multiline: true },
     { label: 'CTA кнопка',     key: 'consultation.cta' },
+    // ── Способи зв'язку ──
+    { section: 'Телефон',       label: 'Назва', key: 'consultation.features.0.title' },
+    { label: 'Опис',                             key: 'consultation.features.0.desc' },
+    { section: 'Відеозустріч',  label: 'Назва', key: 'consultation.features.1.title' },
+    { label: 'Опис',                             key: 'consultation.features.1.desc' },
+    { section: 'Офіс',          label: 'Назва', key: 'consultation.features.2.title' },
+    { label: 'Опис',                             key: 'consultation.features.2.desc' },
+    { section: 'Результат',     label: 'Назва', key: 'consultation.features.3.title' },
+    { label: 'Опис',                             key: 'consultation.features.3.desc' },
   ],
   Contacts: [
     { label: 'Тег розділу',    key: 'contacts.tag' },
@@ -108,26 +207,43 @@ const LANGS: { id: Lang; label: string; flag: string }[] = [
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
-/** Read a dot-path from a nested object */
-function getDeep(obj: Record<string, unknown>, path: string): string {
-  return path.split('.').reduce<unknown>((cur, key) => {
-    if (cur && typeof cur === 'object') return (cur as Record<string, unknown>)[key];
-    return undefined;
-  }, obj) as string ?? '';
+const isNumeric = (s: string) => /^\d+$/.test(s);
+
+/** Read a dot-path from a nested object/array tree */
+function getDeep(obj: unknown, path: string): string {
+  const result = path.split('.').reduce<unknown>((cur, key) => {
+    if (cur == null || typeof cur !== 'object') return '';
+    if (Array.isArray(cur)) return (cur as unknown[])[parseInt(key)];
+    return (cur as Record<string, unknown>)[key];
+  }, obj);
+  return typeof result === 'string' ? result : '';
 }
 
-/** Write a dot-path into a nested object (immutable) */
-function setDeep(obj: Record<string, unknown>, path: string, value: string): Record<string, unknown> {
-  const parts = path.split('.');
-  const clone = { ...obj };
-  let cur: Record<string, unknown> = clone;
-  for (let i = 0; i < parts.length - 1; i++) {
-    const existing = cur[parts[i]];
-    cur[parts[i]] = existing && typeof existing === 'object' ? { ...(existing as object) } : {};
-    cur = cur[parts[i]] as Record<string, unknown>;
+/** Write a dot-path into a nested object/array tree (immutable, array-aware) */
+function setDeep(obj: unknown, path: string, value: string): unknown {
+  const [head, ...rest] = path.split('.');
+  if (rest.length === 0) {
+    // Leaf
+    if (Array.isArray(obj)) {
+      const arr = [...(obj as unknown[])];
+      arr[parseInt(head)] = value;
+      return arr;
+    }
+    return { ...(obj as object ?? {}), [head]: value };
   }
-  cur[parts[parts.length - 1]] = value;
-  return clone;
+  const nextIsNum = isNumeric(rest[0]);
+  if (Array.isArray(obj)) {
+    const idx = parseInt(head);
+    const arr = [...(obj as unknown[])];
+    arr[idx] = setDeep(arr[idx] ?? (nextIsNum ? [] : {}), rest.join('.'), value);
+    return arr;
+  }
+  const record = (obj ?? {}) as Record<string, unknown>;
+  const child  = record[head];
+  return {
+    ...record,
+    [head]: setDeep(child ?? (nextIsNum ? [] : {}), rest.join('.'), value),
+  };
 }
 
 type TranslationsMap = Record<Lang, Record<string, unknown>>;
@@ -211,8 +327,7 @@ export default function AdminBlockContent() {
     const baseVal = getDeep(base[activeLang], key);
     setOverrides((prev) => ({
       ...prev,
-      // If value matches base, remove the override (store empty = use base)
-      [activeLang]: setDeep(prev[activeLang], key, value === baseVal ? '' : value),
+      [activeLang]: setDeep(prev[activeLang], key, value === baseVal ? '' : value) as Record<string, unknown>,
     }));
     setDirty(true);
   };
@@ -221,7 +336,7 @@ export default function AdminBlockContent() {
   const restoreField = (key: string) => {
     setOverrides((prev) => ({
       ...prev,
-      [activeLang]: setDeep(prev[activeLang], key, ''),
+      [activeLang]: setDeep(prev[activeLang], key, '') as Record<string, unknown>,
     }));
     setDirty(true);
   };
@@ -394,7 +509,7 @@ export default function AdminBlockContent() {
                 >
                   <span className="font-medium text-[#141414]">{blockId}</span>
                   <span className="text-xs text-[#141414]/40">
-                    {fields.length} {fields.length === 1 ? 'поле' : 'поля'}
+                    {fields.length} {fields.length < 5 ? 'поля' : 'полів'}
                   </span>
                   {blockOverrides > 0 && (
                     <span className="text-[9px] uppercase tracking-widest bg-amber-50 text-amber-600 border border-amber-200 px-2 py-0.5 rounded-full font-semibold">
@@ -410,13 +525,21 @@ export default function AdminBlockContent() {
                 {isOpen && (
                   <div className="border-t border-[#141414]/8 divide-y divide-[#141414]/6">
                     {fields.map((field) => {
-                      const current   = getValue(activeLang, field.key);
-                      const baseVal   = getDeep(base[activeLang], field.key);
+                      const current    = getValue(activeLang, field.key);
+                      const baseVal    = getDeep(base[activeLang], field.key);
                       const overridden = isOverridden(activeLang, field.key);
 
                       return (
+                        <React.Fragment key={field.key}>
+                          {/* Section header (Картка 1, Кейс 2, etc.) */}
+                          {field.section && (
+                            <div className="px-5 py-2.5 bg-[#f5f5f5] border-t border-[#141414]/8">
+                              <span className="text-[10px] uppercase tracking-widest font-bold text-[#141414]/50">
+                                {field.section}
+                              </span>
+                            </div>
+                          )}
                         <div
-                          key={field.key}
                           className={cn(
                             'px-5 py-5 transition-colors',
                             overridden ? 'bg-amber-50/60' : 'bg-white'
@@ -485,6 +608,7 @@ export default function AdminBlockContent() {
                             </p>
                           )}
                         </div>
+                        </React.Fragment>
                       );
                     })}
                   </div>
